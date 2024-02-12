@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+     <title> Registration </title>
+<head>
+  <script>
+     function validate()
+     {
+    	 var password=document.getElementById("password").value;
+    	 var confirmpassword=document.getElementById("confirmpassword").value;
+    	 
+    	 if(password !== confirmpassword)
+    		 {
+    		   alert("password do no match");
+    	       return false;
+    		 }
+     }
+  
+  </script>
+
+</head>
+<body style="background-color:pink">
+<center>
+
+    <h1 style="color:purple" "margin:10px"> User Registration </h1>
+      
+      <form action="RegisterServlet" method="post" onSubmit="return validate()">
+      
+      <label for="username"> username </label>
+      <input type="text" id="username" name="username" placeholder="username" requered><br><br>
+      
+      <label for="password"> password </label>
+      <input type="password" id="password" name="password" placeholder="password" requered><br><br>
+      
+      <label for="confirmpassword"> confirm-password </label>
+      <input type="password" id="confirmpassword" name="confirmpassword" placeholder="confirmpassword" requered><br><br>
+      
+      <input type="submit" value="Register">
+      
+      </form>
+
+</center>
+
+</body>
+</html>
