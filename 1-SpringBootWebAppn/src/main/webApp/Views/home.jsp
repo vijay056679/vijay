@@ -1,0 +1,1 @@
+<h1 style="color: blue"> Welcome To Spring Boot Web Application</h1>
