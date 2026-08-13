@@ -1,0 +1,47 @@
+# 🍛 RecipeAI — KNN Recipe Predictor
+
+A Flask web app that predicts Indian vegetarian recipes from ingredients using K-Nearest Neighbours.
+
+## Model Performance
+| Metric | Score |
+|--------|-------|
+| Train Accuracy | 100% |
+| **Test Accuracy** | **98%** |
+| Cross-Val (CV-5) | 97.9% ± 0.85% |
+
+> k=7 chosen to balance accuracy and generalisation (no overfitting).
+
+## Project Structure
+```
+recipe_app/
+├── app.py              # Flask backend + prediction endpoint
+├── train_model.py      # Model training script
+├── knn_model.pkl       # Saved trained model
+├── requirements.txt
+└── templates/
+    └── index.html      # UI with injected CSS
+```
+
+## Quick Start
+
+### 1. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Train the model (optional — pkl already included)
+```bash
+python train_model.py
+```
+
+### 3. Run the Flask app
+```bash
+python app.py
+```
+Visit: http://localhost:5000
+
+## How It Works
+1. Each recipe's ingredients are one-hot encoded (26 binary features)
+2. Cooking time is added as a numeric feature (27 features total)
+3. KNN (k=7, distance-weighted, Euclidean) predicts the recipe class
+4. The app shows top-3 predictions with confidence scores

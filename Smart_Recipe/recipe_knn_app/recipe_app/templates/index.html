@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RecipeAI — KNN Recipe Predictor</title>
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --saffron:   #FF6B35;
+      --turmeric:  #F7B731;
+      --spice:     #C0392B;
+      --leaf:      #27AE60;
+      --deep:      #1A0A00;
+      --card-bg:   #FFF8F0;
+      --border:    #FDDCB5;
+      --muted:     #8B6E50;
+      --white:     #FFFFFF;
+      --shadow:    rgba(255,107,53,0.15);
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, #FFF3E0 0%, #FBE9D0 50%, #FFF3E0 100%);
+      min-height: 100vh;
+      color: var(--deep);
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--saffron), #E85D04, var(--spice));
+      padding: 2rem 1rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        45deg, transparent, transparent 30px,
+        rgba(255,255,255,0.05) 30px, rgba(255,255,255,0.05) 60px
+      );
+    }
+    header h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+      position: relative;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
+    header h1 span { color: var(--turmeric); }
+    header p {
+      color: rgba(255,255,255,0.88);
+      margin-top: .5rem;
+      font-size: 1rem;
+      position: relative;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 700;
+      padding: .2rem .7rem;
+      border-radius: 999px;
+      margin-top: .8rem;
+      letter-spacing: .05em;
+      position: relative;
+    }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 960px;
+      margin: -1.5rem auto 3rem;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 40px var(--shadow);
+      margin-bottom: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--saffron);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .card-title::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, var(--border), transparent);
+      border-radius: 2px;
+    }
+
+    /* ── Ingredients Grid ── */
+    .ing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: .6rem;
+    }
+
+    .ing-chip {
+      position: relative;
+    }
+    .ing-chip input[type="checkbox"] {
+      position: absolute; opacity: 0; width: 0; height: 0;
+    }
+    .ing-chip label {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      padding: .55rem .85rem;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      background: var(--white);
+      cursor: pointer;
+      font-size: .85rem;
+      font-weight: 500;
+      color: var(--muted);
+      transition: all .18s ease;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .ing-chip label .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: background .18s;
+      flex-shrink: 0;
+    }
+    .ing-chip input:checked + label {
+      border-color: var(--saffron);
+      background: linear-gradient(135deg, #FFF0E6, #FFE4CC);
+      color: var(--deep);
+      box-shadow: 0 2px 10px rgba(255,107,53,0.2);
+    }
+    .ing-chip input:checked + label .dot {
+      background: var(--saffron);
+    }
+    .ing-chip label:hover {
+      border-color: var(--saffron);
+      transform: translateY(-1px);
+    }
+
+    /* ── Time Slider ── */
+    .time-row {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .time-row label { font-weight: 600; font-size: .95rem; white-space: nowrap; }
+    input[type="range"] {
+      flex: 1; min-width: 160px;
+      -webkit-appearance: none;
+      height: 6px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--saffron) var(--pct, 33%), var(--border) var(--pct, 33%));
+      outline: none;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--saffron);
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(255,107,53,0.4);
+      cursor: pointer;
+    }
+    .time-value {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--saffron);
+      min-width: 60px;
+      text-align: right;
+    }
+
+    /* ── Actions ── */
+    .actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: .5rem;
+    }
+    .btn {
+      padding: .75rem 2rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .2s ease;
+      letter-spacing: .02em;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--saffron), #E85D04);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(255,107,53,0.35);
+      flex: 1;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(255,107,53,0.45); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-secondary {
+      background: var(--white);
+      color: var(--muted);
+      border: 2px solid var(--border);
+      min-width: 110px;
+    }
+    .btn-secondary:hover { border-color: var(--saffron); color: var(--saffron); }
+
+    /* ── Result Area ── */
+    #result { display: none; }
+
+    .result-hero {
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    .result-emoji { font-size: 4rem; line-height: 1; }
+    .result-name {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--deep);
+      margin: .5rem 0 .3rem;
+    }
+    .result-desc { color: var(--muted); font-size: .95rem; }
+    .confidence-bar-wrap { margin: 1.2rem auto; max-width: 320px; }
+    .confidence-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: .4rem;
+    }
+    .confidence-bar {
+      height: 10px;
+      background: var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .confidence-fill {
+      height: 100%;
+      border-radius: 5px;
+      background: linear-gradient(90deg, var(--turmeric), var(--saffron));
+      transition: width .6s cubic-bezier(.4,0,.2,1);
+      width: 0%;
+    }
+
+    /* ── Top 3 ── */
+    .top3-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: .8rem;
+      margin-top: .5rem;
+    }
+    .top3-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      text-align: center;
+      transition: all .2s;
+    }
+    .top3-card.best {
+      border-color: var(--saffron);
+      background: linear-gradient(135deg, #FFF0E6, #FFE4CC);
+    }
+    .top3-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px var(--shadow); }
+    .top3-emoji { font-size: 2rem; }
+    .top3-name { font-weight: 700; font-size: .9rem; margin: .3rem 0 .2rem; }
+    .top3-conf {
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--saffron);
+      background: rgba(255,107,53,0.1);
+      padding: .15rem .5rem;
+      border-radius: 999px;
+      display: inline-block;
+    }
+    .top3-desc { font-size: .75rem; color: var(--muted); margin-top: .3rem; }
+
+    /* ── Error ── */
+    .error-msg {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      color: #B91C1C;
+      padding: .8rem 1.2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: .9rem;
+    }
+
+    /* ── Loading Spinner ── */
+    .spinner {
+      display: none;
+      width: 36px; height: 36px;
+      border: 3px solid var(--border);
+      border-top-color: var(--saffron);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      margin: 1.5rem auto;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Selection counter ── */
+    .sel-count {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--saffron);
+      background: rgba(255,107,53,0.1);
+      padding: .15rem .6rem;
+      border-radius: 999px;
+      margin-left: .5rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: .8rem;
+      color: var(--muted);
+    }
+    footer strong { color: var(--saffron); }
+
+    /* ── Responsive ── */
+    @media (max-width: 560px) {
+      .card { padding: 1.2rem; }
+      .ing-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🍛 Recipe<span>AI</span></h1>
+  <p>Pick your ingredients — our KNN model predicts the dish</p>
+  <span class="badge">KNN MODEL · 98% ACCURACY · 20 INDIAN RECIPES</span>
+</header>
+
+<main>
+
+  <!-- Ingredients Card -->
+  <div class="card">
+    <div class="card-title">
+      🌶️ Select Ingredients
+      <span class="sel-count" id="selCount">0 selected</span>
+    </div>
+    <div class="ing-grid" id="ingGrid">
+      {% for ing in ingredients %}
+      <div class="ing-chip">
+        <input type="checkbox" id="ing_{{ ing|replace(' ','_') }}" value="{{ ing }}">
+        <label for="ing_{{ ing|replace(' ','_') }}">
+          <span class="dot"></span>{{ ing }}
+        </label>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Cooking Time Card -->
+  <div class="card">
+    <div class="card-title">⏱️ Cooking Time</div>
+    <div class="time-row">
+      <label for="timeSlider">Minutes:</label>
+      <input type="range" id="timeSlider" min="15" max="60" value="30"
+             oninput="updateSlider(this)">
+      <div class="time-value"><span id="timeDisplay">30</span> min</div>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="card" style="padding:1.2rem 2rem;">
+    <div class="actions">
+      <button class="btn btn-primary" onclick="predict()">🔮 Predict Recipe</button>
+      <button class="btn btn-secondary" onclick="clearAll()">✕ Clear</button>
+    </div>
+  </div>
+
+  <!-- Result Card -->
+  <div class="card" id="result">
+    <div class="card-title">🎯 Prediction Result</div>
+    <div id="resultContent"></div>
+  </div>
+
+</main>
+
+<footer>Powered by <strong>KNN Machine Learning</strong> · Indian Vegetarian Recipes · 2000 Training Samples</footer>
+
+<script>
+  // Update slider gradient
+  function updateSlider(el) {
+    const pct = ((el.value - el.min) / (el.max - el.min)) * 100;
+    el.style.setProperty('--pct', pct + '%');
+    document.getElementById('timeDisplay').textContent = el.value;
+  }
+  updateSlider(document.getElementById('timeSlider'));
+
+  // Track selection count
+  document.getElementById('ingGrid').addEventListener('change', () => {
+    const n = document.querySelectorAll('#ingGrid input:checked').length;
+    document.getElementById('selCount').textContent = n + ' selected';
+  });
+
+  function clearAll() {
+    document.querySelectorAll('#ingGrid input').forEach(i => i.checked = false);
+    document.getElementById('selCount').textContent = '0 selected';
+    document.getElementById('result').style.display = 'none';
+    document.getElementById('timeSlider').value = 30;
+    updateSlider(document.getElementById('timeSlider'));
+  }
+
+  async function predict() {
+    const selected = [...document.querySelectorAll('#ingGrid input:checked')].map(i => i.value);
+    const time = document.getElementById('timeSlider').value;
+
+    const resultDiv = document.getElementById('result');
+    const content = document.getElementById('resultContent');
+    resultDiv.style.display = 'block';
+    content.innerHTML = '<div class="spinner" style="display:block"></div>';
+
+    try {
+      const res = await fetch('/predict', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ingredients: selected, cooking_time: time})
+      });
+      const data = await res.json();
+
+      if (data.error) {
+        content.innerHTML = `<div class="error-msg">⚠️ ${data.error}</div>`;
+        return;
+      }
+
+      const top3HTML = (data.top3 || []).map((r, i) => `
+        <div class="top3-card ${i===0?'best':''}">
+          <div class="top3-emoji">${r.emoji}</div>
+          <div class="top3-name">${r.name}</div>
+          <span class="top3-conf">${r.confidence}%</span>
+          <div class="top3-desc">${r.desc}</div>
+        </div>
+      `).join('');
+
+      content.innerHTML = `
+        <div class="result-hero">
+          <div class="result-emoji">${data.emoji}</div>
+          <div class="result-name">${data.recipe}</div>
+          <div class="result-desc">${data.desc}</div>
+          <div class="confidence-bar-wrap">
+            <div class="confidence-label">
+              <span>Confidence</span><span>${data.confidence}%</span>
+            </div>
+            <div class="confidence-bar">
+              <div class="confidence-fill" id="confFill"></div>
+            </div>
+          </div>
+        </div>
+        ${data.top3.length > 1 ? `
+          <div class="card-title" style="margin-top:1rem">🏆 Top Predictions</div>
+          <div class="top3-grid">${top3HTML}</div>` : ''}
+      `;
+
+      // Animate bar
+      setTimeout(() => {
+        const fill = document.getElementById('confFill');
+        if (fill) fill.style.width = data.confidence + '%';
+      }, 50);
+
+    } catch(e) {
+      content.innerHTML = `<div class="error-msg">⚠️ Server error. Please try again.</div>`;
+    }
+  }
+</script>
+</body>
+</html>
