@@ -1,0 +1,335 @@
+<!-- STUDENT PORTAL MAIN CONTAINER -->
+    <div class="app-container hidden" id="user-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="user-sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <i data-lucide="bot" class="logo-icon glow-indigo"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Dept. CsBot</h1>
+                    <span>Student Gateway</span>
+                </div>
+            </div>
+
+            <!-- Student Profile Header -->
+            <div class="operator-profile" id="user-profile-header">
+                <div class="avatar-container">
+                    <img src="" alt="Student Avatar" class="operator-avatar" id="user-avatar-display">
+                    <span class="status-indicator online"></span>
+                </div>
+                <div class="operator-info">
+                    <h4 id="user-name-display">Student Name</h4>
+                    <p id="user-id-display"></p>
+                </div>
+            </div>
+
+            <!-- Student Navigation Menu -->
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="user-nav-item active" data-tab="user-dashboard">
+                        <a href="#user-dashboard">
+                            <i data-lucide="layout-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="user-nav-item" data-tab="user-ask-bot">
+                        <a href="#user-ask-bot">
+                            <i data-lucide="message-square"></i>
+                            <span>ASK to Bot</span>
+                        </a>
+                    </li>
+                    <li class="user-nav-item" data-tab="user-notices">
+                        <a href="#user-notices">
+                            <i data-lucide="bell"></i>
+                            <span>Notice Board</span>
+                        </a>
+                    </li>
+                    <li class="user-nav-item" data-tab="user-feedback">
+                        <a href="#user-feedback">
+                            <i data-lucide="star"></i>
+                            <span>Feedback</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <button class="btn btn-danger btn-full" id="user-logout-btn" style="height: 40px; margin-top: 8px;">
+                    <i data-lucide="log-out"></i>
+                    <span>Log Out</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="mobile-toggle-btn" id="user-mobile-toggle">
+                        <i data-lucide="menu"></i>
+                    </button>
+                    <h2 class="page-title" id="user-page-title">Student Dashboard</h2>
+                </div>
+                <div class="header-right">
+                    <!-- Theme Toggle -->
+                    <button class="header-btn" id="user-theme-toggle" title="Toggle Theme Mode">
+                        <i data-lucide="sun" class="sun-icon"></i>
+                        <i data-lucide="moon" class="moon-icon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Student Viewports -->
+            <div class="content-viewport">
+
+                <!-- 1. STUDENT DASHBOARD VIEW -->
+                <section class="view-section active" id="view-user-dashboard">
+                    <div class="dashboard-toolbar glass">
+                        <div class="toolbar-title">
+                            <h3 id="user-welcome-title">Welcome back, Student!</h3>
+                            <p>Here is your academic helper dashboard.</p>
+                        </div>
+                    </div>
+
+                    <div class="kpi-grid">
+                        <div class="kpi-card glass">
+                            <div class="kpi-icon-wrapper bg-indigo">
+                                <i data-lucide="message-square"></i>
+                            </div>
+                            <div class="kpi-data">
+                                <h3>Queries Sent</h3>
+                                <span class="kpi-value" id="user-stat-queries">0</span>
+                                <span class="kpi-trend text-success"><i data-lucide="message-circle"></i> Total chatbot
+                                    queries</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Notices Summary in Dashboard -->
+                    <div class="dashboard-details-grid" style="grid-template-columns: 1fr;">
+                        <div class="details-card glass">
+                            <div class="card-header">
+                                <h3>Latest Notice Board Announcements</h3>
+                                <span class="badge badge-indigo">Notice Updates</span>
+                            </div>
+                            <div class="activity-timeline" id="user-dashboard-notices">
+                                <!-- Loaded dynamically -->
+                                <div class="timeline-loading">Loading notice boards...</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. STUDENT ASK TO BOT VIEW -->
+                <section class="view-section" id="view-user-ask-bot">
+                    <div class="chat-layout">
+                        <!-- Suggested Questions Panel (FAQ) -->
+                        <div class="faq-panel glass">
+                            <div class="faq-header">
+                                <h3>Suggested College Queries</h3>
+                                <p>MCA and MSc(Cs) information is answered separately</p>
+                            </div>
+
+                            <div class="faq-categories">
+                                sincerity
+                                <div class="faq-category">
+                                    <h4>MCA Information</h4>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="When do admissions start for MCA?">MCA Admission
+                                        Start Date</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What is the admission procedure for the MCA course?">MCA Admission
+                                        Process</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What are the eligibility criteria for MCA admissions?">MCA
+                                        Eligibility Requirements</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What core subjects are covered in the MCA curriculum?">MCA Core
+                                        Syllabus</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What are the documents required for MCA admission?">MCA Required
+                                        Documents</button>
+                                </div>
+                                <div class="faq-category">
+                                    <h4>MSc(Cs) Information</h4>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="When do admissions start for MSc(Cs)?">MSc(Cs) Admission
+                                        Start Date</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What is the admission procedure for MSc(Cs)?">MSc(Cs) Admission
+                                        Process</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What are the eligibility criteria for MSc(Cs) admissions?">MSc(Cs)
+                                        Eligibility Requirements</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What core subjects are covered in the MSc(Cs) curriculum?">MSc(Cs)
+                                        Core Syllabus</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What are the documents required for MSc(Cs) admission?">MSc(Cs) Required
+                                        Documents</button>
+                                </div>
+                                <div class="faq-category">
+                                    <h4>Fees, Scholarships & Placements</h4>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What is the fee structure for the MCA program?">MCA Fee
+                                        Details</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What is the fee structure for MSc(Cs)?">MSc(Cs) Fee
+                                        Details</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="Are there scholarships available for MCA students?">Scholarship
+                                        Programs</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What are the placement statistics for MCA graduates?">MCA Placement
+                                        Rates</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What are the placement statistics for MSc(Cs) graduates?">MSc(Cs)
+                                        Placement Rates</button>
+                                </div>
+                                <div class="faq-category">
+                                    <h4>Hostel & Contact</h4>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="Does the campus have hostel facilities for outstation students?">Hostel
+                                        Accommodations</button>
+                                    <button class="faq-btn user-faq-btn"
+                                        data-query="What is the official contact number and office email address for admissions?">Contact
+                                        Office Admissions</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Chat Screen -->
+                        <div class="chat-card glass">
+                            <div class="chat-card-header">
+                                <div class="bot-info-card">
+                                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=DeptCsBot" alt="Dept. CsBot"
+                                        class="bot-avatar-header">
+                                    <div>
+                                        <h3>Dept. CsBot Enquiry Assistant</h3>
+                                        <span class="bot-status"><span class="pulse-online"></span>Online &bull; TF-IDF
+                                            NLP Pipeline</span>
+                                    </div>
+                                </div>
+                                <div class="chat-actions">
+                                    <!-- Multilingual Toggle -->
+                                    <div class="language-toggle-container">
+                                        <select id="user-chat-lang-select" title="Switch Language" class="lang-select">
+                                            <option value="en">English (EN)</option>
+                                            <option value="kn">ಕನ್ನಡ (KN)</option>
+                                        </select>
+                                    </div>
+                                    <!-- Speaker Text-To-Speech Toggle -->
+                                    <button class="action-btn" id="user-voice-response-toggle"
+                                        title="Toggle Voice Response (Muted)" data-enabled="false">
+                                        <i data-lucide="volume-x"></i>
+                                    </button>
+                                    <button class="action-btn" id="user-clear-chat" title="Clear Chat History"><i
+                                            data-lucide="trash-2"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Chat Stream -->
+                            <div class="chat-message-stream" id="user-chat-stream">
+                                <div class="chat-bubble bot-message glass">
+                                    <div class="bubble-content">
+                                        <p>Hello! I am Dept. CsBot, Department of Computer Science. I keep MCA and MSc(Cs)
+                                            information separate, including admission dates, eligibility, fees,
+                                            curriculum, placements, scholarships, hostel facilities, and notices.</p>
+                                        <span class="bubble-meta">System &bull; Now</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- User Input Area -->
+                            <div class="chat-input-area" style="position: relative;">
+                                <div class="search-suggestions-container hidden" id="user-search-suggestions"></div>
+                                <form id="user-chat-form">
+                                    <input type="text" id="user-chat-input"
+                                        placeholder="Type a college enquiry (e.g., What are the placements for MCA or MSc(Cs)?)..."
+                                        autocomplete="off">
+                                    <button type="button" class="chat-mic-btn" id="user-chat-mic-btn"
+                                        title="Speak your query (Speech to Text)">
+                                        <i data-lucide="mic"></i>
+                                    </button>
+                                    <button type="submit" class="chat-send-btn">
+                                        <i data-lucide="send"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. STUDENT NOTICES VIEW -->
+                <section class="view-section" id="view-user-notices">
+                    <div class="users-list-card glass" style="padding: 24px;">
+                        <div class="toolbar-title" style="margin-bottom: 20px;">
+                            <h3>College Notices & Academic Alerts</h3>
+                            <p>Stay up to date with the latest announcements from administrative boards.</p>
+                        </div>
+                        <div class="notice-grid-container" id="user-notices-board">
+                            <!-- notices loaded dynamically -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. STUDENT SUBMIT FEEDBACK VIEW -->
+                <section class="view-section" id="view-user-feedback">
+                    <div class="users-list-card glass" style="max-width: 600px; margin: 0 auto; padding: 32px;">
+                        <div class="landing-header" style="text-align: left; padding: 0; margin-bottom: 24px;">
+                            <div class="landing-logo glow-indigo" style="width: 48px; height: 48px;">
+                                <i data-lucide="star" style="width: 24px; height: 24px; color: white;"></i>
+                            </div>
+                            <h2 style="font-size: 1.5rem; margin-top: 12px;">Submit General Feedback</h2>
+                            <p>Share your experiences or report issues to support operations.</p>
+                        </div>
+
+                        <form id="general-feedback-form">
+                            <div class="form-group">
+                                <label style="margin-bottom: 8px; display: block; font-weight: 500;">Rate your
+                                    experience</label>
+                                <div class="star-rating-selector" id="feedback-star-selector"
+                                    style="display: flex; gap: 8px; font-size: 1.75rem; margin-bottom: 16px;">
+                                    <span class="star-select-btn" data-value="1"
+                                        style="cursor: pointer; color: var(--text-muted);"><i
+                                            data-lucide="star"></i></span>
+                                    <span class="star-select-btn" data-value="2"
+                                        style="cursor: pointer; color: var(--text-muted);"><i
+                                            data-lucide="star"></i></span>
+                                    <span class="star-select-btn" data-value="3"
+                                        style="cursor: pointer; color: var(--text-muted);"><i
+                                            data-lucide="star"></i></span>
+                                    <span class="star-select-btn" data-value="4"
+                                        style="cursor: pointer; color: var(--text-muted);"><i
+                                            data-lucide="star"></i></span>
+                                    <span class="star-select-btn" data-value="5"
+                                        style="cursor: pointer; color: var(--text-muted);"><i
+                                            data-lucide="star"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 16px;">
+                                <label for="feedback-comments"
+                                    style="margin-bottom: 8px; display: block; font-weight: 500;">Comments &
+                                    Suggestions</label>
+                                <textarea id="feedback-comments"
+                                    placeholder="Describe your experience or suggest improvements..." rows="5" required
+                                    style="width: 100%; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); padding: 12px; font-family: var(--font-body);"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-indigo btn-full"
+                                style="margin-top: 24px; height: 42px;">
+                                <i data-lucide="send"></i>
+                                <span>Submit Feedback</span>
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 2px solid #cbd5e1;
+            padding: 15px;
+            position: relative;
+            background-color: #f8fafc;
+        }
+
+        .header h1 {
+            display: inline-block;
+            margin: 0;
+        }
+
+        .nav {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+
+        .nav a {
+            margin-left: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: green;
+            text-decoration: none;
+            color: white;
+        }
+        .con{
+            margin-top: 80px;
+            height: 50%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .reg{
+            background-color: red;
+            color: white;
+            padding: 15px 30px;
+            border:none;
+            text-align: center;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 40px auto;
+            width: 300px;
+        }
+        .reg a{
+            color: white;
+            text-decoration: none;
+        }
+        .chat-box{
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #e0f2fe;
+            color: #0f172a;
+            padding: 15px 30px;
+            border-radius: 5px;
+            animation: moveBox 2s infinite alternate;
+        }
+        @keyframes  moveBox {
+            0%{transform: translate(-50%,0px);}
+            100%{transform: translate(-50%,20px);}
+        } 
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1 style="color: #172033;">College Enquiry System</h1>
+
+        <div class="nav">
+            <a href="login.html">Go To Login Portal</a>
+            <a href="admin_login.html" style="background-color: #6366f1;">Admin Portal</a>
+        </div>
+    </div>
+
+    <div class="con">
+        <img src="chat.jpg" alt="chatbot" width="50%" height="50%">
+    </div> 
+    <div class="chat-box" id="chat">Hi,<br>How may I help You</div>
+    <div class="reg">
+        <a href="register.html">Student Registration</a>
+    </div>   
+
+</body>
+</html>

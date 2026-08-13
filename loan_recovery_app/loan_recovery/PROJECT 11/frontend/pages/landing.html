@@ -1,0 +1,103 @@
+<!-- 0. LANDING HOME PAGE CONTAINER -->
+    <div class="landing-container active" id="landing-container">
+        <div class="landing-hero-bg"></div>
+        <div class="landing-card glass">
+            <!-- Student Login Form -->
+            <div id="student-login-view" class="landing-view hidden">
+                <div class="landing-header">
+                    <div class="landing-logo glow-indigo">
+                        <i data-lucide="user" style="width: 32px; height: 32px; color: white;"></i>
+                    </div>
+                    <h2>Student Login</h2>
+                    <p>Access your student dashboard and chatbot</p>
+                </div>
+                <form id="student-login-form">
+                    <div class="form-group">
+                        <label for="student-login-email">Email Address</label>
+                        <input type="email" id="student-login-email" placeholder="e.g. sneha@example.com" required
+                            autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="student-login-password">Password</label>
+                        <input type="password" id="student-login-password" placeholder="••••••••" required
+                            autocomplete="current-password">
+                    </div>
+                    <div id="student-login-error" class="login-error hidden"></div>
+                    <button type="submit" class="btn btn-indigo btn-full">
+                        <i data-lucide="log-in"></i>
+                        <span>Login as Student</span>
+                    </button>
+                    <div class="form-footer-links">
+                        <p>New here? <a href="#" id="link-to-register">Register as Student</a></p>
+                        <a href="#" class="back-to-portal"><i data-lucide="arrow-left"></i> Go Back</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Student Registration Form -->
+            <div id="student-register-view" class="landing-view hidden">
+                <div class="landing-header">
+                    <div class="landing-logo glow-indigo">
+                        <i data-lucide="user-plus" style="width: 32px; height: 32px; color: white;"></i>
+                    </div>
+                    <h2>Student Registration</h2>
+                    <p>Register to gain access to the chatbot and notice board</p>
+                </div>
+                <form id="student-register-form">
+                    <div class="form-group">
+                        <label for="student-reg-name">Full Name</label>
+                        <input type="text" id="student-reg-name" placeholder="e.g. Laxmi" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="student-reg-email">Email Address</label>
+                        <input type="email" id="student-reg-email" placeholder="e.g. laxmi@example.com" required
+                            autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="student-reg-password">Password</label>
+                        <input type="password" id="student-reg-password" placeholder="••••••••" required
+                            autocomplete="new-password">
+                    </div>
+                    <div id="student-reg-error" class="login-error hidden"></div>
+                    <button type="submit" class="btn btn-indigo btn-full">
+                        <i data-lucide="user-plus"></i>
+                        <span>Register Profile</span>
+                    </button <div class="form-footer-links">
+                    <p>Have an account? <a href="#" id="link-to-login">Login as Student</a></p>
+                    <a href="#" class="back-to-portal"><i data-lucide="arrow-left"></i> Go Back</a>
+            </div>
+            </form>
+        </div>
+
+        <!-- Admin Login Form -->
+        <div id="admin-login-view" class="landing-view hidden">
+            <div class="landing-header">
+                <div class="landing-logo glow-indigo">
+                    <i data-lucide="shield-check" style="width: 32px; height: 32px; color: white;"></i>
+                </div>
+                <h2>Admin Portal Login</h2>
+                <p>Authentication required to access operations dashboard</p>
+            </div>
+            <form id="admin-login-form">
+                <div class="form-group">
+                    <label for="admin-login-username">Admin Username</label>
+                    <input type="text" id="admin-login-username" placeholder="e.g. admin" required
+                        autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="admin-login-password">Password</label>
+                    <input type="password" id="admin-login-password" placeholder="••••••••" required
+                        autocomplete="current-password">
+                </div>
+                <div id="admin-login-error" class="login-error hidden"></div>
+                <button type="submit" class="btn btn-indigo btn-full">
+                    <i data-lucide="log-in"></i>
+                    <span>Authenticate Admin</span>
+                </button>
+                <div class="form-footer-links">
+                    <a href="#" class="back-to-portal"><i data-lucide="arrow-left"></i> Go Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login - ChatBot System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .left {
+            text-align: center;
+            margin-right: 80px;
+        }
+
+        .left img {
+            width: 160px;
+            height: 120px;
+        }
+
+        .left h1 {
+            color: #2a8dbf;
+            margin-top: 10px;
+        }
+
+        .right {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .right h2 {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2a8dbf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1f6e94;
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+            opacity: 0.75;
+        }
+
+        .bottom {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .bottom a {
+            width: auto;
+            margin: 5px;
+            padding: 8px 15px;
+            background-color: #2a8dbf;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left">
+            <img src="login.png" alt="Chat Icon">
+            <h1>ChatBot System</h1>
+        </div>
+
+        <form id="admin-login-form">
+            <div class="right">
+                <h2>Admin Login</h2>
+
+                <p id="login-message" style="color: #a10000; font-size: 13px;" hidden></p>
+
+                <input type="text" name="username" placeholder="Enter Username" required>
+                <input type="password" name="password" placeholder="Enter Password" required>
+
+                <button type="submit" id="login-button">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="bottom">
+        <a href="home1.html">Home</a>
+        <a href="login.html">Student Login</a>
+    </div>
+
+    <script>
+        const form = document.getElementById("admin-login-form");
+        const message = document.getElementById("login-message");
+        const loginButton = document.getElementById("login-button");
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            message.hidden = true;
+            loginButton.disabled = true;
+            loginButton.textContent = "Logging in...";
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch("/api/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        username: formData.get("username"),
+                        password: formData.get("password")
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    localStorage.setItem("adminToken", result.token);
+                    window.location.href = "index.html";
+                    return;
+                }
+
+                message.textContent = result.error || "Invalid credentials";
+                message.hidden = false;
+            } catch (error) {
+                message.textContent = "Server connection error. Make sure backend is running.";
+                message.hidden = false;
+            } finally {
+                loginButton.disabled = false;
+                loginButton.textContent = "Login";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

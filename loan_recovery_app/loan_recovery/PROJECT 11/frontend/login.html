@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ChatBot System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        /* Main container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        /* Left section */
+        .left {
+            text-align: center;
+            margin-right: 80px;
+        }
+
+        .left img {
+            width: 160px;
+            height: 120px;
+        }
+
+        .left h1 {
+            color: #2a8dbf;
+            margin-top: 10px;
+        }
+
+        /* Right section (Login box) */
+        .right {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .right h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Input fields */
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Login button */
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2a8dbf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1f6e94;
+        }
+
+        /* Bottom links */
+        .bottom {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .bottom button {
+            width: auto;
+            margin: 5px;
+            padding: 8px 15px;
+        }
+
+        .bottom a {
+            width: auto;
+            margin: 5px;
+            padding: 8px 15px;
+            background-color: #2a8dbf;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Left side -->
+        <div class="left">
+            <img src="login.png" alt="Chat Icon">
+            <h1>ChatBot System</h1>
+        </div>
+
+        <!-- Right side -->
+        <form id="student-login-form">
+            <div class="right">
+                <h2>Student Login</h2>
+
+                <p id="registered-message" style="color: #166534; font-size: 13px;" hidden>Registration successful. Please login.</p>
+                <p id="login-message" style="color: #a10000; font-size: 13px;" hidden></p>
+
+                <input type="email" name="email" placeholder="Enter Email" required>
+                <input type="password" name="password" placeholder="Enter Password" required>
+
+                <p style="font-size:12px;">
+                    Don't have account? <a href="register.html">Register</a>
+                </p>
+
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Bottom buttons -->
+    <div class="bottom">
+        <a href="home1.html">Home</a>
+        <a href="admin_login.html">Admin Login</a>
+    </div>
+
+    <script>
+        const form = document.getElementById("student-login-form");
+        const message = document.getElementById("login-message");
+        const registeredMessage = document.getElementById("registered-message");
+
+        if (new URLSearchParams(window.location.search).get("registered") === "1") {
+            registeredMessage.hidden = false;
+        }
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            message.hidden = true;
+
+            const formData = new FormData(form);
+            const response = await fetch("/api/user/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    email: formData.get("email"),
+                    password: formData.get("password")
+                })
+            });
+            const result = await response.json();
+
+            if (result.success) {
+                localStorage.setItem("userToken", JSON.stringify(result.user));
+                window.location.href = "index.html";
+                return;
+            }
+
+            message.textContent = result.error || "Invalid credentials";
+            message.hidden = false;
+        });
+    </script>
+
+</body>
+
+</html>

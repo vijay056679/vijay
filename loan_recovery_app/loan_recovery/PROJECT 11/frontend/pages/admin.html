@@ -1,0 +1,451 @@
+<!-- ADMIN PORTAL MAIN CONTAINER -->
+    <div class="app-container hidden" id="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <i data-lucide="bot" class="logo-icon glow-indigo"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Dept. Cs Admin</h1>
+                    <span>College Support Operations</span>
+                </div>
+            </div>
+
+            <!-- Operator Profile -->
+            <div class="operator-profile" id="admin-profile-header">
+                <div class="avatar-container">
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Operator" alt="Operator Avatar"
+                        class="operator-avatar">
+                    <span class="status-indicator online"></span>
+                </div>
+                <div class="operator-info">
+                    <h4>Admin Operator</h4>
+                    <p>Level 1 Support</p>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active" data-tab="dashboard">
+                        <a href="#dashboard">
+                            <i data-lucide="layout-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-tab="unanswered">
+                        <a href="#unanswered">
+                            <i data-lucide="help-circle"></i>
+                            <span>Unanswered Qs</span>
+                            <span class="badge-count badge-danger" id="unanswered-badge">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-tab="bot-users">
+                        <a href="#bot-users">
+                            <i data-lucide="users"></i>
+                            <span>Bot Users List</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-tab="kb-manager">
+                        <a href="#kb-manager">
+                            <i data-lucide="database"></i>
+                            <span>Knowledge Base</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-tab="admin-notices">
+                        <a href="#admin-notices">
+                            <i data-lucide="bell"></i>
+                            <span>Notice Board Mgr</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-tab="admin-feedback">
+                        <a href="#admin-feedback">
+                            <i data-lucide="message-square-text"></i>
+                            <span>General Feedback</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <button class="btn btn-danger btn-full" id="admin-logout-btn" style="height: 40px; margin-top: 8px;">
+                    <i data-lucide="log-out"></i>
+                    <span>Log Out</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="mobile-toggle-btn" id="mobile-toggle">
+                        <i data-lucide="menu"></i>
+                    </button>
+                    <h2 class="page-title" id="page-title">Operations Dashboard</h2>
+                </div>
+
+                <div class="header-right">
+                    <!-- Notifications -->
+                    <div class="notification-wrapper">
+                        <button class="header-btn" id="notification-btn">
+                            <i data-lucide="bell"></i>
+                            <span class="notification-dot" id="noti-dot"></span>
+                        </button>
+                        <div class="notification-dropdown" id="notification-dropdown">
+                            <div class="noti-header">
+                                <h3>Notifications</h3>
+                                <button class="clear-noti-btn" id="clear-noti">Clear</button>
+                            </div>
+                            <div class="noti-body" id="noti-list">
+                                <!-- Loaded dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theme Toggle -->
+                    <button class="header-btn" id="theme-toggle" title="Toggle Theme Mode">
+                        <i data-lucide="sun" class="sun-icon"></i>
+                        <i data-lucide="moon" class="moon-icon"></i>
+                    </button>
+
+                    <!-- Refresh Button -->
+                    <button class="header-btn" id="refresh-btn" title="Refresh Live Data">
+                        <i data-lucide="refresh-cw"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Views / Viewports -->
+            <div class="content-viewport">
+
+                <!-- 1. DASHBOARD VIEW -->
+                <section class="view-section active" id="view-dashboard">
+                    <!-- KPI Cards Grid -->
+                    <div class="kpi-grid">
+                        <div class="kpi-card glass">
+                            <div class="kpi-icon-wrapper bg-indigo">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <div class="kpi-data">
+                                <h3>Total Users</h3>
+                                <span class="kpi-value" id="stat-total-users">0</span>
+                                <span class="kpi-trend text-success"><i data-lucide="trending-up"></i> +12% this
+                                    week</span>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card glass">
+                            <div class="kpi-icon-wrapper bg-violet">
+                                <i data-lucide="message-circle"></i>
+                            </div>
+                            <div class="kpi-data">
+                                <h3>Total Queries</h3>
+                                <span class="kpi-value" id="stat-total-queries">0</span>
+                                <span class="kpi-trend text-success"><i data-lucide="trending-up"></i> +24% today</span>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card glass warning-glow" id="kpi-pending-card">
+                            <div class="kpi-icon-wrapper bg-danger">
+                                <i data-lucide="alert-circle"></i>
+                            </div>
+                            <div class="kpi-data">
+                                <h3>Pending Unanswered</h3>
+                                <span class="kpi-value text-danger" id="stat-pending-questions">0</span>
+                                <span class="kpi-trend text-warning" id="stat-pending-subtext">Needs Operator
+                                    Response</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Analytics Charts -->
+                    <div class="charts-grid">
+                        <div class="chart-container glass">
+                            <div class="chart-header">
+                                <h3>Message Volume</h3>
+                                <span class="chart-subtitle">Daily user requests processed</span>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="messageVolumeChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activities & General Log -->
+                    <div class="dashboard-details-grid">
+                        <div class="details-card glass">
+                            <div class="card-header">
+                                <h3>Recent System Activities</h3>
+                                <span class="badge badge-indigo">Live Log</span>
+                            </div>
+                            <div class="activity-timeline" id="dashboard-activities">
+                                <!-- Loaded dynamically -->
+                                <div class="timeline-loading">Loading activity details...</div>
+                            </div>
+                        </div>
+
+                        <div class="details-card glass">
+                            <div class="card-header">
+                                <h3>Top Searched Queries</h3>
+                                <span class="badge badge-indigo">FAQ Popularity</span>
+                            </div>
+                            <div class="activity-timeline" id="top-queries-list">
+                                <!-- Loaded dynamically -->
+                                <div class="timeline-loading">Loading popular enquiries...</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. ADMIN NOTICE BOARD MANAGER VIEW -->
+                <section class="view-section" id="view-admin-notices">
+                    <div class="users-list-card glass">
+                        <!-- Toolbar -->
+                        <div class="table-filters">
+                            <div class="filter-search" style="width: 100%; max-width: 450px;">
+                                <i data-lucide="search" class="search-icon"></i>
+                                <input type="text" id="admin-notices-search"
+                                    placeholder="Search notices by title or content...">
+                            </div>
+                            <button class="btn btn-indigo" id="add-notice-btn" style="height: 40px; margin-left: auto;">
+                                <i data-lucide="plus-circle"></i>
+                                <span>Post Announcement</span>
+                            </button>
+                        </div>
+                        <!-- Data Table -->
+                        <div class="table-responsive">
+                            <table class="users-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 25%;">Notice Title</th>
+                                        <th style="width: 50%;">Announcement Details</th>
+                                        <th style="width: 15%;">Posted On</th>
+                                        <th style="width: 10%;" class="text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-notices-table-body">
+                                    <!-- Dynamic Notices -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2B. ADMIN FEEDBACK LIST VIEW -->
+                <section class="view-section" id="view-admin-feedback">
+                    <div class="users-list-card glass">
+                        <!-- Filters Header -->
+                        <div class="table-filters">
+                            <div class="filter-search" style="width: 100%;">
+                                <i data-lucide="search" class="search-icon"></i>
+                                <input type="text" id="admin-feedback-search"
+                                    placeholder="Search general student feedback comments...">
+                            </div>
+                        </div>
+                        <!-- Data Grid Table -->
+                        <div class="table-responsive">
+                            <table class="users-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 15%;">User ID</th>
+                                        <th style="width: 20%;">Student Name</th>
+                                        <th style="width: 15%;">Rating</th>
+                                        <th style="width: 40%;">Comments / Reviews</th>
+                                        <th style="width: 10%;" class="text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-feedback-table-body">
+                                    <!-- Dynamic Feedback rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. UNANSWERED QUESTIONS VIEW -->
+                <section class="view-section" id="view-unanswered">
+                    <div class="unanswered-layout">
+                        <!-- Questions Queue -->
+                        <div class="queue-panel glass">
+                            <div class="panel-header">
+                                <h3>Outstanding Queries Queue</h3>
+                                <p>Unprocessed visitor inputs requiring training answers</p>
+                            </div>
+                            <div class="unanswered-list" id="unanswered-list">
+                                <!-- Dynamically loaded -->
+                            </div>
+                        </div>
+
+                        <!-- Learning Resolution Form -->
+                        <div class="resolve-panel glass disabled" id="resolve-panel">
+                            <div class="resolve-empty-state" id="resolve-empty-state">
+                                <i data-lucide="brain-circuit" class="large-icon"></i>
+                                <h3>No Query Selected</h3>
+                                <p>Select an unanswered query from the list on the left to train the NLP chatbot.</p>
+                            </div>
+
+                            <div class="resolve-form-content hidden" id="resolve-form-content">
+                                <div class="panel-header">
+                                    <span class="badge badge-danger">Training Portal</span>
+                                    <h3>Resolve & Teach Bot</h3>
+                                    <p>Your inputs will be vectorised and added directly to the knowledge base
+                                        (`kb.json`).</p>
+                                </div>
+
+                                <form id="resolve-form">
+                                    <input type="hidden" id="resolve-id">
+
+                                    <div class="form-group">
+                                        <label>User's Original Query</label>
+                                        <div class="display-query-text" id="display-query-text">
+                                            "Query content goes here..."
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-6">
+                                            <label>Select Knowledge Category</label>
+                                            <select id="resolve-category" required>
+                                                <option value="Admissions">Admissions</option>
+                                                <option value="MCA Course Details">MCA Course Details</option>
+                                                <option value="MSc(Cs) Course Details">MSc(Cs) Course Details</option>
+                                                <option value="Fee Structure">Fee Structure</option>
+                                                <option value="Placements">Placements</option>
+                                                <option value="Scholarships">Scholarships</option>
+                                                <option value="Hostel Facilities">Hostel Facilities</option>
+                                                <option value="Library Facilities">Library Facilities</option>
+                                                <option value="Faculty Information">Faculty Information</option>
+                                                <option value="Examination Details">Examination Details</option>
+                                                <option value="Academic Calendar">Academic Calendar</option>
+                                                <option value="Contact Information">Contact Information</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label>Assigned User ID</label>
+                                            <input type="text" id="resolve-user-display" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="resolve-answer">Operator's Authoritative Answer (English)</label>
+                                        <textarea id="resolve-answer"
+                                            placeholder="Type the official university reply..." rows="4"
+                                            required></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="resolve-kannada-answer">ಕನ್ನಡ ಅನುವಾದ ಉತ್ತರ (Kannada Answer -
+                                            Optional)</label>
+                                        <textarea id="resolve-kannada-answer"
+                                            placeholder="ಕನ್ನಡ ಭಾಷೆಯಲ್ಲಿ ಉತ್ತರವನ್ನು ಟೈಪ್ ಮಾಡಿ..." rows="4"></textarea>
+                                        <small class="helper-text">Be accurate. This replies will be vectorized and
+                                            saved in both English and Kannada.</small>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-indigo btn-full">
+                                        <i data-lucide="brain"></i>
+                                        <span>Inject Answer & Save to KB</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. BOT USERS LIST VIEW -->
+                <section class="view-section" id="view-bot-users">
+                    <div class="users-list-card glass">
+                        <!-- Filters Header -->
+                        <div class="table-filters">
+                            <div class="filter-search">
+                                <i data-lucide="search" class="search-icon"></i>
+                                <input type="text" id="user-search-input"
+                                    placeholder="Search users by name or ID...">
+                            </div>
+                            <div class="filter-dropdowns">
+                                <select id="user-status-filter" title="Filter by Status">
+                                    <option value="all">All Statuses</option>
+                                    <option value="Online">Online</option>
+                                    <option value="Offline">Offline</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Data Grid Table -->
+                        <div class="table-responsive">
+                            <table class="users-table">
+                                <thead>
+                                    <tr>
+                                        <th>User Details</th>
+                                        <th>Queries Sent</th>
+                                        <th>Last Active</th>
+                                        <th>Status</th>
+                                        <th class="text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="users-table-body">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. KNOWLEDGE BASE CRUD VIEW -->
+                <section class="view-section" id="view-kb-manager">
+                    <div class="users-list-card glass">
+                        <!-- Filters Header -->
+                        <div class="table-filters">
+                            <div class="filter-search">
+                                <i data-lucide="search" class="search-icon"></i>
+                                <input type="text" id="kb-search-input" placeholder="Search FAQ question or answers...">
+                            </div>
+                            <div class="filter-dropdowns">
+                                <select id="kb-category-filter" title="Filter by Category">
+                                    <option value="all">All Categories</option>
+                                    <option value="Admissions">Admissions</option>
+                                    <option value="MCA Course Details">MCA Course Details</option>
+                                    <option value="MSc(Cs) Course Details">MSc(Cs) Course Details</option>
+                                    <option value="Fee Structure">Fee Structure</option>
+                                    <option value="Placements">Placements</option>
+                                    <option value="Scholarships">Scholarships</option>
+                                    <option value="Hostel Facilities">Hostel Facilities</option>
+                                    <option value="Library Facilities">Library Facilities</option>
+                                    <option value="Faculty Information">Faculty Information</option>
+                                    <option value="Examination Details">Examination Details</option>
+                                    <option value="Academic Calendar">Academic Calendar</option>
+                                    <option value="Contact Information">Contact Information</option>
+                                </select>
+                                <button class="btn btn-indigo" id="add-kb-btn" style="height: 40px;">
+                                    <i data-lucide="plus-circle"></i>
+                                    <span>Add Q&A</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Data Grid Table -->
+                        <div class="table-responsive">
+                            <table class="users-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 15%;">Category</th>
+                                        <th style="width: 30%;">Question</th>
+                                        <th style="width: 35%;">Answer</th>
+                                        <th style="width: 20%;" class="text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="kb-table-body">
+                                    <!-- Dynamic FAQ rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>

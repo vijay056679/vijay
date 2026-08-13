@@ -1,0 +1,164 @@
+{
+  "users": [
+    {
+      "id": "USR-1840",
+      "name": "laxmi",
+      "email": "lsu@gmail.com",
+      "platform": "Web Portal",
+      "last_active": "2026-06-23T09:22:56.012670",
+      "queries_count": 8,
+      "accuracy_rate": 87.5,
+      "status": "Online",
+      "history": [
+        {
+          "sender": "user",
+          "message": "What are the eligibility criteria for MCA admissions?",
+          "timestamp": "2026-06-21T21:49:45.686495"
+        },
+        {
+          "sender": "bot",
+          "message": "Candidates must have passed a Bachelor's degree (BCA, BSc IT, BSc CS, or equivalent) with at least 50% marks (45% for reserved categories) and Mathematics at the 10+2 level or Graduate level.",
+          "timestamp": "2026-06-21T21:49:45.686495",
+          "similarity": 1.0,
+          "category": "Admissions"
+        },
+        {
+          "sender": "user",
+          "message": "I want to know about admission related",
+          "timestamp": "2026-06-21T21:50:12.165253"
+        },
+        {
+          "sender": "bot",
+          "message": "The MCA admission procedure requires candidates to qualify in the national or state-level CET (like MAH-MCA-CET, NIMCET) followed by Centralized Admission Process counseling. Register online and upload verified documents.",
+          "timestamp": "2026-06-21T21:50:12.165253",
+          "similarity": 0.61,
+          "category": "Admissions"
+        },
+        {
+          "sender": "user",
+          "message": "ನನಗೆ ಪ್ರವೇಶದ ಬಗ್ಗೆ",
+          "timestamp": "2026-06-21T21:50:37.364028"
+        },
+        {
+          "sender": "bot",
+          "message": "ಕ್ಷಮಿಸಿ, ನಿಮ್ಮ ಪ್ರಶ್ನೆಗೆ ಹೊಂದಾಣಿಕೆಯಾಗುವ ಉತ್ತರವನ್ನು ಕಂಡುಹಿಡಿಯಲಾಗಲಿಲ್ಲ. ಸಹಾಯ ಆಪರೇಟರ್‌ಗೆ ತಿಳಿಸಲಾಗಿದೆ.",
+          "timestamp": "2026-06-21T21:50:37.364028",
+          "similarity": 0.0,
+          "category": "Courses"
+        },
+        {
+          "sender": "user",
+          "message": "What is the fee structure for the MCA program?",
+          "timestamp": "2026-06-22T22:29:15.581596"
+        },
+        {
+          "sender": "bot",
+          "message": "The annual fee structure for the MCA program is approximately 39000 for tuition fees. Additional university examination fees total around 3150 per sem.",
+          "timestamp": "2026-06-22T22:29:15.581596",
+          "similarity": 1.0,
+          "category": "Fee Structure"
+        },
+        {
+          "sender": "user",
+          "message": "What are the placement statistics for MSc(Cs) graduates?",
+          "timestamp": "2026-06-22T22:59:06.853643"
+        },
+        {
+          "sender": "bot",
+          "message": "MSc(Cs) placement information is tracked separately from MCA. MSc(Cs) students are usually considered for software development, data analysis, testing, teaching assistantship, research, and IT support roles.",
+          "timestamp": "2026-06-22T22:59:06.853643",
+          "similarity": 1.0,
+          "category": "MSc(Cs) Course Details"
+        },
+        {
+          "sender": "user",
+          "message": "What core subjects are covered in the MSc(Cs) curriculum?",
+          "timestamp": "2026-06-22T22:59:23.177394"
+        },
+        {
+          "sender": "bot",
+          "message": "The MSc(Cs) curriculum focuses on computer science foundations, algorithms, operating systems, database systems, networks, software engineering, data science electives, and research/project work.",
+          "timestamp": "2026-06-22T22:59:23.177394",
+          "similarity": 1.35,
+          "category": "MSc(Cs) Course Details"
+        },
+        {
+          "sender": "user",
+          "message": "What is the admission procedure for MSc(Cs)?",
+          "timestamp": "2026-06-22T22:59:30.973127"
+        },
+        {
+          "sender": "bot",
+          "message": "MSc(Cs) admission is processed separately from MCA. Applicants should submit the MSc(Cs) application form, required marksheets and certificates, complete department verification, and confirm admission according to the MSc(Cs) schedule.",
+          "timestamp": "2026-06-22T22:59:30.973127",
+          "similarity": 1.35,
+          "category": "MSc(Cs) Course Details"
+        },
+        {
+          "sender": "user",
+          "message": "What is the official contact number and office email address for admissions?",
+          "timestamp": "2026-06-22T23:01:28.350046"
+        },
+        {
+          "sender": "bot",
+          "message": "For admission inquiries, please call +91-00000000000 or email admissions@college. The office is open from Monday to Saturday, 9:30 AM to 5:30 PM.",
+          "timestamp": "2026-06-22T23:01:28.350046",
+          "similarity": 1.0,
+          "category": "Contact Information"
+        }
+      ]
+    }
+  ],
+  "unanswered": [
+    {
+      "id": "UNAQ-22",
+      "user_id": "USR-1840",
+      "user_name": "laxmi",
+      "question": "ನನಗೆ ಪ್ರವೇಶದ ಬಗ್ಗೆ",
+      "timestamp": "2026-06-21T21:50:37.364028",
+      "category": "Courses"
+    }
+  ],
+  "activities": [
+    {
+      "type": "chat",
+      "message": "User laxmi asked about admissions.",
+      "timestamp": "2026-06-21T21:49:45.686495"
+    },
+    {
+      "type": "chat",
+      "message": "User laxmi asked about admissions.",
+      "timestamp": "2026-06-21T21:50:12.165253"
+    },
+    {
+      "type": "unanswered",
+      "message": "New unanswered question flagged: 'ನನಗೆ ಪ್ರವೇಶದ ಬಗ್ಗೆ'",
+      "timestamp": "2026-06-21T21:50:37.364028"
+    },
+    {
+      "type": "chat",
+      "message": "User laxmi asked about fee structure.",
+      "timestamp": "2026-06-22T22:29:15.581596"
+    },
+    {
+      "type": "chat",
+      "message": "User laxmi asked about msc(cs) course details.",
+      "timestamp": "2026-06-22T22:59:06.853643"
+    },
+    {
+      "type": "chat",
+      "message": "User laxmi asked about msc(cs) course details.",
+      "timestamp": "2026-06-22T22:59:23.177394"
+    },
+    {
+      "type": "chat",
+      "message": "User laxmi asked about msc(cs) course details.",
+      "timestamp": "2026-06-22T22:59:30.973127"
+    },
+    {
+      "type": "chat",
+      "message": "User laxmi asked about contact information.",
+      "timestamp": "2026-06-22T23:01:28.350046"
+    }
+  ]
+}

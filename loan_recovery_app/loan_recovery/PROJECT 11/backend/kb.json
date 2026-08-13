@@ -1,0 +1,1504 @@
+[
+  {
+    "id": 1,
+    "category": "Admissions",
+    "question": "What is the admission procedure for the MCA course?",
+    "answer": "The MCA admission procedure requires candidates to qualify in the PGCET by KEA conducted in 2026. Register online and upload verified documents.",
+    "kannada_question": "MCA ಕೋರ್ಸ್ ಪ್ರವೇಶ ಪ್ರಕ್ರಿಯೆ ಏನು?",
+    "kannada_answer": "MCA ಪ್ರವೇಶ ಪ್ರಕ್ರಿಯೆಯು ರಾಜ್ಯ ಮಟ್ಟದ CET (ಉದಾಹರಣೆಗೆ PGCET) ನಲ್ಲಿ ಅರ್ಹತೆ ಪಡೆಯುವುದನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ. ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ನೋಂದಾಯಿಸಿ ಮತ್ತು ಪರಿಶೀಲಿಸಿದ ದಾಖಲೆಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ."
+  },
+  {
+    "id": 2,
+    "category": "Admissions",
+    "question": "What are the eligibility criteria for MCA admissions?",
+    "answer": "Candidates must have passed a Bachelor's degree (BCA, BSc IT, BSc CS, or equivalent) with at least 50% marks",
+    "kannada_question": "MCA ಪ್ರವೇಶಕ್ಕೆ ಅರ್ಹತಾ ಮಾನದಂಡಗಳು ಯಾವುವು?",
+    "kannada_answer": "ಅಭ್ಯರ್ಥಿಗಳು ಕನಿಷ್ಠ 50% ಅಂಕಗಳೊಂದಿಗೆ (ಮೀಸಲಾತಿ ವರ್ಗದವರಿಗೆ 45%) ಪದವಿ (BCA, BSc IT, BSc CS, ಅಥವಾ ತತ್ಸಮಾನ) ತೇರ್ಗಡೆಯಾಗಿರಬೇಕು."
+  },
+  {
+    "id": 3,
+    "category": "MCA Course Details",
+    "question": "What is the duration and structure of the MCA course?",
+    "answer": "The Master of Computer Applications (MCA) is a 2-year full-time postgraduate course divided into 4 semesters. The curriculum covers software engineering, database management, cloud computing, AI, and project work.",
+    "kannada_question": "MCA ಕೋರ್ಸ್‌ನ ಅವಧಿ ಮತ್ತು ರಚನೆ ಏನು?",
+    "kannada_answer": "ಮಾಸ್ಟರ್ ಆಫ್ ಕಂಪ್ಯೂಟರ್ ಅಪ್ಲಿಕೇಷನ್ಸ್ (MCA) 2 ವರ್ಷಗಳ ಪೂರ್ಣಾವಧಿ ಸ್ನಾತಕೋತ್ತರ ಕೋರ್ಸ್ ಆಗಿದ್ದು, ಇದನ್ನು 4 ಸೆಮಿಸ್ಟರ್‌ಗಳಾಗಿ ವಿಂಗಡಿಸಲಾಗಿದೆ. ಪಠ್ಯಕ್ರಮವು ಸಾಫ್ಟ್‌ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್, ಡೇಟಾಬೇಸ್ ನಿರ್ವಹಣೆ, ಕ್ಲೌಡ್ ಕಂಪ್ಯೂಟಿಂಗ್, AI ಮತ್ತು ಪ್ರಾಜೆಕ್ಟ್ ಕೆಲಸಗಳನ್ನು ಒಳಗೊಂಡಿದೆ."
+  },
+  {
+    "id": 4,
+    "category": "MCA Course Details",
+    "question": "What core subjects are covered in the MCA curriculum?",
+    "answer": "Core subjects include Advanced Data Structures, Web Technologies, Object-Oriented Programming, Database Management Systems, Cyber Security, Artificial Intelligence, and a major project in the final semester.",
+    "kannada_question": "MCA ಪಠ್ಯಕ್ರಮದಲ್ಲಿ ಯಾವ ಮುಖ್ಯ ವಿಷಯಗಳನ್ನು ಒಳಗೊಂಡಿದೆ?",
+    "kannada_answer": "ಮುಖ್ಯ ವಿಷಯಗಳಲ್ಲಿ ಸುಧಾರಿತ ಡೇಟಾ ಸ್ಟ್ರಕ್ಚರ್ಸ್, ವೆಬ್ ತಂತ್ರಜ್ಞಾನಗಳು, ಆಬ್ಜೆಕ್ಟ್-ಓರಿಯೆಂಟೆಡ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್, ಡೇಟಾಬೇಸ್ ಮ್ಯಾನೇಜ್‌ಮೆಂಟ್ ಸಿಸ್ಟಮ್ಸ್, ಸೈಬರ್ ಸೆಕ್ಯುರಿಟಿ, ಆರ್ಟಿಫಿಶಿಯಲ್ ಇಂಟೆಲಿಜೆನ್ಸ್ ಮತ್ತು ಕೊನೆಯ ಸೆಮಿಸ್ಟರ್‌ನಲ್ಲಿ ಪ್ರಮುಖ ಪ್ರಾಜೆಕ್ಟ್ ಸೇರಿವೆ."
+  },
+  {
+    "id": 5,
+    "category": "Fee Structure",
+    "question": "What is the fee structure for the MCA program?",
+    "answer": "The annual fee structure for the MCA program is approximately 40000 for tuition fees. Additional university examination fees and laboratory development fees total around 6600 per year.",
+    "kannada_question": "MCA ಕಾರ್ಯಕ್ರಮದ ಶುಲ್ಕ ರಚನೆ ಏನು?",
+    "kannada_answer": "MCA ಕಾರ್ಯಕ್ರಮದ ವಾರ್ಷಿಕ ಬೋಧನಾ ಶುಲ್ಕ ಸುಮಾರು ₹40000 ಆಗಿದೆ. ಹೆಚ್ಚುವರಿ ವಿಶ್ವವಿದ್ಯಾಲಯ ಪರೀಕ್ಷಾ ಶುಲ್ಕಗಳು ಮತ್ತು ಪ್ರಯೋಗಾಲಯ ಅಭಿವೃದ್ಧಿ ಶುಲ್ಕಗಳು ವರ್ಷಕ್ಕೆ ಸುಮಾರು ₹6600 ಆಗಿರುತ್ತವೆ."
+  },
+  {
+    "id": 6,
+    "category": "Fee Structure",
+    "question": "Are there any installment options for paying fees?",
+    "answer": "Yes, students can pay the tuition fees in two installments (at the start of each term). Prior permission must be obtained from the accounts office during admission.",
+    "kannada_question": "ಶುಲ್ಕ ಪಾವತಿಸಲು ಯಾವುದೇ ಕಂತುಗಳ ಆಯ್ಕೆಗಳು ಇವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವಿದ್ಯಾರ್ಥಿಗಳು ಬೋಧನಾ ಶುಲ್ಕವನ್ನು ಎರಡು ಕಂತುಗಳಲ್ಲಿ ಪಾವತಿಸಬಹುದು (ಪ್ರತಿ ಸೆಮಿಸ್ಟರ್‌ನ ಆರಂಭದಲ್ಲಿ). ಪ್ರವೇಶದ ಸಮಯದಲ್ಲಿ ಹಣಕಾಸು ಕಚೇರಿಯಿಂದ ಪೂರ್ವ ಅನುಮತಿ ಪಡೆಯಬೇಕು."
+  },
+  {
+    "id": 7,
+    "category": "Placements",
+    "question": "What are the placement statistics for MCA graduates?",
+    "answer": "Our MCA program boasts a 2% placement rate. The average salary package is $6,500 (INR 5.2 LPA) per annum, and the highest package offered has reached up to $18,000 (INR 14.5 LPA).",
+    "kannada_question": "MCA ಪದವೀಧರರ ಉದ್ಯೋಗ ನಿಯೋಜನೆ (ಪ್ಲೇಸ್‌ಮೆಂಟ್) ಅಂಕಿಅಂಶಗಳು ಯಾವುವು?",
+    "kannada_answer": "ನಮ್ಮ MCA ಕಾರ್ಯಕ್ರಮವು 92% ಪ್ಲೇಸ್‌ಮೆಂಟ್ ದರವನ್ನು ಹೊಂದಿದೆ. ಸರಾಸರಿ ವೇತನ ಪ್ಯಾಕೇಜ್ ವರ್ಷಕ್ಕೆ ₹5.2 ಲಕ್ಷಗಳಾಗಿದ್ದು, ಗರಿಷ್ಠ ಪ್ಯಾಕೇಜ್ ₹14.5 ಲಕ್ಷಗಳವರೆಗೆ ತಲುಪಿದೆ."
+  },
+  {
+    "id": 8,
+    "category": "Placements",
+    "question": "Which top companies recruit from the college for MCA placements?",
+    "answer": "Top recruiters include TCS, Infosys, Wipro, Capgemini, Cognizant, Tech Mahindra, LTI, and several emerging technology startups.",
+    "kannada_question": "MCA ಪ್ಲೇಸ್‌ಮೆಂಟ್‌ಗಾಗಿ ಕಾಲೇಜಿನಿಂದ ಯಾವ ಪ್ರಮುಖ ಕಂಪನಿಗಳು ನೇಮಕಾತಿ ಮಾಡಿಕೊಳ್ಳುತ್ತವೆ?",
+    "kannada_answer": "ಪ್ರಮುಖ ನೇಮಕಾತಿ ಕಂಪನಿಗಳಲ್ಲಿ TCS, Infosys, Wipro, Capgemini, Cognizant, Tech Mahindra, LTI ಮತ್ತು ಹಲವಾರು ಉದಯೋನ್ಮುಖ ತಂತ್ರಜ್ಞಾನ ಸ್ಟಾರ್ಟ್‌ಅಪ್‌ಗಳು ಸೇರಿವೆ."
+  },
+  {
+    "id": 9,
+    "category": "Scholarships",
+    "question": "Are there scholarships available for MCA students?",
+    "answer": "Yes, we support government scholarships (EBC, post-matric, minority scholarships) and offer merit-based scholarships for CET top scorers (covering up to 50% tuition fees).",
+    "kannada_question": "MCA ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸ್ಕಾಲರ್‌ಶಿಪ್‌ಗಳು ಲಭ್ಯವಿದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ನಾವು ಸರ್ಕಾರಿ ಸ್ಕಾಲರ್‌ಶಿಪ್‌ಗಳನ್ನು (EBC, ಪೋಸ್ಟ್-ಮೆಟ್ರಿಕ್, ಅಲ್ಪಸಂಖ್ಯಾತ ಸ್ಕಾಲರ್‌ಶಿಪ್‌ಗಳು) ಬೆಂಬಲಿಸುತ್ತೇವೆ ಮತ್ತು CET ಯಲ್ಲಿ ಉನ್ನತ ಅಂಕ ಪಡೆದವರಿಗೆ ಅರ್ಹತೆ ಆಧಾರಿತ ಸ್ಕಾಲರ್‌ಶಿಪ್‌ಗಳನ್ನು ನೀಡುತ್ತೇವೆ (50% ವರೆಗೆ ಬೋಧನಾ ಶುಲ್ಕ ಕಡಿತ)."
+  },
+  {
+    "id": 10,
+    "category": "Hostel Facilities",
+    "question": "Does the campus have hostel facilities for students?",
+    "answer": "Yes, the college provides separate, fully-furnished hostels for boys and girls. Facilities include 24/7 high-speed Wi-Fi, a mess serving nutritious meals, hot water, gym access, and round-the-clock security.",
+    "kannada_question": " ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಕ್ಯಾಂಪಸ್‌ನಲ್ಲಿ ಹಾಸ್ಟೆಲ್ ಸೌಲಭ್ಯಗಳಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಕಾಲೇಜು ಹುಡುಗರು ಮತ್ತು ಹುಡುಗಿಯರಿಗೆ ಪ್ರತ್ಯೇಕವಾದ, ಸಂಪೂರ್ಣ ಸುಸಜ್ಜಿತ ಹಾಸ್ಟೆಲ್‌ಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ. ಸೌಲಭ್ಯಗಳಲ್ಲಿ 24/7 ಹೈ-ಸ್ಪೀಡ್ ವೈ-ಫೈ, ಪೌಷ್ಟಿಕ ಊಟ ನೀಡುವ ಮೆಸ್, ಬಿಸಿ ನೀರು, ಜಿಮ್ ಪ್ರವೇಶ ಮತ್ತು ದಿನದ 24 ಗಂಟೆಯೂ ಭದ್ರತೆ ಸೇರಿವೆ."
+  },
+  {
+    "id": 11,
+    "category": "Hostel Facilities",
+    "question": "What is the annual fee for the hostel accommodation?",
+    "answer": "The annual fee for the hostel is  30,000. which includes accommodation, access to utilities, and laundry. Mess charges are billed monthly at roughly  3,200 per month.",
+    "kannada_question": "ಹಾಸ್ಟೆಲ್ ವಸತಿಗಾಗಿ ವಾರ್ಷಿಕ ಶುಲ್ಕ ಎಷ್ಟು?",
+    "kannada_answer": "ಹಾಸ್ಟೆಲ್‌ನ ವಾರ್ಷಿಕ ಶುಲ್ಕ ₹30,000 ಆಗಿದೆ, ಇದರಲ್ಲಿ ವಸತಿ, ವಿದ್ಯುತ್/ನೀರು ಮತ್ತು ಲಾಂಡ್ರಿ ಸೇರಿದೆ. ಮೆಸ್ ವೆಚ್ಚವನ್ನು ಮಾಸಿಕ ಸುಮಾರು ₹3,200 ರಂತೆ ಪ್ರತ್ಯೇಕವಾಗಿ ಬಿಲ್ ಮಾಡಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 12,
+    "category": "Library Facilities",
+    "question": "What library facilities and resources are available for students?",
+    "answer": "The central library houses over 25,000 books, subscriptions to national/international journals, and provides e-resource terminals. It features air-conditioned reading halls open from 8:00 AM to 8:00 PM.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಯಾವ ಗ್ರಂಥಾಲಯ ಸೌಲಭ್ಯಗಳು ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳು ಲಭ್ಯವಿವೆ?",
+    "kannada_answer": "ಕೇಂದ್ರ ಗ್ರಂಥಾಲಯವು 25,000 ಕ್ಕೂ ಹೆಚ್ಚು ಪುಸ್ತಕಗಳು, ರಾಷ್ಟ್ರೀಯ/ಅಂತರರಾಷ್ಟ್ರೀಯ ಜರ್ನಲ್‌ಗಳ ಚಂದಾದಾರಿಕೆಗಳನ್ನು ಹೊಂದಿದೆ ಮತ್ತು ಇ-ಸಂಪನ್ಮೂಲ ಟರ್ಮಿನಲ್‌ಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ. ಇದು ಬೆಳಿಗ್ಗೆ 8:00 ರಿಂದ ರಾತ್ರಿ 8:00 ರವರೆಗೆ ತೆರೆದಿರುವ ಹವಾನಿಯಂತ್ರಿತ ಓದುವ ಹಾಲ್‌ಗಳನ್ನು ಹೊಂದಿದೆ."
+  },
+  {
+    "id": 13,
+    "category": "Faculty Information",
+    "question": "What are the qualifications of the teaching faculty?",
+    "answer": "Over 75% of our core faculty members hold PhDs in computer science.",
+    "kannada_question": "ಬೋಧನಾ ಸಿಬ್ಬಂದಿಯ ಅರ್ಹತೆಗಳು ಯಾವುವು?",
+    "kannada_answer": "ನಮ್ಮ ಶೇಕಡಾ 75 ಕ್ಕೂ ಹೆಚ್ಚು ಪ್ರಮುಖ ಅಧ್ಯಾಪಕರು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ‌ನಲ್ಲಿ ಪಿಎಚ್‌ಡಿ ಹೊಂದಿದ್ದಾರೆ."
+  },
+  {
+    "id": 14,
+    "category": "Examination Details",
+    "question": "When are the semester examinations conducted?",
+    "answer": "Odd semester exams (Sem I & III) are usually held in January and February, and even semester exams (Sem II & IV) are conducted in jul-Aug.",
+    "kannada_question": "ಸೆಮಿಸ್ಟರ್ ಪರೀಕ್ಷೆಗಳನ್ನು ಯಾವಾಗ ನಡೆಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ಬೆಸ ಸೆಮಿಸ್ಟರ್ ಪರೀಕ್ಷೆಗಳನ್ನು (ಸೆಮಿಸ್ಟರ್ I ಮತ್ತು III) ಸಾಮಾನ್ಯವಾಗಿ ಜನವರಿ್ -ಫೆಬ್ರವರಿ ‌ನಲ್ಲಿ ನಡೆಸಲಾಗುತ್ತದೆ ಮತ್ತು ಸಮ ಸೆಮಿಸ್ಟರ್ ಪರೀಕ್ಷೆಗಳನ್ನು (ಸೆಮಿಸ್ಟರ್ II ಮತ್ತು IV) ಜುಲೈ-ಆಗಸ್ಟ್ ತಿಂಗಳಲ್ಲಿ ನಡೆಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 15,
+    "category": "Academic Calendar",
+    "question": "Where can I view the academic calendar?",
+    "answer": "The academic calendar is published at the beginning of each semester on the college website under the 'Academics' tab and displayed on department notice boards.",
+    "kannada_question": "ಶೈಕ್ಷಣಿಕ ವೇಳಾಪಟ್ಟಿಯನ್ನು ನಾನು ಎಲ್ಲಿ ವೀಕ್ಷಿಸಬಹುದು?",
+    "kannada_answer": "ಶೈಕ್ಷಣಿಕ ವೇಳಾಪಟ್ಟಿಯನ್ನು ಪ್ರತಿ ಸೆಮಿಸ್ಟರ್‌ನ ಆರಂಭದಲ್ಲಿ ಕಾಲೇಜು ವೆಬ್‌ಸೈಟ್‌ನ 'ಅಕಾಡೆಮಿಕ್ಸ್' ಟ್ಯಾಬ್ ಅಡಿಯಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ವಿಭಾಗದ ಸೂಚನಾ ಫಲಕಗಳಲ್ಲಿ ಪ್ರದರ್ಶಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 16,
+    "category": "Contact Information",
+    "question": "What is the official contact number and office email address for admissions?",
+    "answer": "For admission inquiries, please call +91-22-27709999 or email admissions@college.edu. The office is open from Monday to Saturday, 9:30 AM to 5:30 PM.",
+    "kannada_question": "ಪ್ರವೇಶಕ್ಕಾಗಿ ಅಧಿಕೃತ ಸಂಪರ್ಕ ಸಂಖ್ಯೆ ಮತ್ತು ಕಚೇರಿ ಇಮೇಲ್ ವಿಳಾಸ ಯಾವುದು?",
+    "kannada_answer": "ಪ್ರವೇಶ ವಿಚಾರಣೆಗಾಗಿ, ದಯವಿಟ್ಟು +91-22-27709999 ಗೆ ಕರೆ ಮಾಡಿ ಅಥವಾ admissions@college.edu ಗೆ ಇಮೇಲ್ ಮಾಡಿ. ಕಚೇರಿಯು ಸೋಮವಾರದಿಂದ ಶನಿವಾರದವರೆಗೆ ಬೆಳಿಗ್ಗೆ 9:30 ರಿಂದ ಸಂಜೆ 5:30 ರವರೆಗೆ ತೆರೆದಿರುತ್ತದೆ."
+  },
+  
+  {
+    "id": 17,
+    "category": "M.Sc. Computer Science",
+    "question": "What is the duration of the M.Sc. Computer Science course?",
+    "answer": "The M.Sc. Computer Science course is a two-year postgraduate program divided into four semesters.",
+    "kannada_question": "M.Sc. ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಕೋರ್ಸ್‌ನ ಅವಧಿ ಎಷ್ಟು?",
+    "kannada_answer": "M.Sc. ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಕೋರ್ಸ್ ಎರಡು ವರ್ಷದ ಸ್ನಾತಕೋತ್ತರ ಕಾರ್ಯಕ್ರಮವಾಗಿದ್ದು ನಾಲ್ಕು ಸೆಮಿಸ್ಟರ್‌ಗಳನ್ನು ಹೊಂದಿದೆ."
+  },
+  {
+    "id": 18,
+    "category": "M.Sc. Computer Science",
+    "question": "Who can apply for the M.Sc. Computer Science program?",
+    "answer": "Candidates with a bachelor's degree in Computer Science, Information Technology, or related disciplines are eligible.",
+    "kannada_question": "M.Sc. ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಯಾರು ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು?",
+    "kannada_answer": "ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್, ಐಟಿ ಅಥವಾ ಸಂಬಂಧಿತ ವಿಷಯಗಳಲ್ಲಿ ಪದವಿ ಪಡೆದ ಅಭ್ಯರ್ಥಿಗಳು ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು."
+  },
+  {
+    "id": 19,
+    "category": "Admissions",
+    "question": "When does the admission process usually begin?",
+    "answer": "Admissions generally begin after the university releases the official admission notification.",
+    "kannada_question": "ಪ್ರವೇಶ ಪ್ರಕ್ರಿಯೆ ಸಾಮಾನ್ಯವಾಗಿ ಯಾವಾಗ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ಅಧಿಕೃತ ಅಧಿಸೂಚನೆ ಬಿಡುಗಡೆಯಾದ ನಂತರ ಪ್ರವೇಶ ಪ್ರಕ್ರಿಯೆ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 20,
+    "category": "Admissions",
+    "question": "Can students apply online for admission?",
+    "answer": "Yes, eligible candidates can submit their applications through the university admission portal whenever online applications are announced.",
+    "kannada_question": "ಪ್ರವೇಶಕ್ಕೆ ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಅಧಿಸೂಚನೆ ಪ್ರಕಟವಾದಾಗ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಪ್ರವೇಶ ಪೋರ್ಟಲ್ ಮೂಲಕ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು."
+  },
+  {
+    "id": 21,
+    "category": "Notifications",
+    "question": "Where are department notifications published?",
+    "answer": "Department notifications are displayed on the notice board and the official university website.",
+    "kannada_question": "ವಿಭಾಗದ ಅಧಿಸೂಚನೆಗಳನ್ನು ಎಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ವಿಭಾಗದ ಅಧಿಸೂಚನೆಗಳನ್ನು ಸೂಚನಾ ಫಲಕ ಮತ್ತು ಅಧಿಕೃತ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 22,
+    "category": "Notifications",
+    "question": "How can students receive important announcements?",
+    "answer": "Students should regularly check the department notice board and official university website.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿಗಳು ಪ್ರಮುಖ ಪ್ರಕಟಣೆಗಳನ್ನು ಹೇಗೆ ಪಡೆಯಬಹುದು?",
+    "kannada_answer": "ವಿದ್ಯಾರ್ಥಿಗಳು ವಿಭಾಗದ ಸೂಚನಾ ಫಲಕ ಮತ್ತು ವಿಶ್ವವಿದ್ಯಾಲಯದ ವೆಬ್‌ಸೈಟ್ ಅನ್ನು ನಿಯಮಿತವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
+  },
+  {
+    "id": 23,
+    "category": "Library",
+    "question": "Can MCA students borrow library books?",
+    "answer": "Yes, MCA students can borrow books according to the library rules.",
+    "kannada_question": "MCA ವಿದ್ಯಾರ್ಥಿಗಳು ಗ್ರಂಥಾಲಯದ ಪುಸ್ತಕಗಳನ್ನು ಪಡೆಯಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಗ್ರಂಥಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಪುಸ್ತಕಗಳನ್ನು ಪಡೆಯಬಹುದು."
+  },
+  {
+    "id": 24,
+    "category": "Library",
+    "question": "Does the library provide digital resources?",
+    "answer": "Yes, students can access e-books, journals, and digital learning resources.",
+    "kannada_question": "ಗ್ರಂಥಾಲಯದಲ್ಲಿ ಡಿಜಿಟಲ್ ಸಂಪನ್ಮೂಲಗಳಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಇ-ಪುಸ್ತಕಗಳು, ಜರ್ನಲ್‌ಗಳು ಮತ್ತು ಡಿಜಿಟಲ್ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಬಳಸಬಹುದು."
+  },
+  {
+    "id": 25,
+    "category": "Laboratory",
+    "question": "Are computer laboratories available for practical sessions?",
+    "answer": "Yes, the department provides computer laboratories equipped for practical classes.",
+    "kannada_question": "ಪ್ರಾಯೋಗಿಕ ತರಗತಿಗಳಿಗೆ ಕಂಪ್ಯೂಟರ್ ಪ್ರಯೋಗಾಲಯಗಳಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ರಾಯೋಗಿಕ ತರಗತಿಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಪ್ರಯೋಗಾಲಯಗಳಿವೆ."
+  },
+  {
+    "id": 26,
+    "category": "Laboratory",
+    "question": "Is internet access available in the computer labs?",
+    "answer": "Yes, internet access is available for academic and research purposes.",
+    "kannada_question": "ಪ್ರಯೋಗಾಲಯಗಳಲ್ಲಿ ಇಂಟರ್ನೆಟ್ ಸೌಲಭ್ಯವಿದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಶೈಕ್ಷಣಿಕ ಮತ್ತು ಸಂಶೋಧನಾ ಉದ್ದೇಶಗಳಿಗೆ ಇಂಟರ್ನೆಟ್ ಲಭ್ಯವಿದೆ."
+  },
+  {
+    "id": 27,
+    "category": "Placements",
+    "question": "Does the department organize placement training?",
+    "answer": "Yes, placement training programs are organized to improve employability skills.",
+    "kannada_question": "ವಿಭಾಗವು ಪ್ಲೇಸ್‌ಮೆಂಟ್ ತರಬೇತಿ ನೀಡುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಉದ್ಯೋಗ ಕೌಶಲ್ಯ ಅಭಿವೃದ್ಧಿಗಾಗಿ ಪ್ಲೇಸ್‌ಮೆಂಟ್ ತರಬೇತಿಗಳನ್ನು ಆಯೋಜಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 28,
+    "category": "Projects",
+    "question": "Is a project mandatory in the final semester?",
+    "answer": "Yes, students must complete a project as part of the final semester curriculum.",
+    "kannada_question": "ಕೊನೆಯ ಸೆಮಿಸ್ಟರ್‌ನಲ್ಲಿ ಪ್ರಾಜೆಕ್ಟ್ ಕಡ್ಡಾಯವೇ?",
+    "kannada_answer": "ಹೌದು, ಅಂತಿಮ ಸೆಮಿಸ್ಟರ್‌ನಲ್ಲಿ ಪ್ರಾಜೆಕ್ಟ್ ಕಡ್ಡಾಯವಾಗಿದೆ."
+  },
+  {
+    "id": 29,
+    "category": "Examination",
+    "question": "Where can students find examination notifications?",
+    "answer": "Examination notifications are available on the university website and department notice board.",
+    "kannada_question": "ಪರೀಕ್ಷೆಯ ಅಧಿಸೂಚನೆಗಳನ್ನು ಎಲ್ಲಿ ನೋಡಬಹುದು?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ವೆಬ್‌ಸೈಟ್ ಮತ್ತು ಸೂಚನಾ ಫಲಕದಲ್ಲಿ ಲಭ್ಯವಿರುತ್ತವೆ."
+  },
+  {
+    "id": 30,
+    "category": "Results",
+    "question": "How can students check semester results?",
+    "answer": "Students can check semester results through the official university result portal.",
+    "kannada_question": "ಸೆಮಿಸ್ಟರ್ ಫಲಿತಾಂಶವನ್ನು ಹೇಗೆ ನೋಡಬಹುದು?",
+    "kannada_answer": "ಅಧಿಕೃತ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಫಲಿತಾಂಶ ಪೋರ್ಟಲ್ ಮೂಲಕ ನೋಡಬಹುದು."
+  },
+  {
+    "id": 31,
+    "category": "Scholarships",
+    "question": "Can postgraduate students apply for government scholarships?",
+    "answer": "Eligible postgraduate students may apply for applicable government scholarship schemes.",
+    "kannada_question": "ಸ್ನಾತಕೋತ್ತರ ವಿದ್ಯಾರ್ಥಿಗಳು ಸರ್ಕಾರಿ ವಿದ್ಯಾರ್ಥಿವೇತನಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದೇ?",
+    "kannada_answer": "ಅರ್ಹ ವಿದ್ಯಾರ್ಥಿಗಳು ಸರ್ಕಾರದ ವಿದ್ಯಾರ್ಥಿವೇತನ ಯೋಜನೆಗಳಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು."
+  },
+  {
+    "id": 32,
+    "category": "Hostel",
+    "question": "Is hostel accommodation available for postgraduate students?",
+    "answer": "Hostel accommodation is available subject to availability and university rules.",
+    "kannada_question": "ಸ್ನಾತಕೋತ್ತರ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಹಾಸ್ಟೆಲ್ ಸೌಲಭ್ಯವಿದೆಯೇ?",
+    "kannada_answer": "ಲಭ್ಯತೆ ಮತ್ತು ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಹಾಸ್ಟೆಲ್ ಸೌಲಭ್ಯ ಲಭ್ಯವಿದೆ."
+  },
+  {
+    "id": 33,
+    "category": "Faculty",
+    "question": "Are faculty members available for academic guidance?",
+    "answer": "Yes, faculty members provide academic guidance during working hours.",
+    "kannada_question": "ಅಧ್ಯಾಪಕರು ಶೈಕ್ಷಣಿಕ ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತಾರೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಕೆಲಸದ ವೇಳೆಯಲ್ಲಿ ಶೈಕ್ಷಣಿಕ ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತಾರೆ."
+  },
+  {
+    "id": 34,
+    "category": "Timetable",
+    "question": "Where is the class timetable displayed?",
+    "answer": "The class timetable is displayed on the department notice board and shared with students.",
+    "kannada_question": "ತರಗತಿ ವೇಳಾಪಟ್ಟಿಯನ್ನು ಎಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ವಿಭಾಗದ ಸೂಚನಾ ಫಲಕದಲ್ಲಿ ಮತ್ತು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಹಂಚಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 35,
+    "category": "Academic Calendar",
+    "question": "Does the department follow the university academic calendar?",
+    "answer": "Yes, all academic activities are conducted according to the university academic calendar.",
+    "kannada_question": "ವಿಭಾಗವು ವಿಶ್ವವಿದ್ಯಾಲಯದ ಶೈಕ್ಷಣಿಕ ಕ್ಯಾಲೆಂಡರ್ ಅನುಸರಿಸುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಎಲ್ಲಾ ಶೈಕ್ಷಣಿಕ ಚಟುವಟಿಕೆಗಳು ವಿಶ್ವವಿದ್ಯಾಲಯದ ಕ್ಯಾಲೆಂಡರ್ ಪ್ರಕಾರ ನಡೆಯುತ್ತವೆ."
+  },
+  {
+    "id": 36,
+    "category": "General Enquiry",
+    "question": "Where is the Department of Computer Science located?",
+    "answer": "The Department of Computer Science is located on the Karnataka University Dharwad campus.",
+    "kannada_question": "ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ವಿಭಾಗ ಎಲ್ಲಿದೆ?",
+    "kannada_answer": "ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ವಿಭಾಗ ಕರ್ನಾಟಕ ವಿಶ್ವವಿದ್ಯಾಲಯ ಧಾರವಾಡ ಕ್ಯಾಂಪಸ್‌ನಲ್ಲಿ ಇದೆ."
+  },
+
+  {
+    "id": 57,
+    "category": "Admissions",
+    "question": "Can students edit their application after submission?",
+    "answer": "Application corrections are allowed only if the university announces a correction window.",
+    "kannada_question": "ಅರ್ಜಿ ಸಲ್ಲಿಸಿದ ನಂತರ ತಿದ್ದುಪಡಿ ಮಾಡಬಹುದೇ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯವು ತಿದ್ದುಪಡಿ ಅವಕಾಶ ನೀಡಿದರೆ ಮಾತ್ರ ಅರ್ಜಿಯನ್ನು ತಿದ್ದುಪಡಿ ಮಾಡಬಹುದು."
+  },
+  {
+    "id": 58,
+    "category": "Admissions",
+    "question": "Is migration certificate required for admission?",
+    "answer": "Migration certificate is required for students coming from other universities whenever applicable.",
+    "kannada_question": "ಪ್ರವೇಶಕ್ಕೆ ಮೈಗ್ರೇಶನ್ ಪ್ರಮಾಣಪತ್ರ ಅಗತ್ಯವೇ?",
+    "kannada_answer": "ಇತರೆ ವಿಶ್ವವಿದ್ಯಾಲಯಗಳಿಂದ ಬರುವ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅಗತ್ಯವಿದ್ದರೆ ಮೈಗ್ರೇಶನ್ ಪ್ರಮಾಣಪತ್ರ ಬೇಕಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 59,
+    "category": "Eligibility",
+    "question": "Is there an age limit for MCA admission?",
+    "answer": "Admissions are governed by the eligibility rules specified in the university notification.",
+    "kannada_question": "MCA ಪ್ರವೇಶಕ್ಕೆ ವಯೋಮಿತಿ ಇದೆಯೇ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ಅಧಿಸೂಚನೆಯಲ್ಲಿ ನೀಡಿರುವ ಅರ್ಹತಾ ನಿಯಮಗಳ ಪ್ರಕಾರ ಪ್ರವೇಶ ನೀಡಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 60,
+    "category": "Eligibility",
+    "question": "Can final year students apply for admission?",
+    "answer": "Final year students may apply if permitted in the official admission notification.",
+    "kannada_question": "ಅಂತಿಮ ವರ್ಷದ ವಿದ್ಯಾರ್ಥಿಗಳು ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದೇ?",
+    "kannada_answer": "ಅಧಿಕೃತ ಪ್ರವೇಶ ಅಧಿಸೂಚನೆಯಲ್ಲಿ ಅವಕಾಶ ನೀಡಿದ್ದರೆ ಅಂತಿಮ ವರ್ಷದ ವಿದ್ಯಾರ್ಥಿಗಳು ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು."
+  },
+  {
+    "id": 61,
+    "category": "Notifications",
+    "question": "Where are internal assessment schedules announced?",
+    "answer": "Internal assessment schedules are announced by the department through official notices.",
+    "kannada_question": "ಆಂತರಿಕ ಪರೀಕ್ಷೆಯ ವೇಳಾಪಟ್ಟಿಯನ್ನು ಎಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ವಿಭಾಗವು ಅಧಿಕೃತ ಸೂಚನೆಗಳ ಮೂಲಕ ಪ್ರಕಟಿಸುತ್ತದೆ."
+  },
+  {
+    "id": 62,
+    "category": "Notifications",
+    "question": "How can students know about seminar announcements?",
+    "answer": "Seminar announcements are displayed on department notice boards and official communication channels.",
+    "kannada_question": "ಸೆಮಿನಾರ್ ಮಾಹಿತಿ ಹೇಗೆ ತಿಳಿಯಬಹುದು?",
+    "kannada_answer": "ವಿಭಾಗದ ಸೂಚನಾ ಫಲಕ ಮತ್ತು ಅಧಿಕೃತ ಮಾಹಿತಿ ವ್ಯವಸ್ಥೆಗಳ ಮೂಲಕ ತಿಳಿಯಬಹುದು."
+  },
+  {
+    "id": 63,
+    "category": "Library",
+    "question": "Is a library identity card required?",
+    "answer": "Students should carry their valid identity card while using library services.",
+    "kannada_question": "ಗ್ರಂಥಾಲಯಕ್ಕೆ ಗುರುತಿನ ಚೀಟಿ ಅಗತ್ಯವೇ?",
+    "kannada_answer": "ಗ್ರಂಥಾಲಯ ಬಳಸುವಾಗ ಮಾನ್ಯ ಗುರುತಿನ ಚೀಟಿ ಹೊಂದಿರಬೇಕು."
+  },
+  {
+    "id": 64,
+    "category": "Library",
+    "question": "Can students renew borrowed books?",
+    "answer": "Books may be renewed according to library rules if they are not reserved.",
+    "kannada_question": "ಪುಸ್ತಕಗಳನ್ನು ನವೀಕರಿಸಬಹುದೇ?",
+    "kannada_answer": "ಗ್ರಂಥಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಪುಸ್ತಕಗಳನ್ನು ನವೀಕರಿಸಬಹುದು."
+  },
+  {
+    "id": 65,
+    "category": "Laboratory",
+    "question": "Are software development tools available in the lab?",
+    "answer": "The laboratories provide software required for academic practical sessions.",
+    "kannada_question": "ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಸಾಫ್ಟ್‌ವೇರ್ ಉಪಕರಣಗಳಿವೆಯೇ?",
+    "kannada_answer": "ಶೈಕ್ಷಣಿಕ ಪ್ರಾಯೋಗಿಕಗಳಿಗೆ ಅಗತ್ಯವಾದ ಸಾಫ್ಟ್‌ವೇರ್ ಲಭ್ಯವಿರುತ್ತದೆ."
+  },
+  {
+    "id": 66,
+    "category": "Laboratory",
+    "question": "Are laboratory rules displayed for students?",
+    "answer": "Yes, laboratory safety and usage rules are displayed inside the laboratory.",
+    "kannada_question": "ಲ್ಯಾಬ್ ನಿಯಮಗಳನ್ನು ಪ್ರದರ್ಶಿಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ರಯೋಗಾಲಯದ ನಿಯಮಗಳನ್ನು ಪ್ರದರ್ಶಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 67,
+    "category": "Faculty",
+    "question": "Can students seek project guidance from faculty?",
+    "answer": "Faculty members guide students in selecting and completing academic projects.",
+    "kannada_question": "ಪ್ರಾಜೆಕ್ಟ್ ಮಾರ್ಗದರ್ಶನ ಪಡೆಯಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಅಧ್ಯಾಪಕರು ಪ್ರಾಜೆಕ್ಟ್ ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತಾರೆ."
+  },
+  {
+    "id": 68,
+    "category": "Faculty",
+    "question": "Are faculty members involved in research?",
+    "answer": "Faculty members participate in teaching and research activities as per university norms.",
+    "kannada_question": "ಅಧ್ಯಾಪಕರು ಸಂಶೋಧನೆಯಲ್ಲಿ ಭಾಗವಹಿಸುತ್ತಾರೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಸಂಶೋಧನಾ ಚಟುವಟಿಕೆಗಳಲ್ಲಿ ಭಾಗವಹಿಸುತ್ತಾರೆ."
+  },
+  {
+    "id": 69,
+    "category": "Projects",
+    "question": "Can projects be completed in groups?",
+    "answer": "Project guidelines specify whether projects are individual or group based.",
+    "kannada_question": "ಗುಂಪಿನಲ್ಲಿ ಪ್ರಾಜೆಕ್ಟ್ ಮಾಡಬಹುದೇ?",
+    "kannada_answer": "ಪ್ರಾಜೆಕ್ಟ್ ಮಾರ್ಗಸೂಚಿಗಳ ಪ್ರಕಾರ ವೈಯಕ್ತಿಕ ಅಥವಾ ಗುಂಪು ಪ್ರಾಜೆಕ್ಟ್ ಆಗಿರುತ್ತದೆ."
+  },
+  {
+    "id": 70,
+    "category": "Projects",
+    "question": "Is project evaluation conducted by faculty?",
+    "answer": "Projects are evaluated according to university regulations.",
+    "kannada_question": "ಪ್ರಾಜೆಕ್ಟ್ ಮೌಲ್ಯಮಾಪನವನ್ನು ಅಧ್ಯಾಪಕರು ಮಾಡುತ್ತಾರೆಯೇ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಮೌಲ್ಯಮಾಪನ ಮಾಡಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 71,
+    "category": "Internship",
+    "question": "Can internships be completed during semester breaks?",
+    "answer": "Students may undertake internships during vacation periods subject to academic requirements.",
+    "kannada_question": "ರಜೆ ಸಮಯದಲ್ಲಿ ಇಂಟರ್ನ್‌ಶಿಪ್ ಮಾಡಬಹುದೇ?",
+    "kannada_answer": "ಶೈಕ್ಷಣಿಕ ನಿಯಮಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ರಜೆ ಸಮಯದಲ್ಲಿ ಇಂಟರ್ನ್‌ಶಿಪ್ ಮಾಡಬಹುದು."
+  },
+  {
+    "id": 72,
+    "category": "Placements",
+    "question": "Does the department organize career guidance sessions?",
+    "answer": "Career guidance programs are conducted periodically for students.",
+    "kannada_question": "ವೃತ್ತಿ ಮಾರ್ಗದರ್ಶನ ಕಾರ್ಯಕ್ರಮಗಳಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವೃತ್ತಿ ಮಾರ್ಗದರ್ಶನ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಆಯೋಜಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 73,
+    "category": "Examination",
+    "question": "What happens if a student misses an examination?",
+    "answer": "Students should follow the university examination rules for absentee cases.",
+    "kannada_question": "ಪರೀಕ್ಷೆಗೆ ಗೈರಾದರೆ ಏನು ಮಾಡಬೇಕು?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ಪರೀಕ್ಷಾ ನಿಯಮಗಳನ್ನು ಅನುಸರಿಸಬೇಕು."
+  },
+  {
+    "id": 74,
+    "category": "Examination",
+    "question": "Are hall tickets mandatory for examinations?",
+    "answer": "Yes, students should carry their hall ticket for every university examination.",
+    "kannada_question": "ಪರೀಕ್ಷೆಗೆ ಹಾಲ್ ಟಿಕೆಟ್ ಕಡ್ಡಾಯವೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ರತಿಯೊಂದು ಪರೀಕ್ಷೆಗೆ ಹಾಲ್ ಟಿಕೆಟ್ ಕಡ್ಡಾಯವಾಗಿದೆ."
+  },
+  {
+    "id": 75,
+    "category": "Results",
+    "question": "How are result notifications announced?",
+    "answer": "Result notifications are announced through official university channels.",
+    "kannada_question": "ಫಲಿತಾಂಶ ಪ್ರಕಟಣೆ ಹೇಗೆ ತಿಳಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ಅಧಿಕೃತ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಮೂಲಕ ಫಲಿತಾಂಶ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 76,
+    "category": "General Enquiry",
+    "question": "Who should students contact for academic enquiries?",
+    "answer": "Students should contact the Department of Computer Science office for academic enquiries.",
+    "kannada_question": "ಶೈಕ್ಷಣಿಕ ಮಾಹಿತಿಗಾಗಿ ಯಾರನ್ನು ಸಂಪರ್ಕಿಸಬೇಕು?",
+    "kannada_answer": "ಶೈಕ್ಷಣಿಕ ಮಾಹಿತಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ವಿಭಾಗದ ಕಚೇರಿಯನ್ನು ಸಂಪರ್ಕಿಸಬೇಕು."
+  },
+
+  {
+    "id": 77,
+    "category": "Timetable",
+    "question": "When is the class timetable published?",
+    "answer": "The class timetable is published before the commencement of each semester.",
+    "kannada_question": "ತರಗತಿ ವೇಳಾಪಟ್ಟಿಯನ್ನು ಯಾವಾಗ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ಪ್ರತಿ ಸೆಮಿಸ್ಟರ್ ಆರಂಭಕ್ಕೂ ಮುನ್ನ ತರಗತಿ ವೇಳಾಪಟ್ಟಿಯನ್ನು ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 78,
+    "category": "Timetable",
+    "question": "Can the timetable change during the semester?",
+    "answer": "Yes, the department may revise the timetable whenever necessary.",
+    "kannada_question": "ಸೆಮಿಸ್ಟರ್ ಮಧ್ಯದಲ್ಲಿ ವೇಳಾಪಟ್ಟಿ ಬದಲಾಗಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಅಗತ್ಯವಿದ್ದರೆ ವಿಭಾಗವು ವೇಳಾಪಟ್ಟಿಯನ್ನು ಪರಿಷ್ಕರಿಸಬಹುದು."
+  },
+  {
+    "id": 79,
+    "category": "Attendance",
+    "question": "Is attendance compulsory for laboratory classes?",
+    "answer": "Yes, attendance is compulsory for laboratory sessions as per university regulations.",
+    "kannada_question": "ಲ್ಯಾಬ್ ತರಗತಿಗಳಿಗೆ ಹಾಜರಾತಿ ಕಡ್ಡಾಯವೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಲ್ಯಾಬ್ ತರಗತಿಗಳಿಗೆ ಹಾಜರಾತಿ ಕಡ್ಡಾಯವಾಗಿದೆ."
+  },
+  {
+    "id": 80,
+    "category": "Attendance",
+    "question": "What is the minimum attendance required?",
+    "answer": "Students should maintain the attendance percentage prescribed by the university.",
+    "kannada_question": "ಕನಿಷ್ಠ ಹಾಜರಾತಿ ಎಷ್ಟು ಇರಬೇಕು?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯ ನಿಗದಿಪಡಿಸಿದ ಹಾಜರಾತಿಯನ್ನು ವಿದ್ಯಾರ್ಥಿಗಳು ಕಾಪಾಡಿಕೊಳ್ಳಬೇಕು."
+  },
+  {
+    "id": 81,
+    "category": "Events",
+    "question": "Does the department organize technical events?",
+    "answer": "Yes, the department organizes technical events, coding competitions, and seminars.",
+    "kannada_question": "ವಿಭಾಗವು ತಾಂತ್ರಿಕ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಆಯೋಜಿಸುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಭಾಗವು ತಾಂತ್ರಿಕ ಕಾರ್ಯಕ್ರಮಗಳು, ಕೋಡಿಂಗ್ ಸ್ಪರ್ಧೆಗಳು ಮತ್ತು ಸೆಮಿನಾರ್‌ಗಳನ್ನು ಆಯೋಜಿಸುತ್ತದೆ."
+  },
+  {
+    "id": 82,
+    "category": "Events",
+    "question": "Can students participate in inter-college competitions?",
+    "answer": "Yes, eligible students are encouraged to participate in inter-college competitions.",
+    "kannada_question": "ಅಂತರ ಕಾಲೇಜು ಸ್ಪರ್ಧೆಗಳಲ್ಲಿ ಭಾಗವಹಿಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಅರ್ಹ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಭಾಗವಹಿಸಲು ಪ್ರೋತ್ಸಾಹಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 83,
+    "category": "Workshop",
+    "question": "Are workshops conducted for MCA students?",
+    "answer": "Yes, workshops are conducted on emerging technologies and software development.",
+    "kannada_question": "MCA ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಕಾರ್ಯಾಗಾರಗಳನ್ನು ನಡೆಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಹೊಸ ತಂತ್ರಜ್ಞಾನಗಳು ಮತ್ತು ಸಾಫ್ಟ್‌ವೇರ್ ಅಭಿವೃದ್ಧಿ ಕುರಿತು ಕಾರ್ಯಾಗಾರಗಳನ್ನು ನಡೆಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 84,
+    "category": "Workshop",
+    "question": "Do students receive certificates after workshops?",
+    "answer": "Certificates may be issued for eligible workshop participants.",
+    "kannada_question": "ಕಾರ್ಯಾಗಾರದ ನಂತರ ಪ್ರಮಾಣಪತ್ರ ನೀಡಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಅರ್ಹ ಭಾಗವಹಿಸುವವರಿಗೆ ಪ್ರಮಾಣಪತ್ರ ನೀಡಬಹುದು."
+  },
+  {
+    "id": 85,
+    "category": "Seminars",
+    "question": "Are guest lectures organized by the department?",
+    "answer": "Yes, guest lectures are organized to expose students to current industry trends.",
+    "kannada_question": "ವಿಭಾಗವು ಅತಿಥಿ ಉಪನ್ಯಾಸಗಳನ್ನು ಆಯೋಜಿಸುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಉದ್ಯಮದ ಇತ್ತೀಚಿನ ಬೆಳವಣಿಗೆಗಳ ಬಗ್ಗೆ ತಿಳಿಸಲು ಅತಿಥಿ ಉಪನ್ಯಾಸಗಳನ್ನು ಆಯೋಜಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 86,
+    "category": "Seminars",
+    "question": "Can students present papers in seminars?",
+    "answer": "Yes, students are encouraged to present technical papers during seminars.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿಗಳು ಸೆಮಿನಾರ್‌ನಲ್ಲಿ ಪ್ರಬಂಧ ಮಂಡಿಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ತಾಂತ್ರಿಕ ಪ್ರಬಂಧಗಳನ್ನು ಮಂಡಿಸಲು ಪ್ರೋತ್ಸಾಹಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 87,
+    "category": "Student Services",
+    "question": "Does the department provide student counseling?",
+    "answer": "Yes, academic counseling is available for students.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸಮಾಲೋಚನೆ ಸೌಲಭ್ಯವಿದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಶೈಕ್ಷಣಿಕ ಸಮಾಲೋಚನೆ ಲಭ್ಯವಿದೆ."
+  },
+  {
+    "id": 88,
+    "category": "Student Services",
+    "question": "Can students obtain bonafide certificates?",
+    "answer": "Yes, bonafide certificates are issued on request through the department office.",
+    "kannada_question": "ಬೋನಾಫೈಡ್ ಪ್ರಮಾಣಪತ್ರ ಪಡೆಯಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಭಾಗದ ಕಚೇರಿ ಮೂಲಕ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ ಪಡೆಯಬಹುದು."
+  },
+  {
+    "id": 89,
+    "category": "Certificates",
+    "question": "How can students apply for a transfer certificate?",
+    "answer": "Students should submit an application following university procedures.",
+    "kannada_question": "ವರ್ಗಾವಣೆ ಪ್ರಮಾಣಪತ್ರಕ್ಕೆ ಹೇಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು."
+  },
+  {
+    "id": 90,
+    "category": "Certificates",
+    "question": "Can students obtain provisional certificates?",
+    "answer": "Yes, provisional certificates are issued according to university regulations.",
+    "kannada_question": "ತಾತ್ಕಾಲಿಕ ಪ್ರಮಾಣಪತ್ರ ಪಡೆಯಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ನೀಡಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 91,
+    "category": "Convocation",
+    "question": "How can graduates apply for convocation?",
+    "answer": "Graduates should apply as per the university convocation notification.",
+    "kannada_question": "ದೀಕ್ಷಾಂತ ಸಮಾರಂಭಕ್ಕೆ ಹೇಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ದೀಕ್ಷಾಂತ ಅಧಿಸೂಚನೆಯ ಪ್ರಕಾರ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು."
+  },
+  {
+    "id": 92,
+    "category": "Convocation",
+    "question": "When are degree certificates distributed?",
+    "answer": "Degree certificates are distributed according to the university convocation schedule.",
+    "kannada_question": "ಪದವಿ ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ಯಾವಾಗ ವಿತರಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ದೀಕ್ಷಾಂತ ವೇಳಾಪಟ್ಟಿಯ ಪ್ರಕಾರ ವಿತರಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 93,
+    "category": "Computer Lab",
+    "question": "Are programming software packages available in the lab?",
+    "answer": "Yes, software required for academic practical work is installed in the laboratories.",
+    "kannada_question": "ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಸಾಫ್ಟ್‌ವೇರ್ ಲಭ್ಯವಿದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ರಾಯೋಗಿಕ ಕಾರ್ಯಗಳಿಗೆ ಅಗತ್ಯವಾದ ಸಾಫ್ಟ್‌ವೇರ್ ಲಭ್ಯವಿದೆ."
+  },
+  {
+    "id": 94,
+    "category": "Computer Lab",
+    "question": "Can students use the lab outside practical hours?",
+    "answer": "Additional laboratory access is subject to departmental approval.",
+    "kannada_question": "ಪ್ರಾಯೋಗಿಕ ಸಮಯದ ಹೊರತಾಗಿ ಲ್ಯಾಬ್ ಬಳಸಬಹುದೇ?",
+    "kannada_answer": "ವಿಭಾಗದ ಅನುಮತಿಯೊಂದಿಗೆ ಬಳಸಬಹುದು."
+  },
+  {
+    "id": 95,
+    "category": "General Enquiry",
+    "question": "Does the department have Wi-Fi facilities?",
+    "answer": "Campus internet facilities are available according to university policies.",
+    "kannada_question": "ವಿಭಾಗದಲ್ಲಿ ವೈ-ಫೈ ಸೌಲಭ್ಯವಿದೆಯೇ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಇಂಟರ್ನೆಟ್ ಸೌಲಭ್ಯ ಲಭ್ಯವಿದೆ."
+  },
+  {
+    "id": 96,
+    "category": "General Enquiry",
+    "question": "Where can students submit academic applications?",
+    "answer": "Academic applications should be submitted to the Department of Computer Science office.",
+    "kannada_question": "ಶೈಕ್ಷಣಿಕ ಅರ್ಜಿಗಳನ್ನು ಎಲ್ಲಿ ಸಲ್ಲಿಸಬೇಕು?",
+    "kannada_answer": "ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ವಿಭಾಗದ ಕಚೇರಿಯಲ್ಲಿ ಸಲ್ಲಿಸಬೇಕು."
+  },
+
+  {
+    "id": 97,
+    "category": "Academic Calendar",
+    "question": "When is the academic calendar released?",
+    "answer": "The academic calendar is released before the commencement of each academic year or semester.",
+    "kannada_question": "ಶೈಕ್ಷಣಿಕ ಕ್ಯಾಲೆಂಡರ್ ಯಾವಾಗ ಪ್ರಕಟವಾಗುತ್ತದೆ?",
+    "kannada_answer": "ಪ್ರತಿ ಶೈಕ್ಷಣಿಕ ವರ್ಷ ಅಥವಾ ಸೆಮಿಸ್ಟರ್ ಆರಂಭಕ್ಕೂ ಮುನ್ನ ಶೈಕ್ಷಣಿಕ ಕ್ಯಾಲೆಂಡರ್ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 98,
+    "category": "Academic Calendar",
+    "question": "Does the academic calendar include examination dates?",
+    "answer": "Yes, the academic calendar generally includes important academic and examination schedules.",
+    "kannada_question": "ಶೈಕ್ಷಣಿಕ ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ಪರೀಕ್ಷೆಯ ದಿನಾಂಕಗಳಿರುತ್ತವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಶೈಕ್ಷಣಿಕ ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ಪ್ರಮುಖ ಶೈಕ್ಷಣಿಕ ಹಾಗೂ ಪರೀಕ್ಷೆಯ ವೇಳಾಪಟ್ಟಿಗಳು ಒಳಗೊಂಡಿರುತ್ತವೆ."
+  },
+  {
+    "id": 99,
+    "category": "Syllabus",
+    "question": "Where can students obtain the MCA syllabus?",
+    "answer": "The latest syllabus is available through the Department of Computer Science and the university academic section.",
+    "kannada_question": "MCA ಪಠ್ಯಕ್ರಮವನ್ನು ಎಲ್ಲಿ ಪಡೆಯಬಹುದು?",
+    "kannada_answer": "ಇತ್ತೀಚಿನ ಪಠ್ಯಕ್ರಮವನ್ನು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ವಿಭಾಗ ಹಾಗೂ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಶೈಕ್ಷಣಿಕ ವಿಭಾಗದಿಂದ ಪಡೆಯಬಹುದು."
+  },
+  {
+    "id": 100,
+    "category": "Syllabus",
+    "question": "Can students download the syllabus in PDF format?",
+    "answer": "The syllabus is provided in the format prescribed by the university whenever available.",
+    "kannada_question": "ಪಠ್ಯಕ್ರಮವನ್ನು PDF ರೂಪದಲ್ಲಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಬಹುದೇ?",
+    "kannada_answer": "ಲಭ್ಯವಿದ್ದರೆ ವಿಶ್ವವಿದ್ಯಾಲಯ ನೀಡುವ ರೂಪದಲ್ಲಿ ಪಠ್ಯಕ್ರಮವನ್ನು ಪಡೆಯಬಹುದು."
+  },
+  {
+    "id": 101,
+    "category": "Examination",
+    "question": "Are internal assessments conducted every semester?",
+    "answer": "Yes, internal assessments are conducted according to the university academic regulations.",
+    "kannada_question": "ಪ್ರತಿ ಸೆಮಿಸ್ಟರ್‌ನಲ್ಲಿ ಆಂತರಿಕ ಪರೀಕ್ಷೆಗಳಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಆಂತರಿಕ ಪರೀಕ್ಷೆಗಳನ್ನು ನಡೆಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 102,
+    "category": "Examination",
+    "question": "Can students apply for photocopies of answer scripts?",
+    "answer": "Students may apply according to the university examination rules whenever such a facility is provided.",
+    "kannada_question": "ಉತ್ತರ ಪತ್ರಿಕೆಯ ಪ್ರತಿಗಾಗಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದೇ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ಪರೀಕ್ಷಾ ನಿಯಮಗಳ ಪ್ರಕಾರ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು."
+  },
+  {
+    "id": 103,
+    "category": "Placements",
+    "question": "Are mock interviews conducted before placements?",
+    "answer": "Mock interviews may be organized as part of placement preparation activities.",
+    "kannada_question": "ಪ್ಲೇಸ್‌ಮೆಂಟ್ ಮೊದಲು ಮಾಕ್ ಸಂದರ್ಶನ ನಡೆಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ಲೇಸ್‌ಮೆಂಟ್ ತಯಾರಿಯ ಭಾಗವಾಗಿ ಮಾಕ್ ಸಂದರ್ಶನಗಳನ್ನು ಆಯೋಜಿಸಬಹುದು."
+  },
+  {
+    "id": 104,
+    "category": "Placements",
+    "question": "Do placement activities include resume preparation guidance?",
+    "answer": "Students may receive guidance on resume writing and interview preparation.",
+    "kannada_question": "ರೆಸ್ಯೂಮ್ ತಯಾರಿಸಲು ಮಾರ್ಗದರ್ಶನ ನೀಡಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ರೆಸ್ಯೂಮ್ ತಯಾರಿ ಮತ್ತು ಸಂದರ್ಶನ ಸಿದ್ಧತೆಗೆ ಮಾರ್ಗದರ್ಶನ ನೀಡಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 105,
+    "category": "Scholarships",
+    "question": "Where can students submit scholarship applications?",
+    "answer": "Scholarship applications should be submitted according to the instructions issued by the concerned authority.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿವೇತನ ಅರ್ಜಿಯನ್ನು ಎಲ್ಲಿ ಸಲ್ಲಿಸಬೇಕು?",
+    "kannada_answer": "ಸಂಬಂಧಿತ ಪ್ರಾಧಿಕಾರದ ಸೂಚನೆಯಂತೆ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕು."
+  },
+  {
+    "id": 106,
+    "category": "Scholarships",
+    "question": "Are scholarship notifications displayed by the department?",
+    "answer": "Yes, scholarship notifications are communicated through official notice boards and university announcements.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿವೇತನದ ಅಧಿಸೂಚನೆಗಳನ್ನು ವಿಭಾಗ ಪ್ರಕಟಿಸುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಅಧಿಕೃತ ಸೂಚನಾ ಫಲಕ ಹಾಗೂ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಪ್ರಕಟಣೆಗಳ ಮೂಲಕ ತಿಳಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 107,
+    "category": "Hostel",
+    "question": "Is Wi-Fi available in the hostel?",
+    "answer": "Hostel facilities are provided according to university policies and available infrastructure.",
+    "kannada_question": "ಹಾಸ್ಟೆಲ್‌ನಲ್ಲಿ ವೈ-ಫೈ ಸೌಲಭ್ಯವಿದೆಯೇ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳು ಹಾಗೂ ಲಭ್ಯವಿರುವ ಸೌಲಭ್ಯಗಳ ಪ್ರಕಾರ ಒದಗಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 108,
+    "category": "Hostel",
+    "question": "Can hostel students use the reading room?",
+    "answer": "Reading room facilities are available according to hostel regulations.",
+    "kannada_question": "ಹಾಸ್ಟೆಲ್ ವಿದ್ಯಾರ್ಥಿಗಳು ಓದುವ ಕೊಠಡಿಯನ್ನು ಬಳಸಬಹುದೇ?",
+    "kannada_answer": "ಹಾಸ್ಟೆಲ್ ನಿಯಮಗಳ ಪ್ರಕಾರ ಓದುವ ಕೊಠಡಿಯನ್ನು ಬಳಸಬಹುದು."
+  },
+  {
+    "id": 109,
+    "category": "Student Services",
+    "question": "Can students request a study certificate?",
+    "answer": "Yes, study certificates are issued on request through the department office.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿಗಳು ಅಧ್ಯಯನ ಪ್ರಮಾಣಪತ್ರ ಪಡೆಯಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಭಾಗದ ಕಚೇರಿ ಮೂಲಕ ಅಧ್ಯಯನ ಪ್ರಮಾಣಪತ್ರ ಪಡೆಯಬಹುದು."
+  },
+  {
+    "id": 110,
+    "category": "Student Services",
+    "question": "Can students update their contact information?",
+    "answer": "Students should inform the department office whenever their contact information changes.",
+    "kannada_question": "ಸಂಪರ್ಕ ಮಾಹಿತಿಯನ್ನು ನವೀಕರಿಸಬಹುದೇ?",
+    "kannada_answer": "ಸಂಪರ್ಕ ಮಾಹಿತಿ ಬದಲಾದರೆ ವಿಭಾಗದ ಕಚೇರಿಗೆ ತಿಳಿಸಬೇಕು."
+  },
+  {
+    "id": 111,
+    "category": "Faculty",
+    "question": "Are faculty consultation hours announced?",
+    "answer": "Faculty consultation hours are communicated by the department whenever applicable.",
+    "kannada_question": "ಅಧ್ಯಾಪಕರ ಭೇಟಿ ಸಮಯವನ್ನು ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಅಗತ್ಯವಿದ್ದಾಗ ವಿಭಾಗವು ಅಧ್ಯಾಪಕರ ಭೇಟಿ ಸಮಯವನ್ನು ಪ್ರಕಟಿಸುತ್ತದೆ."
+  },
+  {
+    "id": 112,
+    "category": "Faculty",
+    "question": "Can students discuss research ideas with faculty?",
+    "answer": "Students are encouraged to discuss academic and research ideas with faculty members.",
+    "kannada_question": "ಸಂಶೋಧನಾ ವಿಚಾರಗಳನ್ನು ಅಧ್ಯಾಪಕರೊಂದಿಗೆ ಚರ್ಚಿಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ವಿದ್ಯಾರ್ಥಿಗಳು ಅಧ್ಯಾಪಕರೊಂದಿಗೆ ಶೈಕ್ಷಣಿಕ ಹಾಗೂ ಸಂಶೋಧನಾ ವಿಚಾರಗಳನ್ನು ಚರ್ಚಿಸಬಹುದು."
+  },
+  {
+    "id": 113,
+    "category": "Notifications",
+    "question": "Where are circulars regarding university holidays published?",
+    "answer": "Holiday circulars are communicated through official university notifications.",
+    "kannada_question": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ರಜೆ ಸುತ್ತೋಲೆಗಳನ್ನು ಎಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ಅಧಿಕೃತ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಅಧಿಸೂಚನೆಗಳ ಮೂಲಕ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 114,
+    "category": "Notifications",
+    "question": "How can students know about department meetings?",
+    "answer": "Department meetings are announced through notice boards and official communication channels.",
+    "kannada_question": "ವಿಭಾಗದ ಸಭೆಗಳ ಮಾಹಿತಿ ಹೇಗೆ ಪಡೆಯಬಹುದು?",
+    "kannada_answer": "ಸೂಚನಾ ಫಲಕ ಮತ್ತು ಅಧಿಕೃತ ಮಾಹಿತಿ ವ್ಯವಸ್ಥೆಗಳ ಮೂಲಕ ತಿಳಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 115,
+    "category": "General Enquiry",
+    "question": "Does the department encourage participation in hackathons?",
+    "answer": "Students are encouraged to participate in technical competitions and hackathons whenever opportunities are available.",
+    "kannada_question": "ವಿಭಾಗವು ಹ್ಯಾಕಥಾನ್‌ನಲ್ಲಿ ಭಾಗವಹಿಸಲು ಪ್ರೋತ್ಸಾಹಿಸುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ತಾಂತ್ರಿಕ ಸ್ಪರ್ಧೆಗಳು ಮತ್ತು ಹ್ಯಾಕಥಾನ್‌ಗಳಲ್ಲಿ ಭಾಗವಹಿಸಲು ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಪ್ರೋತ್ಸಾಹಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 116,
+    "category": "General Enquiry",
+    "question": "Can students visit the department office during working hours?",
+    "answer": "Yes, students may visit the department office during official working hours for academic assistance.",
+    "kannada_question": "ಕೆಲಸದ ವೇಳೆಯಲ್ಲಿ ವಿಭಾಗದ ಕಚೇರಿಗೆ ಭೇಟಿ ನೀಡಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಶೈಕ್ಷಣಿಕ ಸಹಾಯಕ್ಕಾಗಿ ಅಧಿಕೃತ ಕೆಲಸದ ವೇಳೆಯಲ್ಲಿ ವಿಭಾಗದ ಕಚೇರಿಗೆ ಭೇಟಿ ನೀಡಬಹುದು."
+  },
+
+  {
+    "id": 117,
+    "category": "Admissions",
+    "question": "Is admission counseling available before applying?",
+    "answer": "Yes, admission counseling is provided by the department during the admission period.",
+    "kannada_question": "ಪ್ರವೇಶಕ್ಕೂ ಮೊದಲು ಸಲಹೆ ಪಡೆಯಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ರವೇಶ ಅವಧಿಯಲ್ಲಿ ವಿಭಾಗವು ಪ್ರವೇಶ ಸಲಹೆಯನ್ನು ನೀಡುತ್ತದೆ."
+  },
+  {
+    "id": 118,
+    "category": "Admissions",
+    "question": "Can applicants track their admission status online?",
+    "answer": "Admission status can be checked through the official admission portal whenever the facility is available.",
+    "kannada_question": "ಪ್ರವೇಶದ ಸ್ಥಿತಿಯನ್ನು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ನೋಡಬಹುದೇ?",
+    "kannada_answer": "ಸೌಲಭ್ಯ ಲಭ್ಯವಿದ್ದರೆ ಅಧಿಕೃತ ಪ್ರವೇಶ ಪೋರ್ಟಲ್ ಮೂಲಕ ಪರಿಶೀಲಿಸಬಹುದು."
+  },
+  {
+    "id": 119,
+    "category": "Admissions",
+    "question": "Is original document verification compulsory?",
+    "answer": "Yes, original documents must be produced during verification.",
+    "kannada_question": "ಮೂಲ ದಾಖಲೆಗಳ ಪರಿಶೀಲನೆ ಕಡ್ಡಾಯವೇ?",
+    "kannada_answer": "ಹೌದು, ಮೂಲ ದಾಖಲೆಗಳನ್ನು ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸಬೇಕು."
+  },
+  {
+    "id": 120,
+    "category": "Admissions",
+    "question": "Can admission be cancelled after confirmation?",
+    "answer": "Admission cancellation is processed according to university regulations.",
+    "kannada_question": "ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸಬಹುದೇ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಪ್ರವೇಶ ರದ್ದುಗೊಳಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 121,
+    "category": "MCA Course",
+    "question": "Does MCA include cloud computing?",
+    "answer": "Cloud computing is included if prescribed in the approved syllabus.",
+    "kannada_question": "MCA ನಲ್ಲಿ ಕ್ಲೌಡ್ ಕಂಪ್ಯೂಟಿಂಗ್ ಇದೆಯೇ?",
+    "kannada_answer": "ಅನುಮೋದಿತ ಪಠ್ಯಕ್ರಮದಲ್ಲಿದ್ದರೆ ಕ್ಲೌಡ್ ಕಂಪ್ಯೂಟಿಂಗ್ ಕಲಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 122,
+    "category": "MCA Course",
+    "question": "Are Python programming subjects included in MCA?",
+    "answer": "Programming subjects are taught according to the university syllabus.",
+    "kannada_question": "MCA ನಲ್ಲಿ Python ಕಲಿಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ಪಠ್ಯಕ್ರಮದ ಪ್ರಕಾರ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ವಿಷಯಗಳನ್ನು ಕಲಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 123,
+    "category": "M.Sc. Computer Science",
+    "question": "Does M.Sc. Computer Science include machine learning?",
+    "answer": "Machine learning is covered whenever it is part of the approved syllabus.",
+    "kannada_question": "M.Sc. ನಲ್ಲಿ Machine Learning ಇದೆಯೇ?",
+    "kannada_answer": "ಅನುಮೋದಿತ ಪಠ್ಯಕ್ರಮದಲ್ಲಿದ್ದರೆ Machine Learning ಕಲಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 124,
+    "category": "M.Sc. Computer Science",
+    "question": "Are practical classes conducted regularly?",
+    "answer": "Yes, practical classes are conducted according to the semester timetable.",
+    "kannada_question": "ಪ್ರಾಯೋಗಿಕ ತರಗತಿಗಳು ನಿಯಮಿತವಾಗಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವೇಳಾಪಟ್ಟಿಯ ಪ್ರಕಾರ ಪ್ರಾಯೋಗಿಕ ತರಗತಿಗಳು ನಡೆಯುತ್ತವೆ."
+  },
+  {
+    "id": 125,
+    "category": "Fee Structure",
+    "question": "Can fee receipts be downloaded online?",
+    "answer": "Fee receipts are available through the prescribed payment system whenever applicable.",
+    "kannada_question": "ಶುಲ್ಕ ರಸೀದಿಯನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಬಹುದೇ?",
+    "kannada_answer": "ಸೌಲಭ್ಯ ಇದ್ದರೆ ಪಾವತಿ ವ್ಯವಸ್ಥೆಯ ಮೂಲಕ ಡೌನ್‌ಲೋಡ್ ಮಾಡಬಹುದು."
+  },
+  {
+    "id": 126,
+    "category": "Fee Structure",
+    "question": "Is there a late fee for delayed payment?",
+    "answer": "Late fee policies are announced by the university whenever applicable.",
+    "kannada_question": "ತಡವಾಗಿ ಶುಲ್ಕ ಪಾವತಿಸಿದರೆ ದಂಡವಿದೆಯೇ?",
+    "kannada_answer": "ಅಗತ್ಯವಿದ್ದರೆ ವಿಶ್ವವಿದ್ಯಾಲಯವು ದಂಡದ ಬಗ್ಗೆ ಪ್ರಕಟಣೆ ನೀಡುತ್ತದೆ."
+  },
+  
+  {
+    "id": 127,
+    "category": "Library",
+    "question": "What are the library working hours?",
+    "answer": "The library functions during the working hours notified by the university.",
+    "kannada_question": "ಗ್ರಂಥಾಲಯದ ಕಾರ್ಯನಿರ್ವಹಣೆಯ ಸಮಯ ಯಾವುದು?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯ ಪ್ರಕಟಿಸಿದ ಸಮಯದಲ್ಲಿ ಗ್ರಂಥಾಲಯ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ."
+  },
+  {
+    "id": 128,
+    "category": "Library",
+    "question": "Can students access e-journals from the library?",
+    "answer": "Yes, students can access available e-journals through the library resources.",
+    "kannada_question": "ಇ-ಜರ್ನಲ್‌ಗಳನ್ನು ಗ್ರಂಥಾಲಯದಿಂದ ಬಳಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಲಭ್ಯವಿರುವ ಇ-ಜರ್ನಲ್‌ಗಳನ್ನು ಗ್ರಂಥಾಲಯದ ಮೂಲಕ ಬಳಸಬಹುದು."
+  },
+  {
+    "id": 129,
+    "category": "Library",
+    "question": "Can books be reserved in advance?",
+    "answer": "Book reservation is available according to library regulations.",
+    "kannada_question": "ಪುಸ್ತಕಗಳನ್ನು ಮುಂಗಡವಾಗಿ ಕಾಯ್ದಿರಿಸಬಹುದೇ?",
+    "kannada_answer": "ಗ್ರಂಥಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಪುಸ್ತಕಗಳನ್ನು ಕಾಯ್ದಿರಿಸಬಹುದು."
+  },
+  {
+    "id": 130,
+    "category": "Library",
+    "question": "Is there a fine for overdue books?",
+    "answer": "Yes, overdue books are subject to library fine rules.",
+    "kannada_question": "ತಡವಾಗಿ ಪುಸ್ತಕ ಹಿಂತಿರುಗಿಸಿದರೆ ದಂಡವಿದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಗ್ರಂಥಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ದಂಡ ವಿಧಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 131,
+    "category": "Computer Laboratory",
+    "question": "Are all computers connected to the internet?",
+    "answer": "Internet-enabled computers are available for academic purposes.",
+    "kannada_question": "ಎಲ್ಲಾ ಕಂಪ್ಯೂಟರ್‌ಗಳಿಗೆ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಇದೆಯೇ?",
+    "kannada_answer": "ಶೈಕ್ಷಣಿಕ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕಿತ ಕಂಪ್ಯೂಟರ್‌ಗಳು ಲಭ್ಯವಿವೆ."
+  },
+  {
+    "id": 132,
+    "category": "Computer Laboratory",
+    "question": "Can students install software in laboratory computers?",
+    "answer": "Software installation requires prior approval from the laboratory administrator.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿಗಳು ಲ್ಯಾಬ್ ಕಂಪ್ಯೂಟರ್‌ನಲ್ಲಿ ಸಾಫ್ಟ್‌ವೇರ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಬಹುದೇ?",
+    "kannada_answer": "ಲ್ಯಾಬ್ ನಿರ್ವಾಹಕರ ಅನುಮತಿ ಅಗತ್ಯವಿದೆ."
+  },
+  {
+    "id": 133,
+    "category": "Computer Laboratory",
+    "question": "Are programming IDEs available in the laboratory?",
+    "answer": "Yes, commonly used programming IDEs are available for practical sessions.",
+    "kannada_question": "ಪ್ರೋಗ್ರಾಮಿಂಗ್ IDE ಗಳು ಲಭ್ಯವಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಸಾಮಾನ್ಯವಾಗಿ ಬಳಸುವ IDE ಗಳು ಲಭ್ಯವಿವೆ."
+  },
+  {
+    "id": 134,
+    "category": "Computer Laboratory",
+    "question": "Is Linux available in the laboratory?",
+    "answer": "Linux systems are provided wherever required for the curriculum.",
+    "kannada_question": "ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಲಿನಕ್ಸ್ ಲಭ್ಯವಿದೆಯೇ?",
+    "kannada_answer": "ಪಠ್ಯಕ್ರಮಕ್ಕೆ ಅಗತ್ಯವಿರುವ ಸ್ಥಳಗಳಲ್ಲಿ ಲಿನಕ್ಸ್ ವ್ಯವಸ್ಥೆ ಲಭ್ಯವಿದೆ."
+  },
+  {
+    "id": 135,
+    "category": "Projects",
+    "question": "Can students develop AI-based projects?",
+    "answer": "Yes, students are encouraged to develop innovative projects under faculty guidance.",
+    "kannada_question": "AI ಆಧಾರಿತ ಪ್ರಾಜೆಕ್ಟ್ ಮಾಡಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಅಧ್ಯಾಪಕರ ಮಾರ್ಗದರ್ಶನದಲ್ಲಿ ನವೀನ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಬಹುದು."
+  },
+  {
+    "id": 136,
+    "category": "Projects",
+    "question": "Are industry-based projects encouraged?",
+    "answer": "Yes, industry-oriented projects are encouraged whenever feasible.",
+    "kannada_question": "ಉದ್ಯಮ ಆಧಾರಿತ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಪ್ರೋತ್ಸಾಹಿಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಸಾಧ್ಯವಾದಲ್ಲಿ ಉದ್ಯಮ ಆಧಾರಿತ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಪ್ರೋತ್ಸಾಹಿಸಲಾಗುತ್ತದೆ."
+  },
+  
+  {
+    "id": 137,
+    "category": "Internship",
+    "question": "Does the department help students find internships?",
+    "answer": "The department provides information about internship opportunities whenever available.",
+    "kannada_question": "ವಿಭಾಗವು ಇಂಟರ್ನ್‌ಶಿಪ್ ಅವಕಾಶಗಳನ್ನು ಒದಗಿಸುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಅವಕಾಶ ಲಭ್ಯವಿದ್ದಾಗ ವಿಭಾಗವು ಇಂಟರ್ನ್‌ಶಿಪ್ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸುತ್ತದೆ."
+  },
+  {
+    "id": 138,
+    "category": "Internship",
+    "question": "Can internships be completed in software companies?",
+    "answer": "Yes, students may undertake internships in software companies with prior approval.",
+    "kannada_question": "ಸಾಫ್ಟ್‌ವೇರ್ ಕಂಪನಿಗಳಲ್ಲಿ ಇಂಟರ್ನ್‌ಶಿಪ್ ಮಾಡಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಅನುಮತಿಯೊಂದಿಗೆ ಸಾಫ್ಟ್‌ವೇರ್ ಕಂಪನಿಗಳಲ್ಲಿ ಇಂಟರ್ನ್‌ಶಿಪ್ ಮಾಡಬಹುದು."
+  },
+  {
+    "id": 139,
+    "category": "Placements",
+    "question": "Are campus interviews conducted every year?",
+    "answer": "Campus recruitment activities are organized whenever companies visit the department.",
+    "kannada_question": "ಪ್ರತಿ ವರ್ಷ ಕ್ಯಾಂಪಸ್ ಸಂದರ್ಶನ ನಡೆಯುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಕಂಪನಿಗಳು ಭೇಟಿ ನೀಡಿದಾಗ ಕ್ಯಾಂಪಸ್ ನೇಮಕಾತಿ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಆಯೋಜಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 140,
+    "category": "Placements",
+    "question": "Can M.Sc. Computer Science students attend placement drives?",
+    "answer": "Eligible M.Sc. Computer Science students may participate in placement activities organized by the university.",
+    "kannada_question": "M.Sc. ವಿದ್ಯಾರ್ಥಿಗಳು ಪ್ಲೇಸ್‌ಮೆಂಟ್‌ನಲ್ಲಿ ಭಾಗವಹಿಸಬಹುದೇ?",
+    "kannada_answer": "ಅರ್ಹ M.Sc. ವಿದ್ಯಾರ್ಥಿಗಳು ವಿಶ್ವವಿದ್ಯಾಲಯದ ಪ್ಲೇಸ್‌ಮೆಂಟ್ ಕಾರ್ಯಕ್ರಮಗಳಲ್ಲಿ ಭಾಗವಹಿಸಬಹುದು."
+  },
+  {
+    "id": 141,
+    "category": "Events",
+    "question": "Does the department celebrate National Science Day?",
+    "answer": "Yes, the department organizes academic events on important occasions whenever scheduled.",
+    "kannada_question": "ರಾಷ್ಟ್ರೀಯ ವಿಜ್ಞಾನ ದಿನವನ್ನು ಆಚರಿಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವೇಳಾಪಟ್ಟಿಯ ಪ್ರಕಾರ ಶೈಕ್ಷಣಿಕ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಆಯೋಜಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 142,
+    "category": "Events",
+    "question": "Are coding competitions organized for students?",
+    "answer": "Yes, coding competitions are organized to improve programming skills.",
+    "kannada_question": "ಕೋಡಿಂಗ್ ಸ್ಪರ್ಧೆಗಳನ್ನು ಆಯೋಜಿಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಕೌಶಲ್ಯವನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಲು ಕೋಡಿಂಗ್ ಸ್ಪರ್ಧೆಗಳನ್ನು ಆಯೋಜಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 143,
+    "category": "Workshop",
+    "question": "Are AI workshops conducted for postgraduate students?",
+    "answer": "Yes, AI and emerging technology workshops are organized whenever possible.",
+    "kannada_question": "AI ಕಾರ್ಯಾಗಾರಗಳನ್ನು ನಡೆಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, AI ಹಾಗೂ ಹೊಸ ತಂತ್ರಜ್ಞಾನಗಳ ಕಾರ್ಯಾಗಾರಗಳನ್ನು ಆಯೋಜಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 144,
+    "category": "Workshop",
+    "question": "Can outside experts conduct workshops?",
+    "answer": "Yes, industry experts and academicians are invited to conduct workshops.",
+    "kannada_question": "ಹೊರಗಿನ ತಜ್ಞರು ಕಾರ್ಯಾಗಾರ ನಡೆಸುತ್ತಾರೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಉದ್ಯಮ ಹಾಗೂ ಶಿಕ್ಷಣ ಕ್ಷೇತ್ರದ ತಜ್ಞರನ್ನು ಆಹ್ವಾನಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 145,
+    "category": "Seminars",
+    "question": "Are research seminars compulsory?",
+    "answer": "Research seminars are conducted as prescribed by the department.",
+    "kannada_question": "ಸಂಶೋಧನಾ ಸೆಮಿನಾರ್ ಕಡ್ಡಾಯವೇ?",
+    "kannada_answer": "ವಿಭಾಗದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಸಂಶೋಧನಾ ಸೆಮಿನಾರ್‌ಗಳನ್ನು ನಡೆಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 146,
+    "category": "Seminars",
+    "question": "Do seminar participants receive certificates?",
+    "answer": "Certificates may be issued for eligible seminar participants.",
+    "kannada_question": "ಸೆಮಿನಾರ್ ಭಾಗವಹಿಸಿದವರಿಗೆ ಪ್ರಮಾಣಪತ್ರ ನೀಡಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಅರ್ಹ ಭಾಗವಹಿಸುವವರಿಗೆ ಪ್ರಮಾಣಪತ್ರ ನೀಡಬಹುದು."
+  },
+  
+  {
+    "id": 147,
+    "category": "Student Services",
+    "question": "Does the department provide career counseling?",
+    "answer": "Yes, career counseling sessions are organized periodically for students.",
+    "kannada_question": "ವಿಭಾಗವು ವೃತ್ತಿ ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ನಿಯಮಿತವಾಗಿ ವೃತ್ತಿ ಮಾರ್ಗದರ್ಶನ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಆಯೋಜಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 148,
+    "category": "Student Services",
+    "question": "Can students request recommendation letters?",
+    "answer": "Yes, recommendation letters may be issued by faculty members as per departmental procedures.",
+    "kannada_question": "ಶಿಫಾರಸು ಪತ್ರ ಪಡೆಯಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಭಾಗದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಅಧ್ಯಾಪಕರು ಶಿಫಾರಸು ಪತ್ರ ನೀಡಬಹುದು."
+  },
+  {
+    "id": 149,
+    "category": "Student Services",
+    "question": "Can students obtain identity card duplicates?",
+    "answer": "Duplicate identity cards may be issued after following the prescribed procedure.",
+    "kannada_question": "ಗುರುತಿನ ಚೀಟಿಯ ನಕಲು ಪಡೆಯಬಹುದೇ?",
+    "kannada_answer": "ನಿಯಮಾನುಸಾರ ಅರ್ಜಿ ಸಲ್ಲಿಸಿದ ನಂತರ ನಕಲು ಗುರುತಿನ ಚೀಟಿ ನೀಡಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 150,
+    "category": "Student Services",
+    "question": "Can students apply for no objection certificates?",
+    "answer": "Yes, NOC requests are processed through the department office.",
+    "kannada_question": "NOC ಪಡೆಯಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಭಾಗದ ಕಚೇರಿ ಮೂಲಕ NOC ಪಡೆಯಬಹುದು."
+  },
+  {
+    "id": 151,
+    "category": "Faculty",
+    "question": "Are faculty members available during office hours?",
+    "answer": "Yes, faculty members are available during notified office hours.",
+    "kannada_question": "ಅಧ್ಯಾಪಕರು ಕಚೇರಿ ಸಮಯದಲ್ಲಿ ಲಭ್ಯವಿರುತ್ತಾರೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ರಕಟಿಸಿದ ಸಮಯದಲ್ಲಿ ಅಧ್ಯಾಪಕರು ಲಭ್ಯವಿರುತ್ತಾರೆ."
+  },
+  {
+    "id": 152,
+    "category": "Faculty",
+    "question": "Can students discuss project ideas with faculty?",
+    "answer": "Students are encouraged to discuss project ideas with faculty members.",
+    "kannada_question": "ಪ್ರಾಜೆಕ್ಟ್ ವಿಷಯವನ್ನು ಅಧ್ಯಾಪಕರೊಂದಿಗೆ ಚರ್ಚಿಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ವಿದ್ಯಾರ್ಥಿಗಳು ಅಧ್ಯಾಪಕರೊಂದಿಗೆ ಪ್ರಾಜೆಕ್ಟ್ ವಿಷಯ ಚರ್ಚಿಸಬಹುದು."
+  },
+  {
+    "id": 153,
+    "category": "Research",
+    "question": "Does the department encourage research activities?",
+    "answer": "Yes, students are encouraged to participate in research and innovation activities.",
+    "kannada_question": "ವಿಭಾಗವು ಸಂಶೋಧನೆಯನ್ನು ಪ್ರೋತ್ಸಾಹಿಸುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಸಂಶೋಧನೆ ಮತ್ತು ನವೀನ ಚಟುವಟಿಕೆಗಳಲ್ಲಿ ಭಾಗವಹಿಸಲು ಪ್ರೋತ್ಸಾಹಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 154,
+    "category": "Research",
+    "question": "Can students publish research papers?",
+    "answer": "Students are encouraged to publish research papers under faculty guidance.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿಗಳು ಸಂಶೋಧನಾ ಲೇಖನ ಪ್ರಕಟಿಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಅಧ್ಯಾಪಕರ ಮಾರ್ಗದರ್ಶನದಲ್ಲಿ ಸಂಶೋಧನಾ ಲೇಖನಗಳನ್ನು ಪ್ರಕಟಿಸಬಹುದು."
+  },
+  {
+    "id": 155,
+    "category": "Computer Laboratory",
+    "question": "Are networking laboratories available?",
+    "answer": "Yes, networking laboratories are available for practical learning.",
+    "kannada_question": "ನೆಟ್ವರ್ಕಿಂಗ್ ಲ್ಯಾಬ್ ಇದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ರಾಯೋಗಿಕ ತರಗತಿಗಳಿಗಾಗಿ ನೆಟ್ವರ್ಕಿಂಗ್ ಲ್ಯಾಬ್ ಲಭ್ಯವಿದೆ."
+  },
+  {
+    "id": 156,
+    "category": "Computer Laboratory",
+    "question": "Can students access laboratory systems after class hours?",
+    "answer": "Access after class hours is subject to departmental permission.",
+    "kannada_question": "ತರಗತಿ ನಂತರ ಲ್ಯಾಬ್ ಬಳಸಬಹುದೇ?",
+    "kannada_answer": "ವಿಭಾಗದ ಅನುಮತಿಯೊಂದಿಗೆ ಮಾತ್ರ ಬಳಸಬಹುದು."
+  },
+  
+  {
+    "id": 157,
+    "category": "Research",
+    "question": "Are students encouraged to participate in research projects?",
+    "answer": "Yes, students are encouraged to participate in research projects under faculty supervision.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಸಂಶೋಧನಾ ಯೋಜನೆಗಳಲ್ಲಿ ಭಾಗವಹಿಸಲು ಪ್ರೋತ್ಸಾಹಿಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಅಧ್ಯಾಪಕರ ಮಾರ್ಗದರ್ಶನದಲ್ಲಿ ಸಂಶೋಧನಾ ಯೋಜನೆಗಳಲ್ಲಿ ಭಾಗವಹಿಸಲು ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಪ್ರೋತ್ಸಾಹಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 158,
+    "category": "Research",
+    "question": "Does the department organize research paper presentations?",
+    "answer": "Yes, research paper presentations are organized periodically.",
+    "kannada_question": "ವಿಭಾಗವು ಸಂಶೋಧನಾ ಲೇಖನ ಮಂಡನೆಗಳನ್ನು ಆಯೋಜಿಸುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಸಂಶೋಧನಾ ಲೇಖನ ಮಂಡನೆಗಳನ್ನು ನಿಯಮಿತವಾಗಿ ಆಯೋಜಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 159,
+    "category": "Computer Laboratory",
+    "question": "Are database software tools available in the laboratory?",
+    "answer": "Yes, database software required for practical sessions is available.",
+    "kannada_question": "ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಡೇಟಾಬೇಸ್ ಸಾಫ್ಟ್‌ವೇರ್ ಲಭ್ಯವಿದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ರಾಯೋಗಿಕ ತರಗತಿಗಳಿಗೆ ಅಗತ್ಯವಾದ ಡೇಟಾಬೇಸ್ ಸಾಫ್ಟ್‌ವೇರ್ ಲಭ್ಯವಿದೆ."
+  },
+  {
+    "id": 160,
+    "category": "Computer Laboratory",
+    "question": "Can students practice programming after laboratory sessions?",
+    "answer": "Students may practice programming subject to laboratory availability and departmental approval.",
+    "kannada_question": "ಲ್ಯಾಬ್ ನಂತರ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಅಭ್ಯಾಸ ಮಾಡಬಹುದೇ?",
+    "kannada_answer": "ಲ್ಯಾಬ್ ಲಭ್ಯತೆ ಮತ್ತು ವಿಭಾಗದ ಅನುಮತಿಯೊಂದಿಗೆ ಅಭ್ಯಾಸ ಮಾಡಬಹುದು."
+  },
+  {
+    "id": 161,
+    "category": "Notifications",
+    "question": "Where are workshop notifications published?",
+    "answer": "Workshop notifications are published on the department notice board and official communication channels.",
+    "kannada_question": "ಕಾರ್ಯಾಗಾರದ ಅಧಿಸೂಚನೆಗಳನ್ನು ಎಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ವಿಭಾಗದ ಸೂಚನಾ ಫಲಕ ಮತ್ತು ಅಧಿಕೃತ ಮಾಹಿತಿ ವ್ಯವಸ್ಥೆಗಳಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 162,
+    "category": "Notifications",
+    "question": "How are examination circulars communicated?",
+    "answer": "Examination circulars are communicated through official university notifications.",
+    "kannada_question": "ಪರೀಕ್ಷಾ ಸುತ್ತೋಲೆಗಳನ್ನು ಹೇಗೆ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ಅಧಿಕೃತ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಅಧಿಸೂಚನೆಗಳ ಮೂಲಕ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 163,
+    "category": "Hostel",
+    "question": "Are separate hostels available for boys and girls?",
+    "answer": "Yes, separate hostel facilities are available according to university regulations.",
+    "kannada_question": "ಹುಡುಗರು ಮತ್ತು ಹುಡುಗಿಯರಿಗೆ ಪ್ರತ್ಯೇಕ ಹಾಸ್ಟೆಲ್ ಇದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಪ್ರತ್ಯೇಕ ಹಾಸ್ಟೆಲ್ ಸೌಲಭ್ಯವಿದೆ."
+  },
+  {
+    "id": 164,
+    "category": "Hostel",
+    "question": "Is purified drinking water available in the hostel?",
+    "answer": "Basic hostel facilities include drinking water as provided by the university.",
+    "kannada_question": "ಹಾಸ್ಟೆಲ್‌ನಲ್ಲಿ ಶುದ್ಧ ಕುಡಿಯುವ ನೀರಿದೆಯೇ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯ ಒದಗಿಸುವ ಮೂಲಭೂತ ಸೌಲಭ್ಯಗಳಲ್ಲಿ ಕುಡಿಯುವ ನೀರು ಸೇರಿದೆ."
+  },
+  {
+    "id": 165,
+    "category": "Placements",
+    "question": "Are alumni invited for placement guidance?",
+    "answer": "Yes, alumni may be invited to share career guidance and industry experience.",
+    "kannada_question": "ಹಳೆಯ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಪ್ಲೇಸ್‌ಮೆಂಟ್ ಮಾರ್ಗದರ್ಶನಕ್ಕಾಗಿ ಆಹ್ವಾನಿಸುತ್ತಾರೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವೃತ್ತಿ ಮಾರ್ಗದರ್ಶನಕ್ಕಾಗಿ ಹಳೆಯ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಆಹ್ವಾನಿಸಬಹುದು."
+  },
+  {
+    "id": 166,
+    "category": "Placements",
+    "question": "Does the department conduct resume review sessions?",
+    "answer": "Yes, resume review sessions may be organized before placement drives.",
+    "kannada_question": "ರೆಸ್ಯೂಮ್ ಪರಿಶೀಲನೆ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ನಡೆಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ಲೇಸ್‌ಮೆಂಟ್‌ಗೆ ಮುನ್ನ ರೆಸ್ಯೂಮ್ ಪರಿಶೀಲನೆ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ನಡೆಸಬಹುದು."
+  },
+  
+  {
+    "id": 167,
+    "category": "Examination",
+    "question": "When are internal assessment marks announced?",
+    "answer": "Internal assessment marks are announced by the department after evaluation.",
+    "kannada_question": "ಆಂತರಿಕ ಪರೀಕ್ಷೆಯ ಅಂಕಗಳನ್ನು ಯಾವಾಗ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ಮೌಲ್ಯಮಾಪನದ ನಂತರ ವಿಭಾಗವು ಆಂತರಿಕ ಪರೀಕ್ಷೆಯ ಅಂಕಗಳನ್ನು ಪ್ರಕಟಿಸುತ್ತದೆ."
+  },
+  {
+    "id": 168,
+    "category": "Examination",
+    "question": "Can students improve internal assessment marks?",
+    "answer": "Improvement opportunities are provided according to university regulations whenever applicable.",
+    "kannada_question": "ಆಂತರಿಕ ಪರೀಕ್ಷೆಯ ಅಂಕಗಳನ್ನು ಸುಧಾರಿಸಬಹುದೇ?",
+    "kannada_answer": "ಅಗತ್ಯವಿದ್ದರೆ ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಅವಕಾಶ ನೀಡಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 169,
+    "category": "Results",
+    "question": "How can students verify their examination results?",
+    "answer": "Students should verify their results through the official university result portal.",
+    "kannada_question": "ಪರೀಕ್ಷೆಯ ಫಲಿತಾಂಶವನ್ನು ಹೇಗೆ ಪರಿಶೀಲಿಸಬಹುದು?",
+    "kannada_answer": "ಅಧಿಕೃತ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಫಲಿತಾಂಶ ಪೋರ್ಟಲ್ ಮೂಲಕ ಪರಿಶೀಲಿಸಬಹುದು."
+  },
+  {
+    "id": 170,
+    "category": "Results",
+    "question": "What should students do if there is an error in the marks card?",
+    "answer": "Students should immediately contact the examination section for correction.",
+    "kannada_question": "ಅಂಕಪಟ್ಟಿಯಲ್ಲಿ ದೋಷವಿದ್ದರೆ ಏನು ಮಾಡಬೇಕು?",
+    "kannada_answer": "ತಕ್ಷಣವೇ ಪರೀಕ್ಷಾ ವಿಭಾಗವನ್ನು ಸಂಪರ್ಕಿಸಿ ತಿದ್ದುಪಡಿ ಮಾಡಿಸಬೇಕು."
+  },
+  {
+    "id": 171,
+    "category": "Faculty",
+    "question": "Can students schedule appointments with faculty members?",
+    "answer": "Yes, students may meet faculty members during scheduled consultation hours.",
+    "kannada_question": "ಅಧ್ಯಾಪಕರೊಂದಿಗೆ ಭೇಟಿಗೆ ಸಮಯ ನಿಗದಿಪಡಿಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ನಿಗದಿತ ಸಮಯದಲ್ಲಿ ಅಧ್ಯಾಪಕರನ್ನು ಭೇಟಿ ಮಾಡಬಹುದು."
+  },
+  {
+    "id": 172,
+    "category": "Faculty",
+    "question": "Do faculty members supervise postgraduate projects?",
+    "answer": "Yes, postgraduate projects are supervised by faculty members.",
+    "kannada_question": "ಸ್ನಾತಕೋತ್ತರ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳಿಗೆ ಅಧ್ಯಾಪಕರು ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತಾರೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಸ್ನಾತಕೋತ್ತರ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳಿಗೆ ಅಧ್ಯಾಪಕರು ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತಾರೆ."
+  },
+  {
+    "id": 173,
+    "category": "Computer Laboratory",
+    "question": "Are computer laboratories air-conditioned?",
+    "answer": "Laboratory facilities are maintained according to departmental infrastructure.",
+    "kannada_question": "ಕಂಪ್ಯೂಟರ್ ಲ್ಯಾಬ್‌ಗಳು ಹವಾನಿಯಂತ್ರಿತವಾಗಿವೆಯೇ?",
+    "kannada_answer": "ವಿಭಾಗದ ಮೂಲಸೌಕರ್ಯಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಲ್ಯಾಬ್ ಸೌಲಭ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 174,
+    "category": "Computer Laboratory",
+    "question": "Can students print project reports from the laboratory?",
+    "answer": "Printing facilities are available subject to departmental policies.",
+    "kannada_question": "ಲ್ಯಾಬ್‌ನಿಂದ ಪ್ರಾಜೆಕ್ಟ್ ವರದಿಯನ್ನು ಮುದ್ರಿಸಬಹುದೇ?",
+    "kannada_answer": "ವಿಭಾಗದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಮುದ್ರಣ ಸೌಲಭ್ಯ ಲಭ್ಯವಿರಬಹುದು."
+  },
+  {
+    "id": 175,
+    "category": "Library",
+    "question": "Can students access previous project reports in the library?",
+    "answer": "Previous project reports may be available for reference as per library rules.",
+    "kannada_question": "ಹಿಂದಿನ ಪ್ರಾಜೆಕ್ಟ್ ವರದಿಗಳನ್ನು ಗ್ರಂಥಾಲಯದಲ್ಲಿ ನೋಡಬಹುದೇ?",
+    "kannada_answer": "ಗ್ರಂಥಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಉಲ್ಲೇಖಕ್ಕಾಗಿ ಲಭ್ಯವಿರಬಹುದು."
+  },
+  {
+    "id": 176,
+    "category": "Library",
+    "question": "Does the library provide newspaper and magazine facilities?",
+    "answer": "Yes, newspapers and magazines are available for students in the library.",
+    "kannada_question": "ಗ್ರಂಥಾಲಯದಲ್ಲಿ ಪತ್ರಿಕೆ ಮತ್ತು ಮಾಸಪತ್ರಿಕೆಗಳಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವಿದ್ಯಾರ್ಥಿಗಳಿಗಾಗಿ ಪತ್ರಿಕೆಗಳು ಮತ್ತು ಮಾಸಪತ್ರಿಕೆಗಳು ಲಭ್ಯವಿವೆ."
+  },
+
+
+  {
+    "id": 177,
+    "category": "Student Services",
+    "question": "Can students apply for a bonafide certificate online?",
+    "answer": "Students may apply through the procedure prescribed by the department or university.",
+    "kannada_question": "ಬೋನಾಫೈಡ್ ಪ್ರಮಾಣಪತ್ರಕ್ಕೆ ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದೇ?",
+    "kannada_answer": "ವಿಭಾಗ ಅಥವಾ ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು."
+  },
+  {
+    "id": 178,
+    "category": "Student Services",
+    "question": "How long does it take to receive a bonafide certificate?",
+    "answer": "The certificate is issued within the processing time specified by the department.",
+    "kannada_question": "ಬೋನಾಫೈಡ್ ಪ್ರಮಾಣಪತ್ರ ಪಡೆಯಲು ಎಷ್ಟು ಸಮಯ ಬೇಕು?",
+    "kannada_answer": "ವಿಭಾಗ ನಿಗದಿಪಡಿಸಿದ ಅವಧಿಯಲ್ಲಿ ಪ್ರಮಾಣಪತ್ರ ನೀಡಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 179,
+    "category": "Student Services",
+    "question": "Can students update their email address in university records?",
+    "answer": "Yes, students may request updates through the department office.",
+    "kannada_question": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ದಾಖಲೆಗಳಲ್ಲಿ ಇಮೇಲ್ ವಿಳಾಸ ಬದಲಾಯಿಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಭಾಗದ ಕಚೇರಿ ಮೂಲಕ ಬದಲಾವಣೆ ಮಾಡಿಸಬಹುದು."
+  },
+  {
+    "id": 180,
+    "category": "Student Services",
+    "question": "Where can students submit grievance applications?",
+    "answer": "Grievance applications may be submitted to the department or university grievance cell.",
+    "kannada_question": "ದೂರು ಅರ್ಜಿಯನ್ನು ಎಲ್ಲಿ ಸಲ್ಲಿಸಬೇಕು?",
+    "kannada_answer": "ವಿಭಾಗ ಅಥವಾ ವಿಶ್ವವಿದ್ಯಾಲಯದ ದೂರು ನಿವಾರಣಾ ಘಟಕಕ್ಕೆ ಸಲ್ಲಿಸಬಹುದು."
+  },
+  {
+    "id": 181,
+    "category": "Academic Calendar",
+    "question": "Does the academic calendar include holidays?",
+    "answer": "Yes, the academic calendar includes important holidays and academic events.",
+    "kannada_question": "ಶೈಕ್ಷಣಿಕ ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ರಜೆಗಳಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಪ್ರಮುಖ ರಜೆಗಳು ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಕಾರ್ಯಕ್ರಮಗಳು ಒಳಗೊಂಡಿರುತ್ತವೆ."
+  },
+  {
+    "id": 182,
+    "category": "Academic Calendar",
+    "question": "Where can students download the academic calendar?",
+    "answer": "The academic calendar is available through the official university sources.",
+    "kannada_question": "ಶೈಕ್ಷಣಿಕ ಕ್ಯಾಲೆಂಡರ್ ಅನ್ನು ಎಲ್ಲಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಬಹುದು?",
+    "kannada_answer": "ಅಧಿಕೃತ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಮೂಲಗಳಿಂದ ಡೌನ್‌ಲೋಡ್ ಮಾಡಬಹುದು."
+  },
+  {
+    "id": 183,
+    "category": "Timetable",
+    "question": "Are laboratory timetables published separately?",
+    "answer": "Yes, laboratory schedules are published separately whenever required.",
+    "kannada_question": "ಲ್ಯಾಬ್ ವೇಳಾಪಟ್ಟಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಅಗತ್ಯವಿದ್ದಾಗ ಪ್ರತ್ಯೇಕವಾಗಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 184,
+    "category": "Timetable",
+    "question": "How are timetable changes communicated?",
+    "answer": "Timetable changes are announced through department notices.",
+    "kannada_question": "ವೇಳಾಪಟ್ಟಿ ಬದಲಾವಣೆಗಳನ್ನು ಹೇಗೆ ತಿಳಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ವಿಭಾಗದ ಸೂಚನೆಗಳ ಮೂಲಕ ತಿಳಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 185,
+    "category": "Scholarships",
+    "question": "Can students check scholarship status online?",
+    "answer": "Scholarship status can be checked through the concerned scholarship portal.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿವೇತನದ ಸ್ಥಿತಿಯನ್ನು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ನೋಡಬಹುದೇ?",
+    "kannada_answer": "ಸಂಬಂಧಿತ ವಿದ್ಯಾರ್ಥಿವೇತನ ಪೋರ್ಟಲ್ ಮೂಲಕ ಪರಿಶೀಲಿಸಬಹುದು."
+  },
+  {
+    "id": 186,
+    "category": "Scholarships",
+    "question": "Is income certificate required for scholarship applications?",
+    "answer": "Income certificate may be required depending on the scholarship scheme.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿವೇತನಕ್ಕೆ ಆದಾಯ ಪ್ರಮಾಣಪತ್ರ ಅಗತ್ಯವೇ?",
+    "kannada_answer": "ಯೋಜನೆಯ ಪ್ರಕಾರ ಆದಾಯ ಪ್ರಮಾಣಪತ್ರ ಅಗತ್ಯವಾಗಬಹುದು."
+  },
+
+  {
+    "id": 187,
+    "category": "Hostel",
+    "question": "Is hostel accommodation available for first-year postgraduate students?",
+    "answer": "Hostel accommodation is allotted based on availability and university guidelines.",
+    "kannada_question": "ಪ್ರಥಮ ವರ್ಷದ ಸ್ನಾತಕೋತ್ತರ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಹಾಸ್ಟೆಲ್ ಸೌಲಭ್ಯವಿದೆಯೇ?",
+    "kannada_answer": "ಲಭ್ಯತೆ ಮತ್ತು ವಿಶ್ವವಿದ್ಯಾಲಯದ ನಿಯಮಗಳ ಪ್ರಕಾರ ಹಾಸ್ಟೆಲ್ ಸೌಲಭ್ಯ ನೀಡಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 188,
+    "category": "Hostel",
+    "question": "Are visitors allowed inside the hostel?",
+    "answer": "Visitors are permitted only according to the hostel rules and visiting hours.",
+    "kannada_question": "ಹಾಸ್ಟೆಲ್‌ಗೆ ಭೇಟಿ ನೀಡುವವರಿಗೆ ಅನುಮತಿ ಇದೆಯೇ?",
+    "kannada_answer": "ಹಾಸ್ಟೆಲ್ ನಿಯಮಗಳು ಮತ್ತು ಭೇಟಿ ಸಮಯದ ಪ್ರಕಾರ ಮಾತ್ರ ಅನುಮತಿ ನೀಡಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 189,
+    "category": "Hostel",
+    "question": "Is medical assistance available for hostel students?",
+    "answer": "Basic medical assistance is available according to university facilities.",
+    "kannada_question": "ಹಾಸ್ಟೆಲ್ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವೈದ್ಯಕೀಯ ನೆರವು ಲಭ್ಯವಿದೆಯೇ?",
+    "kannada_answer": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ಸೌಲಭ್ಯಗಳ ಪ್ರಕಾರ ಮೂಲಭೂತ ವೈದ್ಯಕೀಯ ನೆರವು ಲಭ್ಯವಿದೆ."
+  },
+  {
+    "id": 190,
+    "category": "Hostel",
+    "question": "Are hostel rules mandatory for all residents?",
+    "answer": "Yes, every hostel resident must follow the hostel regulations.",
+    "kannada_question": "ಹಾಸ್ಟೆಲ್ ನಿಯಮಗಳನ್ನು ಎಲ್ಲರೂ ಪಾಲಿಸಬೇಕೇ?",
+    "kannada_answer": "ಹೌದು, ಎಲ್ಲಾ ಹಾಸ್ಟೆಲ್ ನಿವಾಸಿಗಳು ನಿಯಮಗಳನ್ನು ಕಡ್ಡಾಯವಾಗಿ ಪಾಲಿಸಬೇಕು."
+  },
+  {
+    "id": 191,
+    "category": "Research",
+    "question": "Can postgraduate students participate in funded research projects?",
+    "answer": "Eligible students may participate in funded research projects under faculty guidance.",
+    "kannada_question": "ಸ್ನಾತಕೋತ್ತರ ವಿದ್ಯಾರ್ಥಿಗಳು ಅನುದಾನಿತ ಸಂಶೋಧನಾ ಯೋಜನೆಗಳಲ್ಲಿ ಭಾಗವಹಿಸಬಹುದೇ?",
+    "kannada_answer": "ಅರ್ಹ ವಿದ್ಯಾರ್ಥಿಗಳು ಅಧ್ಯಾಪಕರ ಮಾರ್ಗದರ್ಶನದಲ್ಲಿ ಭಾಗವಹಿಸಬಹುದು."
+  },
+  {
+    "id": 192,
+    "category": "Research",
+    "question": "Does the department organize research methodology workshops?",
+    "answer": "Yes, research methodology workshops are organized periodically.",
+    "kannada_question": "ಸಂಶೋಧನಾ ವಿಧಾನಶಾಸ್ತ್ರ ಕಾರ್ಯಾಗಾರಗಳನ್ನು ನಡೆಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಸಂಶೋಧನಾ ವಿಧಾನಶಾಸ್ತ್ರ ಕಾರ್ಯಾಗಾರಗಳನ್ನು ನಿಯಮಿತವಾಗಿ ಆಯೋಜಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 193,
+    "category": "Research",
+    "question": "Can students present research papers at conferences?",
+    "answer": "Students are encouraged to present research papers with faculty approval.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿಗಳು ಸಮ್ಮೇಳನಗಳಲ್ಲಿ ಸಂಶೋಧನಾ ಲೇಖನ ಮಂಡಿಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಅಧ್ಯಾಪಕರ ಅನುಮತಿಯೊಂದಿಗೆ ಮಂಡಿಸಬಹುದು."
+  },
+  {
+    "id": 194,
+    "category": "Research",
+    "question": "Are research journals available in the department library?",
+    "answer": "The department library provides access to available research journals and publications.",
+    "kannada_question": "ವಿಭಾಗದ ಗ್ರಂಥಾಲಯದಲ್ಲಿ ಸಂಶೋಧನಾ ಜರ್ನಲ್‌ಗಳಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಲಭ್ಯವಿರುವ ಸಂಶೋಧನಾ ಜರ್ನಲ್‌ಗಳು ಮತ್ತು ಪ್ರಕಟಣೆಗಳು ಲಭ್ಯವಿವೆ."
+  },
+  {
+    "id": 195,
+    "category": "General Enquiry",
+    "question": "Does the department have smart classrooms?",
+    "answer": "Yes, classrooms are equipped with modern teaching facilities wherever available.",
+    "kannada_question": "ವಿಭಾಗದಲ್ಲಿ ಸ್ಮಾರ್ಟ್ ತರಗತಿಗಳಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಲಭ್ಯವಿರುವ ಆಧುನಿಕ ಬೋಧನಾ ಸೌಲಭ್ಯಗಳೊಂದಿಗೆ ತರಗತಿಗಳಿವೆ."
+  },
+  {
+    "id": 196,
+    "category": "General Enquiry",
+    "question": "Can students access campus Wi-Fi using their university credentials?",
+    "answer": "Eligible students can access campus Wi-Fi according to university IT policies.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿಗಳು ವಿಶ್ವವಿದ್ಯಾಲಯದ ಲಾಗಿನ್ ಬಳಸಿ ವೈ-ಫೈ ಬಳಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಶ್ವವಿದ್ಯಾಲಯದ ಐಟಿ ನಿಯಮಗಳ ಪ್ರಕಾರ ಬಳಸಬಹುದು."
+  },
+
+  {
+    "id": 227,
+    "category": "MCA Programme",
+    "question": "Are software engineering subjects included in the MCA curriculum?",
+    "answer": "Yes, software engineering is included as per the approved MCA syllabus of Karnataka University Dharwad.",
+    "kannada_question": "MCA ಪಠ್ಯಕ್ರಮದಲ್ಲಿ ಸಾಫ್ಟ್‌ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್ ವಿಷಯ ಇದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಕರ್ನಾಟಕ ವಿಶ್ವವಿದ್ಯಾಲಯ ಧಾರವಾಡದ ಅನುಮೋದಿತ MCA ಪಠ್ಯಕ್ರಮದ ಪ್ರಕಾರ ಸಾಫ್ಟ್‌ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್ ಕಲಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 228,
+    "category": "MCA Programme",
+    "question": "Is object-oriented programming taught in MCA?",
+    "answer": "Yes, object-oriented programming is an important subject in the MCA programme.",
+    "kannada_question": "MCA ನಲ್ಲಿ Object-Oriented Programming ಕಲಿಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, Object-Oriented Programming MCA ಪಠ್ಯಕ್ರಮದ ಪ್ರಮುಖ ವಿಷಯವಾಗಿದೆ."
+  },
+  {
+    "id": 229,
+    "category": "M.Sc. Computer Science",
+    "question": "Does M.Sc. Computer Science include advanced database management?",
+    "answer": "Yes, advanced database management topics are covered according to the syllabus.",
+    "kannada_question": "M.Sc. Computer Science ನಲ್ಲಿ Advanced Database Management ಇದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಪಠ್ಯಕ್ರಮದ ಪ್ರಕಾರ Advanced Database Management ವಿಷಯವನ್ನು ಕಲಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 230,
+    "category": "M.Sc. Computer Science",
+    "question": "Are data analytics concepts included in M.Sc. Computer Science?",
+    "answer": "Yes, data analytics topics are included whenever specified in the university syllabus.",
+    "kannada_question": "M.Sc. Computer Science ನಲ್ಲಿ Data Analytics ಇದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ವಿಶ್ವವಿದ್ಯಾಲಯದ ಪಠ್ಯಕ್ರಮದಲ್ಲಿ ಇದ್ದರೆ Data Analytics ಕಲಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 231,
+    "category": "Academic Support",
+    "question": "Can students attend extra coaching classes?",
+    "answer": "Extra coaching classes may be conducted whenever required by the department.",
+    "kannada_question": "ಹೆಚ್ಚುವರಿ ತರಗತಿಗಳಿಗೆ ಹಾಜರಾಗಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಅಗತ್ಯವಿದ್ದಾಗ ವಿಭಾಗವು ಹೆಚ್ಚುವರಿ ತರಗತಿಗಳನ್ನು ನಡೆಸಬಹುದು."
+  },
+  {
+    "id": 232,
+    "category": "Academic Support",
+    "question": "Are remedial classes available for weak students?",
+    "answer": "Yes, remedial classes may be organized to support students academically.",
+    "kannada_question": "ದುರ್ಬಲ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವಿಶೇಷ ತರಗತಿಗಳಿವೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಶೈಕ್ಷಣಿಕ ಸಹಾಯಕ್ಕಾಗಿ ವಿಶೇಷ ತರಗತಿಗಳನ್ನು ಆಯೋಜಿಸಬಹುದು."
+  },
+  {
+    "id": 233,
+    "category": "Department Office",
+    "question": "Can students submit leave applications in the department office?",
+    "answer": "Yes, leave applications should be submitted to the department office as per procedure.",
+    "kannada_question": "ರಜೆ ಅರ್ಜಿಯನ್ನು ವಿಭಾಗದ ಕಚೇರಿಯಲ್ಲಿ ಸಲ್ಲಿಸಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ನಿಯಮಾನುಸಾರ ವಿಭಾಗದ ಕಚೇರಿಯಲ್ಲಿ ಸಲ್ಲಿಸಬೇಕು."
+  },
+  {
+    "id": 234,
+    "category": "Department Office",
+    "question": "Can students collect certificates from the department office?",
+    "answer": "Yes, certificates are issued through the department office after verification.",
+    "kannada_question": "ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ವಿಭಾಗದ ಕಚೇರಿಯಿಂದ ಪಡೆಯಬಹುದೇ?",
+    "kannada_answer": "ಹೌದು, ಪರಿಶೀಲನೆಯ ನಂತರ ವಿಭಾಗದ ಕಚೇರಿಯಿಂದ ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ಪಡೆಯಬಹುದು."
+  },
+  {
+    "id": 235,
+    "category": "Notifications",
+    "question": "How are urgent department notices communicated?",
+    "answer": "Urgent notices are communicated through official notice boards and department communication channels.",
+    "kannada_question": "ತುರ್ತು ವಿಭಾಗದ ಸೂಚನೆಗಳನ್ನು ಹೇಗೆ ತಿಳಿಸಲಾಗುತ್ತದೆ?",
+    "kannada_answer": "ಅಧಿಕೃತ ಸೂಚನಾ ಫಲಕ ಹಾಗೂ ವಿಭಾಗದ ಮಾಹಿತಿ ವ್ಯವಸ್ಥೆಗಳ ಮೂಲಕ ತಿಳಿಸಲಾಗುತ್ತದೆ."
+  },
+  {
+    "id": 236,
+    "category": "Notifications",
+    "question": "Can students receive department notifications through email?",
+    "answer": "Students may receive important notifications through official communication systems whenever enabled.",
+    "kannada_question": "ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇಮೇಲ್ ಮೂಲಕ ಸೂಚನೆಗಳನ್ನು ಕಳುಹಿಸಲಾಗುತ್ತದೆಯೇ?",
+    "kannada_answer": "ಹೌದು, ಅಧಿಕೃತ ವ್ಯವಸ್ಥೆ ಸಕ್ರಿಯವಾಗಿದ್ದರೆ ಪ್ರಮುಖ ಸೂಚನೆಗಳನ್ನು ಇಮೇಲ್ ಮೂಲಕ ಕಳುಹಿಸಲಾಗುತ್ತದೆ."
+  }
+]

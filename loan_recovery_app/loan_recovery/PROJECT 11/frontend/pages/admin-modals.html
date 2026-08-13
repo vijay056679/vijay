@@ -1,0 +1,177 @@
+<!-- 5. USER PROFILE MODAL / DIALOG -->
+    <div class="modal-overlay" id="user-modal">
+        <div class="modal-container glass">
+            <div class="modal-header">
+                <div class="modal-user-identity">
+                    <img src="" alt="User Avatar" class="modal-avatar" id="modal-user-avatar">
+                    <div>
+                        <h3 id="modal-user-name">User Name</h3>
+                        <span id="modal-user-id" class="user-id-tag"></span>
+                    </div>
+                </div>
+                <button class="modal-close-btn" id="modal-close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <!-- User Meta Grid -->
+                <div class="user-meta-grid">
+                    <div class="meta-item">
+                        <label>Platform Channel</label>
+                        <span id="modal-meta-platform">-</span>
+                    </div>
+                    <div class="meta-item">
+                        <label>Total Queries</label>
+                        <span id="modal-meta-queries">-</span>
+                    </div>
+                    <div class="meta-item">
+                        <label>Engagement Accuracy</label>
+                        <span id="modal-meta-accuracy">-</span>
+                    </div>
+                    <div class="meta-item">
+                        <label>Last Event Time</label>
+                        <span id="modal-meta-active">-</span>
+                    </div>
+                </div>
+
+                <!-- Chat History Section -->
+                <div class="modal-chat-section">
+                    <h4>Session Conversation Transcript</h4>
+                    <div class="modal-transcript-flow" id="modal-transcript">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. KNOWLEDGE BASE EDIT MODAL -->
+    <div class="modal-overlay" id="kb-modal">
+        <div class="modal-container glass">
+            <div class="modal-header">
+                <div class="modal-user-identity">
+                    <div class="brand-logo" style="width: 40px; height: 40px;">
+                        <i data-lucide="database" class="logo-icon glow-indigo" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <div>
+                        <h3 id="kb-modal-title">Add Q&A Entry</h3>
+                        <span>Manage Chatbot Knowledge Base</span>
+                    </div>
+                </div>
+                <button class="modal-close-btn" id="kb-modal-close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form id="kb-form">
+                    <input type="hidden" id="kb-id">
+
+                    <div class="form-row">
+                        <div class="form-group" style="width: 100%;">
+                            <label for="kb-category">Category</label>
+                            <select id="kb-category" required
+                                style="width: 100%; height: 42px; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); padding: 0 12px;">
+                                <option value="Admissions">Admissions</option>
+                                <option value="MCA Course Details">MCA Course Details</option>
+                                <option value="MSc(Cs) Course Details">MSc(Cs) Course Details</option>
+                                <option value="Fee Structure">Fee Structure</option>
+                                <option value="Placements">Placements</option>
+                                <option value="Scholarships">Scholarships</option>
+                                <option value="Hostel Facilities">Hostel Facilities</option>
+                                <option value="Library Facilities">Library Facilities</option>
+                                <option value="Faculty Information">Faculty Information</option>
+                                <option value="Examination Details">Examination Details</option>
+                                <option value="Academic Calendar">Academic Calendar</option>
+                                <option value="Contact Information">Contact Information</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 12px;">
+                        <label for="kb-question">Question (English)</label>
+                        <input type="text" id="kb-question" placeholder="e.g. What is the intake capacity for MCA or MSc(Cs)?"
+                            required
+                            style="width: 100%; height: 42px; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); padding: 0 12px;">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 12px;">
+                        <label for="kb-answer">Answer (English)</label>
+                        <textarea id="kb-answer" placeholder="Type answer details..." rows="3" required
+                            style="width: 100%; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); padding: 12px;"></textarea>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 12px;">
+                        <label for="kb-kannada-question">Question (ಕನ್ನಡ - Optional)</label>
+                        <input type="text" id="kb-kannada-question" placeholder="ಕನ್ನಡದಲ್ಲಿ ಪ್ರಶ್ನೆಯನ್ನು ಟೈಪ್ ಮಾಡಿ..."
+                            style="width: 100%; height: 42px; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); padding: 0 12px;">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 12px;">
+                        <label for="kb-kannada-answer">Answer (ಕನ್ನಡ - Optional)</label>
+                        <textarea id="kb-kannada-answer" placeholder="ಕನ್ನಡದಲ್ಲಿ ಉತ್ತರವನ್ನು ಟೈಪ್ ಮಾಡಿ..." rows="3"
+                            style="width: 100%; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); padding: 12px;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-indigo btn-full"
+                        style="margin-top: 16px; width: 100%; height: 42px;">
+                        <i data-lucide="save"></i>
+                        <span>Save to Knowledge Base</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. CREATE USER PERSONA MODAL -->
+    <div class="modal-overlay" id="user-create-modal">
+        <div class="modal-container glass">
+            <div class="modal-header">
+                <div class="modal-user-identity">
+                    <div class="brand-logo" style="width: 40px; height: 40px;">
+                        <i data-lucide="user-plus" class="logo-icon glow-indigo" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <div>
+                        <h3>Create User Persona</h3>
+                        <span>Register a new testing profile</span>
+                    </div>
+                </div>
+                <button class="modal-close-btn" id="user-create-modal-close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form id="user-create-form">
+                    <div class="form-group">
+                        <label for="create-user-name">Full Name</label>
+                        <input type="text" id="create-user-name" placeholder="e.g. Ramesh Kumar" required
+                            style="width: 100%; height: 42px; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); padding: 0 12px;">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 12px;">
+                        <label for="create-user-email">Email Address</label>
+                        <input type="email" id="create-user-email" placeholder="e.g. ramesh@gmail.com" required
+                            style="width: 100%; height: 42px; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); padding: 0 12px;">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 12px;">
+                        <label for="create-user-platform">Simulation Channel</label>
+                        <select id="create-user-platform" required
+                            style="width: 100%; height: 42px; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); padding: 0 12px;">
+                            <option value="Web Widget">Web Widget</option>
+                            <option value="WhatsApp">WhatsApp</option>
+                            <option value="Telegram">Telegram</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-indigo btn-full"
+                        style="margin-top: 20px; width: 100%; height: 42px;">
+                        <i data-lucide="plus-circle"></i>
+                        <span>Register User Profile</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>

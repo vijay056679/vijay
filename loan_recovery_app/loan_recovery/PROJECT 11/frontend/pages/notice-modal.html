@@ -1,0 +1,39 @@
+<!-- 8. NOTICE CREATION MODAL -->
+    <div class="modal-overlay" id="notice-modal">
+        <div class="modal-container glass">
+            <div class="modal-header">
+                <div class="modal-user-identity">
+                    <div class="brand-logo" style="width: 40px; height: 40px;">
+                        <i data-lucide="bell" class="logo-icon glow-indigo" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <div>
+                        <h3>Post College Announcement</h3>
+                        <span>Publish news to student notice board</span>
+                    </div>
+                </div>
+                <button class="modal-close-btn" id="notice-modal-close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form id="notice-form">
+                    <div class="form-group">
+                        <label for="notice-title">Notice Title</label>
+                        <input type="text" id="notice-title" placeholder="e.g. Midterm Exams Schedule" required
+                            style="width: 100%; height: 42px; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); padding: 0 12px;">
+                    </div>
+                    <div class="form-group" style="margin-top: 16px;">
+                        <label for="notice-content">Notice Details / Announcement Content</label>
+                        <textarea id="notice-content" placeholder="Type notice description..." rows="5" required
+                            style="width: 100%; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); padding: 12px; font-family: var(--font-body);"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-indigo btn-full"
+                        style="margin-top: 20px; width: 100%; height: 42px;">
+                        <i data-lucide="send"></i>
+                        <span>Publish Announcement</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
