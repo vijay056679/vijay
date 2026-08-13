@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUC Emission Analyser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+     /* ═══════════════════════════════════════════════════════
+       DESIGN SYSTEM — Industrial PUC diagnostic aesthetic
+       Deep graphite + acid-green + neon-amber accents
+    ═══════════════════════════════════════════════════════ */
+    :root {
+      --bg:        #0d0f12;
+      --bg2:       #13161c;
+      --bg3:       #1a1e27;
+      --panel:     #1e2330;
+      --border:    rgba(255,255,255,0.06);
+      --border2:   rgba(255,255,255,0.12);
+      --green:     #39ff8f;
+      --amber:     #ffb830;
+      --red:       #ff4d5e;
+      --blue:      #4db8ff;
+      --muted:     #6a7080;
+      --text:      #dde3ee;
+      --text-dim:  #8a90a0;
+      --mono:      'Space Mono', monospace;
+      --sans:      'Syne', sans-serif;
+      --glow-g:    0 0 20px rgba(57,255,143,.25);
+      --glow-a:    0 0 20px rgba(255,184,48,.25);
+      --glow-r:    0 0 20px rgba(255,77,94,.30);
+      --radius:    12px;
+      --radius-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── BACKGROUND GRID ─────────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(57,255,143,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57,255,143,.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    /* ── SCANLINE OVERLAY ────────────────────────────────── */
+    body::after {
+      content: '';
+      position: fixed; inset: 0; z-index: 1;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,.08) 2px,
+        rgba(0,0,0,.08) 4px
+      );
+      pointer-events: none;
+    }
+
+    /* ── LAYOUT ──────────────────────────────────────────── */
+    .page { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 24px 80px; }
+
+    /* ── HEADER ──────────────────────────────────────────── */
+    header {
+      padding: 36px 0 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+
+    .logo-badge {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, var(--green), #00c85a);
+      border-radius: 14px;
+      display: grid; place-items: center;
+      font-size: 26px;
+      box-shadow: var(--glow-g), inset 0 1px 0 rgba(255,255,255,.2);
+      flex-shrink: 0;
+    }
+
+    .logo-text h1 {
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: #fff;
+    }
+    .logo-text h1 span { color: var(--green); }
+    .logo-text p {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 2px;
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .header-stats {
+      margin-left: auto;
+      display: flex;
+      gap: 16px;
+    }
+    .stat-pill {
+      background: var(--panel);
+      border: 1px solid var(--border2);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .stat-pill strong { color: var(--green); font-size: 13px; }
+
+    /* ── MAIN GRID ───────────────────────────────────────── */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .main-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── CARD ────────────────────────────────────────────── */
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: border-color .3s;
+    }
+    .card:hover { border-color: var(--border2); }
+
+    .card-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(180deg, var(--bg3) 0%, transparent 100%);
+    }
+    .card-header .icon {
+      font-size: 18px;
+      width: 36px; height: 36px;
+      background: rgba(57,255,143,.1);
+      border: 1px solid rgba(57,255,143,.2);
+      border-radius: 10px;
+      display: grid; place-items: center;
+    }
+    .card-header h2 {
+      font-size: 14px; font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .card-header .tag {
+      margin-left: auto;
+      font-family: var(--mono);
+      font-size: 10px;
+      background: rgba(57,255,143,.08);
+      color: var(--green);
+      border: 1px solid rgba(57,255,143,.2);
+      border-radius: 6px;
+      padding: 3px 10px;
+      letter-spacing: 1px;
+    }
+
+    .card-body { padding: 24px; }
+
+    /* ── FORM ────────────────────────────────────────────── */
+    .section-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: .5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .field label .unit {
+      color: var(--amber);
+      font-size: 10px;
+    }
+
+    /* Select dropdowns (Vehicle Configuration) */
+    .field select {
+      background: var(--bg2);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236a7080' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 10px 36px 10px 14px;
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 13px;
+      width: 100%;
+      outline: none;
+      cursor: pointer;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .field select option { background: var(--bg2); }
+    .field select:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(57,255,143,.1);
+    }
+
+    /* Numeric input fields (emission readings) */
+    .field input[type="number"] {
+      width: 100%;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      color: var(--green);
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 700;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .field input[type="number"]:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(57,255,143,.1);
+    }
+    .field input[type="number"]::-webkit-inner-spin-button {
+      opacity: 0.5;
+    }
+
+    .field .range-hint {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .gap-20 { height: 20px; }
+
+    /* ── BUTTONS ─────────────────────────────────────────── */
+    .btn-row { display: flex; gap: 12px; margin-top: 28px; }
+
+    .btn {
+      flex: 1;
+      padding: 13px 20px;
+      border-radius: var(--radius);
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      cursor: pointer;
+      border: none;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--green), #00c85a);
+      color: #0a1a0f;
+      box-shadow: var(--glow-g);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(57,255,143,.35); }
+    .btn-primary:active { transform: translateY(0); }
+
+    .btn-ghost {
+      background: var(--bg3);
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { border-color: var(--border2); color: var(--text); }
+
+    .btn-sample {
+      background: rgba(255,184,48,.07);
+      color: var(--amber);
+      border: 1px solid rgba(255,184,48,.2);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-family: var(--mono);
+      font-size: 10px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: all .2s;
+      white-space: nowrap;
+    }
+    .btn-sample:hover { background: rgba(255,184,48,.14); }
+
+    /* ── RIGHT PANEL ─────────────────────────────────────── */
+    .right-col { display: flex; flex-direction: column; gap: 24px; }
+
+    /* ── RESULT CARD ─────────────────────────────────────── */
+    #result-card { display: none; }
+
+    .result-severity {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      border-radius: var(--radius);
+      margin-bottom: 20px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .severity-ok    { background: rgba(57,255,143,.1); color: var(--green); border: 1px solid rgba(57,255,143,.25); }
+    .severity-medium{ background: rgba(255,184,48,.1);  color: var(--amber); border: 1px solid rgba(255,184,48,.25); }
+    .severity-high  { background: rgba(255,77,94,.1);   color: var(--red);   border: 1px solid rgba(255,77,94,.25); }
+
+    .result-issue-name {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .result-issue-name .eicon { font-size: 28px; }
+
+    .result-desc {
+      font-size: 13px;
+      color: var(--text-dim);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .action-box {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--amber);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .action-box strong {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--amber);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* ── CONFIDENCE BARS ─────────────────────────────────── */
+    .conf-title {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin: 20px 0 12px;
+    }
+
+    .conf-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .conf-label {
+      font-size: 11px;
+      color: var(--text-dim);
+      width: 150px;
+      flex-shrink: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .conf-bar-wrap {
+      flex: 1;
+      background: var(--bg3);
+      border-radius: 4px;
+      height: 6px;
+      overflow: hidden;
+    }
+    .conf-bar {
+      height: 100%;
+      border-radius: 4px;
+      transition: width .6s cubic-bezier(.22,1,.36,1);
+      background: linear-gradient(90deg, var(--green), #00c85a);
+    }
+    .conf-pct {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--green);
+      width: 36px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* ── GAUGE PANEL ─────────────────────────────────────── */
+    .gauge-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .gauge-item {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+      transition: border-color .3s;
+    }
+    .gauge-item.highlight { border-color: var(--green); background: rgba(57,255,143,.04); }
+    .gauge-item.warn      { border-color: var(--amber); background: rgba(255,184,48,.04); }
+    .gauge-item.danger    { border-color: var(--red);   background: rgba(255,77,94,.04); }
+
+    .gauge-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .gauge-value {
+      font-family: var(--mono);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+    }
+    .gauge-unit {
+      font-size: 9px;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    /* ── LOADING SPINNER ─────────────────────────────────── */
+    .spinner {
+      display: none;
+      width: 20px; height: 20px;
+      border: 2px solid rgba(57,255,143,.3);
+      border-top-color: var(--green);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── IDLE STATE ──────────────────────────────────────── */
+    .idle-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .idle-icon {
+      font-size: 48px;
+      opacity: .4;
+      filter: grayscale(1);
+    }
+    .idle-text {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+
+    /* ── SAMPLE ISSUE PICKER ─────────────────────────────── */
+    .sample-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer p {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+    footer span { color: var(--green); }
+
+    /* ── ANIMATIONS ──────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(16px); }
+      to   { opacity:1; transform: translateY(0);    }
+    }
+    .fade-up { animation: fadeUp .4s ease both; }
+
+    @keyframes pulse-border {
+      0%,100% { box-shadow: 0 0 0 0 rgba(57,255,143,.3); }
+      50%      { box-shadow: 0 0 0 6px rgba(57,255,143,0); }
+    }
+    .pulse { animation: pulse-border 2s ease infinite; }
+
+    /* ── TOOLTIP ─────────────────────────────────────────── */
+    [data-tip] { position: relative; cursor: help; }
+    [data-tip]::after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: 120%; left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg3);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 10px;
+      white-space: nowrap;
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border2);
+      opacity: 0; pointer-events: none;
+      transition: opacity .2s;
+      z-index: 10;
+    }
+    [data-tip]:hover::after { opacity: 1; }
+
+    /* ── SCROLLBAR ───────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--panel); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+
+  </style>
+</head>
+
+<body>
+<div class="page">
+
+  <!-- ── HEADER ──────────────────────────────────────────── -->
+  <header>
+    <div class="logo-badge">🚗</div>
+    <div class="logo-text">
+      <h1>PUC Emission <span>Analyser</span></h1>
+      <p> Fault Detection · Real-time</p>
+    </div>
+    <div class="header-stats">
+      {% if train_acc != 'N/A' %}
+      <div class="stat-pill" data-tip="Training set accuracy">
+     #   Train <strong>{{ train_acc }}%</strong>
+      </div>
+      {% endif %}
+      {% if test_acc != 'N/A' %}
+      <div class="stat-pill" data-tip="Hold-out test accuracy">
+        Test <strong>{{ test_acc }}%</strong>
+      </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <!-- ── MAIN GRID ─────────────────────────────────────────── -->
+  <div class="main-grid">
+
+    <!-- LEFT COLUMN — INPUT FORM -->
+    <div>
+
+      <!-- Vehicle info card -->
+      <div class="card" style="margin-bottom:24px">
+        <div class="card-header">
+          <div class="icon">🔧</div>
+          <h2>Vehicle Parameters</h2>
+          <span class="tag">PUC INPUT</span>
+        </div>
+        <div class="card-body">
+          <div class="section-label">Vehicle Configuration</div>
+          <div class="row-2" style="margin-bottom:20px">
+            <div class="field">
+              <label>Fuel Type</label>
+              <select id="fuel_type">
+                <option value="Diesel">Diesel</option>
+                <option value="Petrol">Petrol</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Emission Standard</label>
+              <select id="emission_standard">
+                <option value="BS4">BS4</option>
+                <option value="BS6">BS6</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="section-label">Emission Readings</div>
+
+          <div class="row-2" style="margin-bottom:16px">
+            <!-- CO -->
+            <div class="field">
+              <label>CO — Carbon Monoxide <span class="unit">%vol</span></label>
+              <input type="number" id="CO" min="0.10" max="0.90" step="0.01" value="0.25"
+                     oninput="updateGauge('CO')">
+              <span class="range-hint">range 0.10 – 0.90</span>
+            </div>
+
+            <!-- HC -->
+            <div class="field">
+              <label>HC — Hydrocarbons <span class="unit">ppm</span></label>
+              <input type="number" id="HC" min="50" max="700" step="1" value="120"
+                     oninput="updateGauge('HC')">
+              <span class="range-hint">range 50 – 700</span>
+            </div>
+          </div>
+
+          <div class="row-2" style="margin-bottom:16px">
+            <!-- NOx -->
+            <div class="field">
+              <label>NOx — Nitrogen Oxides <span class="unit">g/km</span></label>
+              <input type="number" id="NOx" min="0.01" max="0.30" step="0.001" value="0.025"
+                     oninput="updateGauge('NOx')">
+              <span class="range-hint">range 0.01 – 0.30</span>
+            </div>
+
+            <!-- PM -->
+            <div class="field">
+              <label>PM — Particulate Matter <span class="unit">g/km</span></label>
+              <input type="number" id="PM" min="0.001" max="0.025" step="0.0001" value="0.0018"
+                     oninput="updateGauge('PM')">
+              <span class="range-hint">range 0.001 – 0.025</span>
+            </div>
+          </div>
+
+          <div class="row-2" style="margin-bottom:0">
+            <!-- O2 -->
+            <div class="field">
+              <label>O₂ — Oxygen <span class="unit">%vol</span></label>
+              <input type="number" id="O2" min="0.20" max="0.90" step="0.01" value="0.50"
+                     oninput="updateGauge('O2')">
+              <span class="range-hint">range 0.20 – 0.90</span>
+            </div>
+
+            <!-- Lambda -->
+            <div class="field">
+              <label>λ Lambda — Air/Fuel Ratio <span class="unit">stoich=1.0</span></label>
+              <input type="number" id="Lambda" min="0.70" max="1.30" step="0.001" value="1.00"
+                     oninput="updateGauge('Lambda')">
+              <span class="range-hint">range 0.70 – 1.30</span>
+            </div>
+          </div>
+
+          <!-- Action buttons -->
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="runPredict()">
+              <div class="spinner" id="spinner"></div>
+              <span id="btn-text">🔍 Analyse Emissions</span>
+            </button>
+            <button class="btn btn-ghost" onclick="resetForm()">↺ Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample loader card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="icon">📋</div>
+          <h2>Load Sample Fault</h2>
+          <span class="tag">QUICK LOAD</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px;font-family:var(--mono)">
+            Load realistic PUC readings for a known fault type:
+          </p>
+          <div class="sample-wrap" id="sample-btns"></div>
+        </div>
+      </div>
+
+    </div><!-- /left col -->
+
+    <!-- RIGHT COLUMN — RESULTS -->
+    <div class="right-col">
+
+      <!-- Live gauge card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="icon">📊</div>
+          <h2>Live Readings</h2>
+          <span class="tag">REALTIME</span>
+        </div>
+        <div class="card-body">
+          <div class="gauge-grid" id="gauge-grid">
+            <div class="gauge-item" id="g-CO">
+              <div class="gauge-label">CO</div>
+              <div class="gauge-value" id="gv-CO">0.25</div>
+              <div class="gauge-unit">%vol</div>
+            </div>
+            <div class="gauge-item" id="g-HC">
+              <div class="gauge-label">HC</div>
+              <div class="gauge-value" id="gv-HC">120</div>
+              <div class="gauge-unit">ppm</div>
+            </div>
+            <div class="gauge-item" id="g-NOx">
+              <div class="gauge-label">NOx</div>
+              <div class="gauge-value" id="gv-NOx">0.025</div>
+              <div class="gauge-unit">g/km</div>
+            </div>
+            <div class="gauge-item" id="g-PM">
+              <div class="gauge-label">PM</div>
+              <div class="gauge-value" id="gv-PM">0.0018</div>
+              <div class="gauge-unit">g/km</div>
+            </div>
+            <div class="gauge-item" id="g-O2">
+              <div class="gauge-label">O₂</div>
+              <div class="gauge-value" id="gv-O2">0.50</div>
+              <div class="gauge-unit">%vol</div>
+            </div>
+            <div class="gauge-item" id="g-Lambda">
+              <div class="gauge-label">λ Lambda</div>
+              <div class="gauge-value" id="gv-Lambda">1.000</div>
+              <div class="gauge-unit">ratio</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diagnosis result card -->
+      <div class="card" id="result-card">
+        <div class="card-header">
+          <div class="icon">🩺</div>
+          <h2>Diagnosis Result</h2>
+          <span class="tag" id="result-tag">PENDING</span>
+        </div>
+        <div class="card-body fade-up">
+          <div class="result-severity" id="sev-badge">—</div>
+          <div class="result-issue-name" id="issue-name">—</div>
+          <div class="result-desc" id="issue-desc">—</div>
+          <div class="action-box">
+            <strong>🔧 Recommended Action</strong>
+            <span id="issue-action">—</span>
+          </div>
+          <div class="conf-title">TOP PREDICTIONS / CONFIDENCE</div>
+          <div id="conf-bars"></div>
+        </div>
+      </div>
+
+      <!-- Idle state -->
+      <div class="card" id="idle-card">
+        <div class="card-body idle-state">
+          <div class="idle-icon">🔬</div>
+          <div class="idle-text">Fill in emission values<br>and click Analyse</div>
+        </div>
+      </div>
+
+    </div><!-- /right col -->
+  </div><!-- /main-grid -->
+
+  <footer>
+    <p>PUC Emission Classifier · <span>XGBoost</span> </p>
+    <p>India Emission Standards: <span>BS4 / BS6</span></p>
+  </footer>
+
+</div><!-- /page -->
+
+<script>
+  // ── LIVE GAUGE UPDATE ─────────────────────────────────────
+  const THRESHOLDS = {
+    CO:     { warn: 0.45, danger: 0.65 },
+    HC:     { warn: 300,  danger: 500  },
+    NOx:    { warn: 0.10, danger: 0.15 },
+    PM:     { warn: 0.007,danger: 0.012},
+    O2:     { warn: null, danger: null },
+    Lambda: { warn: null, danger: null },
+  };
+
+  function updateGauge(id) {
+    const raw = document.getElementById(id).value;
+    const val = parseFloat(raw);
+    const gv  = document.getElementById('gv-' + id);
+    const gi  = document.getElementById('g-'  + id);
+    if (!gv || !gi || isNaN(val)) return;
+
+    // format
+    gv.textContent = id === 'HC' ? val : val.toFixed(id === 'Lambda' ? 3 : id === 'PM' ? 4 : 2);
+
+    // colour
+    const t = THRESHOLDS[id];
+    gi.className = 'gauge-item';
+    if (t && t.danger !== null && val >= t.danger) gi.classList.add('danger');
+    else if (t && t.warn !== null && val >= t.warn) gi.classList.add('warn');
+    else gi.classList.add('highlight');
+  }
+
+  // init gauges
+  ['CO','HC','NOx','PM','O2','Lambda'].forEach(id => updateGauge(id));
+
+  // ── SAMPLE FAULT BUTTONS ──────────────────────────────────
+  const FAULTS = [
+    'Normal','Air Filter Clogged','DPF Clogging','EGR Valve Problem',
+    'Engine Misfire','Fuel Injector Issue','Injector Problem',
+    'Rich Fuel Mixture','Spark Plug Issue','Turbocharger Issue'
+  ];
+
+  const sampleWrap = document.getElementById('sample-btns');
+  FAULTS.forEach(fault => {
+    const btn = document.createElement('button');
+    btn.className = 'btn-sample';
+    btn.textContent = fault;
+    btn.onclick = () => loadSample(fault);
+    sampleWrap.appendChild(btn);
+  });
+
+  function loadSample(fault) {
+    fetch('/sample/' + encodeURIComponent(fault))
+      .then(r => r.json())
+      .then(d => {
+        ['CO','HC','NOx','PM','O2','Lambda'].forEach(k => {
+          if (d[k] !== undefined) {
+            document.getElementById(k).value = d[k];
+            updateGauge(k);
+          }
+        });
+      });
+  }
+
+  // ── PREDICT ───────────────────────────────────────────────
+  function runPredict() {
+    const spinner = document.getElementById('spinner');
+    const btnText = document.getElementById('btn-text');
+    spinner.style.display = 'block';
+    btnText.textContent   = 'Analysing…';
+
+    const body = {
+      fuel_type:          document.getElementById('fuel_type').value,
+      emission_standard:  document.getElementById('emission_standard').value,
+      CO:     document.getElementById('CO').value,
+      HC:     document.getElementById('HC').value,
+      NOx:    document.getElementById('NOx').value,
+      PM:     document.getElementById('PM').value,
+      O2:     document.getElementById('O2').value,
+      Lambda: document.getElementById('Lambda').value,
+    };
+
+    fetch('/predict', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(body),
+    })
+    .then(r => r.json())
+    .then(data => {
+      spinner.style.display = 'none';
+      btnText.textContent = '🔍 Analyse Emissions';
+      if (data.success) showResult(data);
+      else alert('Error: ' + data.error);
+    })
+    .catch(err => {
+      spinner.style.display = 'none';
+      btnText.textContent = '🔍 Analyse Emissions';
+      alert('Network error: ' + err);
+    });
+  }
+
+  // ── SHOW RESULT ───────────────────────────────────────────
+  function showResult(data) {
+    document.getElementById('idle-card').style.display = 'none';
+    const rc = document.getElementById('result-card');
+    rc.style.display = 'block';
+    rc.classList.add('fade-up');
+
+    // severity badge
+    const sev = document.getElementById('sev-badge');
+    sev.className = 'result-severity severity-' + data.severity;
+    const icons = { ok: '✅', medium: '⚠️', high: '🚨' };
+    sev.innerHTML = icons[data.severity] + ' &nbsp; PUC STATUS: <strong>' + data.severity_label + '</strong>';
+
+    // result tag
+    document.getElementById('result-tag').textContent = data.severity_label;
+
+    // issue name
+    document.getElementById('issue-name').innerHTML =
+      '<span class="eicon">' + data.icon + '</span> ' + data.issue;
+
+    document.getElementById('issue-desc').textContent   = data.description;
+    document.getElementById('issue-action').textContent = data.action;
+
+    // confidence bars
+    const wrap = document.getElementById('conf-bars');
+    wrap.innerHTML = '';
+    data.top_issues.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.className = 'conf-item';
+      const maxW = item.prob;
+      div.innerHTML = `
+        <span class="conf-label" title="${item.label}">${item.label}</span>
+        <div class="conf-bar-wrap">
+          <div class="conf-bar" style="width:0%;background:${i===0?'var(--green)':i===1?'var(--amber)':'var(--muted)'}"></div>
+        </div>
+        <span class="conf-pct">${item.prob}%</span>
+      `;
+      wrap.appendChild(div);
+      setTimeout(() => {
+        div.querySelector('.conf-bar').style.width = maxW + '%';
+      }, 100 + i * 80);
+    });
+  }
+
+  // ── RESET ─────────────────────────────────────────────────
+  function resetForm() {
+    const defaults = { CO:0.25, HC:120, NOx:0.025, PM:0.0018, O2:0.50, Lambda:1.00 };
+    Object.entries(defaults).forEach(([k,v]) => {
+      document.getElementById(k).value = v;
+      updateGauge(k);
+    });
+    document.getElementById('result-card').style.display = 'none';
+    document.getElementById('idle-card').style.display   = 'block';
+    document.getElementById('fuel_type').value = 'Diesel';
+    document.getElementById('emission_standard').value = 'BS4';
+  }
+</script>
+</body>
+</html>
