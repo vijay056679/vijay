@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STATION 7 — Air Quality Telemetry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Archivo+Expanded:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-0: #12130f;
+    --bg-1: #191a14;
+    --panel: #1e1f18;
+    --hairline: #34362b;
+    --amber: #e8b545;
+    --amber-dim: #8a6f2e;
+    --paper: #ece6d6;
+    --paper-dim: #8f8b7a;
+    --good: #5ec48b;
+    --moderate: #d9c24a;
+    --sensitive: #e08a3c;
+    --unhealthy: #d1543f;
+    --severe: #8b3a62;
+    --radius: 3px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-0);
+    color: var(--paper);
+    font-family: 'Space Mono', monospace;
+    min-height: 100vh;
+  }
+
+  body {
+    background-image:
+      radial-gradient(ellipse 900px 500px at 50% -10%, rgba(232,181,69,0.06), transparent),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px);
+    transition: background-color 1.2s ease;
+  }
+
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 28px 24px 80px;
+  }
+
+  /* ---------- Header / Masthead ---------- */
+  .masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+  }
+
+  .masthead-left .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--amber-dim);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .masthead-left h1 {
+    font-family: 'Archivo Expanded', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--paper);
+  }
+
+  .masthead-left h1 span {
+    color: var(--amber);
+  }
+
+  .masthead-right {
+    text-align: right;
+    font-size: 11px;
+    color: var(--paper-dim);
+    line-height: 1.6;
+  }
+
+  .status-dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--good);
+    margin-right: 6px;
+    box-shadow: 0 0 6px var(--good);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* ---------- Grid layout ---------- */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 22px;
+  }
+
+  @media (max-width: 880px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 24px;
+    position: relative;
+  }
+
+  .panel-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--amber-dim);
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ---------- Sliders (input panel) ---------- */
+  .field {
+    margin-bottom: 20px;
+  }
+
+  .field:last-child { margin-bottom: 0; }
+
+  .field-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+
+  .field-name {
+    color: var(--paper);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .field-value {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: var(--amber);
+    font-size: 14px;
+    min-width: 70px;
+    text-align: right;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background: var(--hairline);
+    border-radius: 2px;
+    outline: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--amber);
+    cursor: pointer;
+    border: 2px solid var(--bg-0);
+    box-shadow: 0 0 0 1px var(--amber-dim);
+    transition: transform 0.15s ease;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--amber);
+    cursor: pointer;
+    border: 2px solid var(--bg-0);
+  }
+
+  .field-range {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: var(--paper-dim);
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 26px;
+    padding: 15px;
+    background: var(--amber);
+    color: var(--bg-0);
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'Archivo Expanded', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+
+  .submit-btn:hover { background: #f5c862; }
+  .submit-btn:active { transform: scale(0.99); }
+  .submit-btn:disabled { opacity: 0.5; cursor: wait; }
+
+  /* ---------- Readout panel (right side) ---------- */
+  .readout-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .gauge-wrap {
+    position: relative;
+    width: 220px;
+    height: 130px;
+    margin: 8px 0 4px;
+  }
+
+  .gauge-arc-bg {
+    stroke: var(--hairline);
+  }
+
+  .needle {
+    transform-origin: 110px 110px;
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .gauge-center-dot {
+    fill: var(--paper);
+  }
+
+  .category-label {
+    font-family: 'Archivo Expanded', sans-serif;
+    font-weight: 800;
+    font-size: 21px;
+    margin: 10px 0 2px;
+    transition: color 0.6s ease;
+    min-height: 28px;
+  }
+
+  .category-band {
+    font-size: 11px;
+    color: var(--paper-dim);
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
+
+  .confidence-row {
+    width: 100%;
+    font-size: 11px;
+    color: var(--paper-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--hairline);
+    padding-top: 14px;
+    margin-top: 6px;
+  }
+
+  .confidence-value {
+    color: var(--amber);
+    font-weight: 700;
+  }
+
+  .advisory {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--paper);
+    background: rgba(255,255,255,0.02);
+    border-left: 2px solid var(--amber-dim);
+    padding: 12px 14px;
+    margin-top: 16px;
+    text-align: left;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .prob-list {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .prob-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 44px;
+    align-items: center;
+    gap: 10px;
+    font-size: 10.5px;
+  }
+
+  .prob-name {
+    text-align: left;
+    color: var(--paper-dim);
+    letter-spacing: 0.02em;
+  }
+
+  .prob-bar-track {
+    height: 5px;
+    background: var(--hairline);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .prob-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.7s ease;
+  }
+
+  .prob-pct {
+    text-align: right;
+    color: var(--paper-dim);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .placeholder-state {
+    color: var(--paper-dim);
+    font-size: 12px;
+    padding: 30px 10px;
+    line-height: 1.7;
+  }
+
+  /* ---------- Footer strip ---------- */
+  .footer-strip {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: var(--paper-dim);
+    letter-spacing: 0.06em;
+    border-top: 1px solid var(--hairline);
+    padding-top: 14px;
+  }
+
+  .footer-strip b { color: var(--amber-dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="masthead-left">
+      <div class="eyebrow">Continuous Ambient Monitoring · Unit 7</div>
+      <h1>STATION<span>_</span>7 <span>AQI</span></h1>
+    </div>
+    <div class="masthead-right">
+      <div><span class="status-dot"></span>MODEL ONLINE — GRADIENT-BOOSTED ENSEMBLE</div>
+      <div id="clock-readout">—</div>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <!-- INPUT PANEL -->
+    <div class="panel">
+      <div class="panel-label"><span>Sensor Input — Manual Override</span><span>7 Channels</span></div>
+
+      {% for f in fields %}
+      <div class="field">
+        <div class="field-head">
+          <span class="field-name">{{ f.label }}</span>
+          <span class="field-value" id="val-{{ f.key }}">{{ f.default }} {{ f.unit }}</span>
+        </div>
+        <input type="range" id="slider-{{ f.key }}"
+               min="{{ f.min }}" max="{{ f.max }}" step="{{ f.step }}" value="{{ f.default }}"
+               data-unit="{{ f.unit }}">
+        <div class="field-range"><span>{{ f.min }}</span><span>{{ f.max }} {{ f.unit }}</span></div>
+      </div>
+      {% endfor %}
+
+      <button class="submit-btn" id="predict-btn">Run Prediction</button>
+    </div>
+
+    <!-- READOUT PANEL -->
+    <div class="panel readout-panel">
+      <div class="panel-label" style="width:100%;"><span>Classification Output</span><span id="model-tag">XGBoost</span></div>
+
+      <div class="gauge-wrap">
+        <svg width="220" height="130" viewBox="0 0 220 130">
+          <path d="M 20 110 A 90 90 0 0 1 200 110" fill="none" stroke-width="10" class="gauge-arc-bg" stroke-linecap="round"/>
+          <path d="M 20 110 A 90 90 0 0 1 65 35" fill="none" stroke="#5ec48b" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+          <path d="M 65 35 A 90 90 0 0 1 110 20" fill="none" stroke="#d9c24a" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+          <path d="M 110 20 A 90 90 0 0 1 155 35" fill="none" stroke="#e08a3c" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+          <path d="M 155 35 A 90 90 0 0 1 200 110" fill="none" stroke="#d1543f" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+          <line id="needle" class="needle" x1="110" y1="110" x2="110" y2="34" stroke="#ece6d6" stroke-width="2.5" stroke-linecap="round" transform="rotate(-72 110 110)"/>
+          <circle cx="110" cy="110" r="5" class="gauge-center-dot"/>
+        </svg>
+      </div>
+
+      <div id="result-body">
+        <div class="placeholder-state">
+          Set sensor values on the left and run a prediction to see the classification, confidence, and full probability breakdown here.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-strip">
+    <span><b>Model</b> — Boosted decision tree ensemble · test accuracy ≈ 92.9%</span>
+    <span><b>Features</b> — PM2.5 · PM10 · NO₂ · SO₂ · CO · O₃ · Temp</span>
+  </div>
+
+</div>
+
+<script>
+const FIELD_KEYS = [{% for f in fields %}"{{ f.key }}"{{ "," if not loop.last }}{% endfor %}];
+
+const CATEGORY_COLORS = {
+  "Good": "#5ec48b",
+  "Moderate": "#d9c24a",
+  "Unhealthy for Sensitive": "#e08a3c",
+  "Unhealthy": "#d1543f",
+  "Very Unhealthy": "#8b3a62"
+};
+
+// Wire up sliders -> live value readouts
+FIELD_KEYS.forEach(key => {
+  const slider = document.getElementById(`slider-${key}`);
+  const label = document.getElementById(`val-${key}`);
+  const unit = slider.dataset.unit;
+  slider.addEventListener('input', () => {
+    label.textContent = `${slider.value} ${unit}`;
+  });
+});
+
+// Clock readout
+function updateClock() {
+  const now = new Date();
+  document.getElementById('clock-readout').textContent =
+    now.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }) + ' · ' +
+    now.toLocaleTimeString('en-US', { hour12: false });
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+const btn = document.getElementById('predict-btn');
+const resultBody = document.getElementById('result-body');
+const needle = document.getElementById('needle');
+
+btn.addEventListener('click', async () => {
+  const payload = {};
+  FIELD_KEYS.forEach(key => {
+    payload[key] = parseFloat(document.getElementById(`slider-${key}`).value);
+  });
+
+  btn.disabled = true;
+  btn.textContent = 'Analyzing…';
+
+  try {
+    const res = await fetch('/predict', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+
+    if (data.error) {
+      resultBody.innerHTML = `<div class="placeholder-state">Error: ${data.error}</div>`;
+      return;
+    }
+
+    // Rotate needle
+    needle.setAttribute('transform', `rotate(${data.needle_deg} 110 110)`);
+
+    // Build probability rows
+    let probRows = '';
+    for (const [label, pct] of Object.entries(data.probabilities)) {
+      const color = CATEGORY_COLORS[label] || '#8f8b7a';
+      probRows += `
+        <div class="prob-row">
+          <div class="prob-name">${label}</div>
+          <div class="prob-bar-track"><div class="prob-bar-fill" style="width:${pct}%; background:${color};"></div></div>
+          <div class="prob-pct">${pct}%</div>
+        </div>`;
+    }
+
+    resultBody.innerHTML = `
+      <div class="category-label" style="color:${data.color};">${data.prediction}</div>
+      <div class="category-band">AQI BAND ${data.band}</div>
+      <div class="advisory">${data.advisory}</div>
+      <div class="confidence-row">
+        <span>Model Confidence</span>
+        <span class="confidence-value">${data.confidence}%</span>
+      </div>
+      <div class="prob-list">${probRows}</div>
+    `;
+
+    // Animate bar fills after insertion (already set via inline width, but trigger reflow)
+    document.body.style.setProperty('--bg-tint', data.glow);
+
+  } catch (err) {
+    resultBody.innerHTML = `<div class="placeholder-state">Request failed: ${err.message}</div>`;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Run Prediction';
+  }
+});
+</script>
+</body>
+</html>
