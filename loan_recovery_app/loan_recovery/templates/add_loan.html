@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Open New Case{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div>
+    <span class="eyebrow">Case Files</span>
+    <h2>Open New Case</h2>
+    <p class="sub">Log a new loan and assign it a case number.</p>
+  </div>
+</div>
+
+<div class="panel" style="max-width: 640px;">
+  <h3>Case Details</h3>
+  <form method="POST" action="{{ url_for('add_loan') }}">
+    <div class="field">
+      <label for="borrower_id">Borrower</label>
+      <select name="borrower_id" id="borrower_id" onchange="document.getElementById('new-borrower-fields').style.display = this.value === 'new' ? 'block' : 'none';">
+        <option value="new">+ New borrower</option>
+        {% for b in borrowers %}
+        <option value="{{ b.id }}">{{ b.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div id="new-borrower-fields">
+      <div class="form-grid">
+        <div class="field">
+          <label for="new_name">Full name</label>
+          <input type="text" name="new_name" id="new_name" placeholder="Jordan Prescott">
+        </div>
+        <div class="field">
+          <label for="new_phone">Phone</label>
+          <input type="text" name="new_phone" id="new_phone" placeholder="+91 98765 43210">
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="field">
+          <label for="new_email">Email</label>
+          <input type="email" name="new_email" id="new_email" placeholder="jordan@example.com">
+        </div>
+        <div class="field">
+          <label for="new_address">Address</label>
+          <input type="text" name="new_address" id="new_address" placeholder="City, State">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="field">
+        <label for="principal_amount">Principal amount (₹)</label>
+        <input type="number" step="0.01" min="0" name="principal_amount" id="principal_amount" required placeholder="50000">
+      </div>
+      <div class="field">
+        <label for="interest_rate">Interest rate (% p.a.)</label>
+        <input type="number" step="0.01" min="0" name="interest_rate" id="interest_rate" placeholder="12">
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="field">
+        <label for="due_date">Due date</label>
+        <input type="date" name="due_date" id="due_date" value="{{ today }}" required>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Open Case</button>
+  </form>
+</div>
+{% endblock %}

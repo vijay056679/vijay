@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}Ledger Overview{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div>
+    <span class="eyebrow">Recovery Desk</span>
+    <h2>Ledger Overview</h2>
+    <p class="sub">Standing of every case currently open on the desk.</p>
+  </div>
+  <a href="{{ url_for('add_loan') }}" class="btn btn-primary">+ Open New Case</a>
+</div>
+
+<div class="stat-row">
+  <div class="stat-card" style="--stat-accent: var(--gold);">
+    <span class="stat-label">Total Cases</span>
+    <div class="stat-value">{{ total_loans }}</div>
+    <div class="stat-foot">{{ active_count }} active on file</div>
+  </div>
+  <div class="stat-card" style="--stat-accent: var(--rust);">
+    <span class="stat-label">Outstanding Balance</span>
+    <div class="stat-value">₹{{ "{:,.0f}".format(total_outstanding) }}</div>
+    <div class="stat-foot">{{ overdue_count }} case(s) overdue</div>
+  </div>
+  <div class="stat-card" style="--stat-accent: var(--green);">
+    <span class="stat-label">Total Recovered</span>
+    <div class="stat-value">₹{{ "{:,.0f}".format(total_recovered) }}</div>
+    <div class="stat-foot">{{ recovery_rate }}% of principal collected</div>
+  </div>
+  <div class="stat-card" style="--stat-accent: #7a2f2f;">
+    <span class="stat-label">Closed Cases</span>
+    <div class="stat-value">{{ recovered_count }}</div>
+    <div class="stat-foot">{{ defaulted_count }} marked defaulted</div>
+  </div>
+</div>
+
+<div class="two-col">
+  <div class="panel">
+    <h3>Oldest Overdue Cases</h3>
+    {% if top_overdue %}
+    <table class="ledger">
+      <thead>
+        <tr><th>Case</th><th>Borrower</th><th>Days Overdue</th><th style="text-align:right;">Outstanding</th></tr>
+      </thead>
+      <tbody>
+        {% for loan in top_overdue %}
+        <tr onclick="window.location='{{ url_for('loan_detail', loan_id=loan.id) }}'" style="cursor:pointer;">
+          <td class="case-number">{{ loan.case_number }}</td>
+          <td>{{ loan.borrower.name }}</td>
+          <td><span class="pill status-overdue">{{ loan.days_overdue() }} days</span></td>
+          <td class="amount">₹{{ "{:,.0f}".format(loan.outstanding_amount) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <div class="empty-state">No overdue cases on the desk right now — clean ledger.</div>
+    {% endif %}
+  </div>
+
+  <div class="panel">
+    <h3>Recent Payments Logged</h3>
+    {% if recent_payments %}
+    <ul class="timeline">
+      {% for p in recent_payments %}
+      <li>
+        <div class="t-head">
+          <span>{{ p.loan.borrower.name }} · {{ p.loan.case_number }}</span>
+          <span class="mono">₹{{ "{:,.0f}".format(p.amount) }}</span>
+        </div>
+        <div class="t-note">{{ p.method or "Payment" }}{% if p.note %} — {{ p.note }}{% endif %}</div>
+        <div class="t-date">{{ p.payment_date.strftime('%d %b %Y') }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <div class="empty-state">No payments logged yet.</div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

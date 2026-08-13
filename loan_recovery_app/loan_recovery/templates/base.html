@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Casefile{% endblock %} · Loan Recovery Desk</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="mark">CF</div>
+        <h1>Casefile</h1>
+        <span>Recovery Desk</span>
+      </div>
+      <ul class="nav-tabs">
+        <li><a href="{{ url_for('dashboard') }}" class="{{ 'active' if request.endpoint=='dashboard' }}"><span class="tab-index">01</span> Ledger Overview</a></li>
+        <li><a href="{{ url_for('loans_list') }}" class="{{ 'active' if request.endpoint in ['loans_list'] }}"><span class="tab-index">02</span> Case Files</a></li>
+        <li><a href="{{ url_for('add_loan') }}" class="{{ 'active' if request.endpoint=='add_loan' }}"><span class="tab-index">03</span> Open New Case</a></li>
+        <li><a href="{{ url_for('borrowers_list') }}" class="{{ 'active' if request.endpoint in ['borrowers_list','borrower_detail'] }}"><span class="tab-index">04</span> Borrowers</a></li>
+      </ul>
+      <div class="sidebar-foot">
+        Every case, tracked to close.<br>Casefile Recovery Desk.
+      </div>
+    </aside>
+    <main>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="flash-stack">
+            {% for category, message in messages %}
+              <div class="flash {{ 'error' if category == 'error' else '' }}">{{ message }}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+</body>
+</html>

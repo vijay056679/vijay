@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}{{ borrower.name }}{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div>
+    <span class="eyebrow">Borrower Profile</span>
+    <h2>{{ borrower.name }}</h2>
+    <p class="sub">{{ borrower.phone or 'No phone' }} · {{ borrower.email or 'No email' }} · {{ borrower.address or 'No address' }}</p>
+  </div>
+</div>
+
+{% if borrower.loans %}
+<div class="case-grid">
+  {% for loan in borrower.loans %}
+  <a href="{{ url_for('loan_detail', loan_id=loan.id) }}">
+    <div class="case-file" data-tab="{{ loan.case_number }}" style="--tilt: {{ '-1deg' if loop.index0 % 2 == 0 else '0.8deg' }};">
+      <div class="case-number">Opened {{ loan.loan_date.strftime('%d %b %Y') }}</div>
+      <h4>{{ loan.case_number }}</h4>
+      <div class="figures">
+        <div><span class="fig-label">Principal</span><span class="fig-value">₹{{ "{:,.0f}".format(loan.principal_amount) }}</span></div>
+        <div><span class="fig-label">Outstanding</span><span class="fig-value">₹{{ "{:,.0f}".format(loan.outstanding_amount) }}</span></div>
+      </div>
+      <div class="meta-row">
+        <span>Due {{ loan.due_date.strftime('%d %b %Y') }}</span>
+        <span class="stamp status-{{ loan.status.lower() }}">{{ loan.status }}</span>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% else %}
+<div class="panel"><div class="empty-state">This borrower has no cases yet.</div></div>
+{% endif %}
+{% endblock %}

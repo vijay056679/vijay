@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% block title %}{{ loan.case_number }}{% endblock %}
+{% block content %}
+
+<div class="case-banner">
+  <div>
+    <div class="case-title">{{ loan.borrower.name }} <span class="mono" style="font-size:14px; color:var(--slate);">· {{ loan.case_number }}</span></div>
+    <div class="case-sub">Opened {{ loan.loan_date.strftime('%d %b %Y') }} · Due {{ loan.due_date.strftime('%d %b %Y') }}
+      {% if loan.days_overdue() > 0 %} · <span style="color:var(--rust);">{{ loan.days_overdue() }} days overdue</span>{% endif %}
+    </div>
+  </div>
+  <div class="status-actions">
+    <span class="stamp status-{{ loan.status.lower() }}">{{ loan.status }}</span>
+    <form method="POST" action="{{ url_for('update_status', loan_id=loan.id) }}" style="display:inline;">
+      <select name="status" onchange="this.form.submit()" class="btn btn-outline btn-sm" style="background:var(--ink-2);">
+        <option value="">Change status…</option>
+        <option value="Active">Active</option>
+        <option value="Overdue">Overdue</option>
+        <option value="Recovered">Recovered</option>
+        <option value="Defaulted">Defaulted</option>
+      </select>
+    </form>
+  </div>
+</div>
+
+<div class="two-col">
+  <div>
+    <div class="panel">
+      <h3>Recovery Progress</h3>
+      {% set recovered_amt = loan.principal_amount - loan.outstanding_amount %}
+      {% set pct = ((recovered_amt / loan.principal_amount) * 100) if loan.principal_amount > 0 else 0 %}
+      <div class="figures" style="margin-top:0;">
+        <div><span class="fig-label">Principal</span><span class="fig-value">₹{{ "{:,.0f}".format(loan.principal_amount) }}</span></div>
+        <div><span class="fig-label">Recovered</span><span class="fig-value">₹{{ "{:,.0f}".format(recovered_amt) }}</span></div>
+        <div><span class="fig-label">Outstanding</span><span class="fig-value">₹{{ "{:,.0f}".format(loan.outstanding_amount) }}</span></div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" style="width: {{ pct }}%;"></div></div>
+      <div class="t-note" style="margin-top:6px; color:#6b634c;">{{ "%.1f"|format(pct) }}% recovered · interest rate {{ loan.interest_rate }}% p.a.</div>
+    </div>
+
+    <div class="panel">
+      <h3>Payment History</h3>
+      {% if payments %}
+      <table class="ledger">
+        <thead><tr><th>Date</th><th>Method</th><th>Note</th><th style="text-align:right;">Amount</th></tr></thead>
+        <tbody>
+          {% for p in payments %}
+          <tr>
+            <td class="mono">{{ p.payment_date.strftime('%d %b %Y') }}</td>
+            <td>{{ p.method }}</td>
+            <td>{{ p.note or '—' }}</td>
+            <td class="amount">₹{{ "{:,.0f}".format(p.amount) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <div class="empty-state">No payments logged for this case yet.</div>
+      {% endif %}
+    </div>
+
+    <div class="panel">
+      <h3>Log a Payment</h3>
+      <form method="POST" action="{{ url_for('add_payment', loan_id=loan.id) }}">
+        <div class="form-grid">
+          <div class="field">
+            <label for="amount">Amount (₹)</label>
+            <input type="number" step="0.01" min="0.01" max="{{ loan.outstanding_amount }}" name="amount" id="amount" required>
+          </div>
+          <div class="field">
+            <label for="method">Method</label>
+            <select name="method" id="method">
+              <option>Bank Transfer</option>
+              <option>Cash</option>
+              <option>UPI</option>
+              <option>Cheque</option>
+              <option>Card</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="note">Note</label>
+          <input type="text" name="note" id="note" placeholder="Partial settlement, receipt #...">
+        </div>
+        <button type="submit" class="btn btn-primary">Log Payment</button>
+      </form>
+    </div>
+  </div>
+
+  <div>
+    <div class="panel">
+      <h3>Borrower</h3>
+      <p style="margin:0 0 4px 0; font-weight:600;">{{ loan.borrower.name }}</p>
+      <p style="margin:0 0 4px 0; color:#6b634c; font-size:13px;">{{ loan.borrower.phone or 'No phone on file' }}</p>
+      <p style="margin:0 0 4px 0; color:#6b634c; font-size:13px;">{{ loan.borrower.email or 'No email on file' }}</p>
+      <p style="margin:0; color:#6b634c; font-size:13px;">{{ loan.borrower.address or 'No address on file' }}</p>
+    </div>
+
+    <div class="panel">
+      <h3>Collection Activity</h3>
+      {% if notes %}
+      <ul class="timeline">
+        {% for n in notes %}
+        <li>
+          <div class="t-head"><span>{{ n.action }} · {{ n.agent_name }}</span></div>
+          {% if n.note %}<div class="t-note">{{ n.note }}</div>{% endif %}
+          <div class="t-date">{{ n.created_at.strftime('%d %b %Y, %H:%M') }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <div class="empty-state">No activity logged yet.</div>
+      {% endif %}
+
+      <form method="POST" action="{{ url_for('add_note', loan_id=loan.id) }}" style="margin-top:14px;">
+        <div class="form-grid">
+          <div class="field">
+            <label for="agent_name">Agent</label>
+            <input type="text" name="agent_name" id="agent_name" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="action">Action</label>
+            <select name="action" id="action">
+              <option>Call</option>
+              <option>SMS</option>
+              <option>Email</option>
+              <option>Field Visit</option>
+              <option>Legal Notice</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="note2">Note</label>
+          <textarea name="note" id="note2" placeholder="Spoke with borrower, promised payment by..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline">Log Activity</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

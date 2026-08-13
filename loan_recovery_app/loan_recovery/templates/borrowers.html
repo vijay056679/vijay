@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Borrowers{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div>
+    <span class="eyebrow">Directory</span>
+    <h2>Borrowers</h2>
+    <p class="sub">{{ borrowers|length }} borrower(s) on file.</p>
+  </div>
+  <a href="{{ url_for('add_loan') }}" class="btn btn-primary">+ Open New Case</a>
+</div>
+
+<div class="panel">
+  {% if borrowers %}
+  <table class="ledger">
+    <thead><tr><th>Name</th><th>Phone</th><th>Email</th><th>Cases</th><th style="text-align:right;">Outstanding</th></tr></thead>
+    <tbody>
+      {% for b in borrowers %}
+      <tr onclick="window.location='{{ url_for('borrower_detail', borrower_id=b.id) }}'" style="cursor:pointer;">
+        <td style="font-weight:600;">{{ b.name }}</td>
+        <td>{{ b.phone or '—' }}</td>
+        <td>{{ b.email or '—' }}</td>
+        <td>{{ b.loans|length }}</td>
+        <td class="amount">₹{{ "{:,.0f}".format(b.loans|sum(attribute='outstanding_amount')) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="empty-state">No borrowers on file yet. Open a new case to add one.</div>
+  {% endif %}
+</div>
+{% endblock %}

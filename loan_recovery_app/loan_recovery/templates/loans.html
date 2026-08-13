@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Case Files{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div>
+    <span class="eyebrow">Case Files</span>
+    <h2>All Cases</h2>
+    <p class="sub">{{ loans|length }} case(s) matching this filter.</p>
+  </div>
+  <a href="{{ url_for('add_loan') }}" class="btn btn-primary">+ Open New Case</a>
+</div>
+
+<div class="filter-row">
+  <a href="{{ url_for('loans_list') }}" class="{{ 'active' if active_filter=='All' }}">All</a>
+  {% for s in statuses %}
+  <a href="{{ url_for('loans_list', status=s) }}" class="{{ 'active' if active_filter==s }}">{{ s }}</a>
+  {% endfor %}
+</div>
+
+{% if loans %}
+<div class="case-grid">
+  {% for loan in loans %}
+  <a href="{{ url_for('loan_detail', loan_id=loan.id) }}">
+    <div class="case-file" data-tab="{{ loan.case_number }}" style="--tilt: {{ '-1deg' if loop.index0 % 2 == 0 else '0.8deg' }};">
+      <div class="case-number">Opened {{ loan.loan_date.strftime('%d %b %Y') }}</div>
+      <h4>{{ loan.borrower.name }}</h4>
+      <div class="figures">
+        <div>
+          <span class="fig-label">Principal</span>
+          <span class="fig-value">₹{{ "{:,.0f}".format(loan.principal_amount) }}</span>
+        </div>
+        <div>
+          <span class="fig-label">Outstanding</span>
+          <span class="fig-value">₹{{ "{:,.0f}".format(loan.outstanding_amount) }}</span>
+        </div>
+      </div>
+      <div class="meta-row">
+        <span>Due {{ loan.due_date.strftime('%d %b %Y') }}</span>
+        <span class="stamp status-{{ loan.status.lower() }}">{{ loan.status }}</span>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% else %}
+<div class="panel"><div class="empty-state">No cases match this filter yet.</div></div>
+{% endif %}
+{% endblock %}
